@@ -9,4 +9,17 @@ const base = repo && !repo.endsWith('.github.io') ? `/${repo}/` : '/'
 export default defineConfig({
   plugins: [react()],
   base,
+  build: {
+    // Three.js and its React helpers go in their own files, so a code change
+    // doesn't make visitors download the whole 3D engine again.
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          three: ['three'],
+          r3f: ['@react-three/fiber', '@react-three/drei', '@react-three/postprocessing'],
+        },
+      },
+    },
+  },
 })
