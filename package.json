@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "render:ai": "node scripts/render-ai.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",
