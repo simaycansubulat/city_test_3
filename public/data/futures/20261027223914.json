@@ -1,0 +1,536 @@
+{
+ "recordedAt": "2026-10-27T22:39:14.262Z",
+ "model": "anthropic/claude-4.5-haiku",
+ "choices": {
+  "move": 0,
+  "litter": 0,
+  "recycle": 0,
+  "river": 1,
+  "green": 0,
+  "energy": 0,
+  "water": 0
+ },
+ "headline": "Weimar suffocated: throwaway culture turned a cultural capital into decay",
+ "real": {
+  "fetchedAt": "2026-10-27T22:38:12.564Z",
+  "air": {
+   "time": "2026-10-27T23:00",
+   "european_aqi": 29,
+   "pm2_5": 9.4,
+   "pm10": 12.7,
+   "no2": 7.5,
+   "source": "real: Open-Meteo air quality (CAMS Europe model) for Weimar"
+  },
+  "weather": {
+   "time": "2026-10-27T23:30",
+   "temperature_c": 10.2,
+   "rain_last_30_days_mm": 34,
+   "source": "real: Open-Meteo weather for Weimar"
+  },
+  "river": {
+   "today_m3s": 2.65,
+   "mean_last_30_days_m3s": 0.85,
+   "source": "real: Open-Meteo flood API (GloFAS model), river Ilm at Weimar"
+  }
+ },
+ "facts": {
+  "map_area_km2": 2.6,
+  "buildings": 4316,
+  "green_share": 0.08,
+  "water_share": 0.013,
+  "bus_lines": 9,
+  "source": "real: city kit (LoD2 buildings, land use plots) and OpenStreetMap bus lines"
+ },
+ "seed": 560430,
+ "startState": {
+  "air": 0.71,
+  "green": 0.32,
+  "mobility": 0.45,
+  "river": 0.55,
+  "trees": 0.6,
+  "clean": 0.6
+ },
+ "startWorld": {
+  "sky": "#9cc7ea",
+  "ground": "#d6d0c2",
+  "buildings": "#f2ead8",
+  "vegetation": 0.85,
+  "water": 0.8,
+  "haze": 0.19,
+  "light": "day",
+  "traffic": 0.6,
+  "crowds": 0.6
+ },
+ "timeline": [
+  {
+   "year": 2035,
+   "kind": "think",
+   "entry": {
+    "why": "time starts to run in Weimar",
+    "people": [
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "park_2",
+      "act": "Someone runs the air conditioner with the window open",
+      "text": "Someone near Green area 2 (3.0 ha) runs the air conditioner with the window open."
+     },
+     {
+      "choice": "litter",
+      "first": false,
+      "icon": "🗑",
+      "place": "city_palace",
+      "act": "Someone throws a coffee cup on the pavement",
+      "text": "Someone near City Palace throws a coffee cup on the pavement."
+     },
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "hauptbahnhof",
+      "act": "Someone leaves every screen in the flat on all night",
+      "text": "Someone near Hauptbahnhof leaves every screen in the flat on all night."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "bauhaus_museum",
+      "act": "Someone drives alone to work in a large SUV",
+      "text": "Someone near Bauhaus-Museum drives alone to work in a large SUV."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar: people drive alone, litter freely, waste water and energy. No recycling, trees cut down. The town is being degraded by carelessness.",
+    "surprise": null,
+    "verdict": null,
+    "headline": "Throwaway culture spreads: cars, trash, waste, neglect of nature",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "trash_accumulation_downtown",
+      "title": "Litter spreads in city center",
+      "icon": "🗑️",
+      "place": "goetheplatz",
+      "radius": 200,
+      "story": "Coffee cups and refuse pile up on pavements. People throw without thinking. Streets grow grimy.",
+      "mood": "bad",
+      "visual": {
+       "people": 0.6,
+       "waste": 0.35
+      },
+      "streetColor": null,
+      "groundColor": "#c9bfb0"
+     },
+     {
+      "id": "exhaust_smog_main_routes",
+      "title": "Exhaust haze over traffic zones",
+      "icon": "🚗",
+      "place": "hauptbahnhof",
+      "radius": 250,
+      "story": "Solo drivers and SUVs clog streets. Exhaust fumes linger. Air turns grey around busy junctions.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.65,
+       "smog": 0.3
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "park_neglect_begins",
+      "title": "Green areas fade, trees cut",
+      "icon": "🌳",
+      "place": "park_2",
+      "radius": 150,
+      "story": "Pavements spread where grass was. Trees felled for 'convenience'. Green shrinks. Nature pushed back.",
+      "mood": "bad",
+      "visual": {
+       "trees": 0.65,
+       "dead_trees": 0.1
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#a8d5f7",
+     "ground": "#cfc8b8",
+     "vegetation": 0.8,
+     "haze": 0.24,
+     "traffic": 0.62,
+     "crowds": 0.58
+    }
+   }
+  },
+  {
+   "year": 2048,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "litter",
+      "first": false,
+      "icon": "🗑",
+      "place": "goethe_s_house",
+      "act": "Someone leaves a pizza box on a bench",
+      "text": "Someone near Goethe's House leaves a pizza box on a bench."
+     },
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "city_palace",
+      "act": "Someone heats with an old oil boiler",
+      "text": "Someone near City Palace heats with an old oil boiler."
+     },
+     {
+      "choice": "litter",
+      "first": false,
+      "icon": "🗑",
+      "place": "bauhaus_museum",
+      "act": "Someone leaves a pizza box on a bench",
+      "text": "Someone near Bauhaus-Museum leaves a pizza box on a bench."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "hauptbahnhof",
+      "act": "Someone leaves the engine running while waiting",
+      "text": "Someone near Hauptbahnhof leaves the engine running while waiting."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Nine years of neglect: litter spreads, exhaust thickens, trees fall. Oil heating, idling engines, waste everywhere. The carelessness is now visible.",
+    "surprise": null,
+    "verdict": null,
+    "headline": "Weimar's throwaway culture deepens: trash, smog, dying trees, wasted resources",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "trash_accumulation_downtown",
+      "title": "Litter spreads in city center",
+      "icon": "🗑️",
+      "place": "goetheplatz",
+      "radius": 120,
+      "story": "Pizza boxes, bottles, bags pile up. No one picks them up. Rats thrive.",
+      "mood": "bad",
+      "visual": {
+       "people": 0.5,
+       "waste": 0.6
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "exhaust_smog_main_routes",
+      "title": "Exhaust haze over traffic zones",
+      "icon": "💨",
+      "place": "hauptbahnhof",
+      "radius": 200,
+      "story": "Idling engines, solo drivers, old cars. Gray smog hangs over station and roads.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.7,
+       "smog": 0.5
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "park_neglect_spreads",
+      "title": "Parks turning barren, trees cut",
+      "icon": "💀",
+      "place": "park_2",
+      "radius": 180,
+      "story": "Green shrinks yearly. Stumps where oaks stood. Grass dies. People avoid it.",
+      "mood": "bad",
+      "visual": {
+       "trees": 0.3,
+       "dead_trees": 0.4
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#b8a89f",
+     "vegetation": 0.65,
+     "water": 0.7,
+     "haze": 0.35
+    }
+   }
+  },
+  {
+   "year": 2065,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "recycle",
+      "first": false,
+      "icon": "🚮",
+      "place": "bauhaus_museum",
+      "act": "Someone throws everything into one bin",
+      "text": "Someone near Bauhaus-Museum throws everything into one bin."
+     },
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "city_palace",
+      "act": "Someone washes the pavement with a hose",
+      "text": "Someone near City Palace washes the pavement with a hose."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "bauhaus_museum",
+      "act": "Someone takes old electronics to the recycling yard",
+      "text": "Someone near Bauhaus-Museum takes old electronics to the recycling yard."
+     },
+     {
+      "choice": "green",
+      "first": false,
+      "icon": "🧱",
+      "place": "cranach_house",
+      "act": "Someone cuts down a tree in the backyard",
+      "text": "Someone near Cranach House cuts down a tree in the backyard."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Thirteen years of waste, exhaust, and neglect. Cars multiply, bins overflow, trees vanish. The Ilm still flows but the town decays visibly.",
+    "surprise": null,
+    "verdict": null,
+    "headline": "Weimar choked by waste and exhaust: nature bulldozed, streets lined with trash",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "trash_epidemic_downtown",
+      "title": "Litter engulfs city center",
+      "icon": "🗑️",
+      "place": "goetheplatz",
+      "radius": 200,
+      "story": "Bins overflow daily. Streets become dumping grounds. No one picks up anymore.",
+      "mood": "bad",
+      "visual": {
+       "people": 0.4,
+       "smog": 0.4,
+       "waste": 0.7
+      },
+      "streetColor": null,
+      "groundColor": "#9d8f7a"
+     },
+     {
+      "id": "exhaust_layer_spreads",
+      "title": "Smog thickens over traffic routes",
+      "icon": "💨",
+      "place": "hauptbahnhof",
+      "radius": 300,
+      "story": "Every car idles, exhausts accumulate. Sky yellows by midday. Breathing worsens.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.65,
+       "smog": 0.65,
+       "dark_buildings": 0.3
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "green_loss_accelerates",
+      "title": "Parks bare, gardens paved for parking",
+      "icon": "🪓",
+      "place": "park_2",
+      "radius": 250,
+      "story": "Trees felled for garages. Grass replaced by asphalt. Dust rises where green stood.",
+      "mood": "bad",
+      "visual": {
+       "trees": 0.2,
+       "dead_trees": 0.4,
+       "cars": 0.5
+      },
+      "streetColor": null,
+      "groundColor": "#8b7d6b"
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#c4a895",
+     "ground": "#b8a896",
+     "buildings": "#e8dcc8",
+     "vegetation": 0.45,
+     "water": 0.68,
+     "haze": 0.48,
+     "traffic": 0.68,
+     "crowds": 0.52,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2077,
+   "kind": "think",
+   "entry": {
+    "why": "It is now 2077: time has run out. Give your final picture of Weimar, with indicators and outlook.",
+    "people": [
+     {
+      "choice": "green",
+      "first": false,
+      "icon": "🧱",
+      "place": "bauhaus_museum",
+      "act": "Someone covers a lawn with gravel",
+      "text": "Someone near Bauhaus-Museum covers a lawn with gravel."
+     },
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "city_palace",
+      "act": "Someone heats with an old oil boiler",
+      "text": "Someone near City Palace heats with an old oil boiler."
+     },
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "park_3",
+      "act": "Someone runs the air conditioner with the window open",
+      "text": "Someone near Green area 3 (1.6 ha) runs the air conditioner with the window open."
+     },
+     {
+      "choice": "litter",
+      "first": false,
+      "icon": "🗑",
+      "place": "goethe_s_house",
+      "act": "Someone drops cigarette butts into the gutter",
+      "text": "Someone near Goethe's House drops cigarette butts into the gutter."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar has chosen waste over care for 42 years. Every habit—driving alone, littering, cutting trees, ignoring water—has compounded. The town is choking.",
+    "surprise": {
+     "title": "The Ilm turns brown",
+     "story": "Decades of neglect: oil runoff, trash, no treatment. The river that shaped Weimar is now a sludge highway.",
+     "icon": "💧",
+     "place": "ilm_river"
+    },
+    "verdict": {
+     "word": "Ruined",
+     "icon": "☠️",
+     "mood": "bad"
+    },
+    "headline": "Weimar suffocated: throwaway culture turned a cultural capital into decay",
+    "outlook": "Weimar, once a beacon of culture and reason, is now a cautionary monument to what happens when a society chooses convenience over care for 42 years straight.",
+    "observed": [],
+    "changes": [
+     {
+      "id": "final_park_collapse",
+      "title": "Parks erased: asphalt and concrete",
+      "icon": "🏜️",
+      "place": "park_2",
+      "radius": 300,
+      "story": "Trees cut for parking. Grass paved over. Only gravel and dirt remain where green was promised.",
+      "mood": "bad",
+      "visual": {
+       "trees": 0.05,
+       "dead_trees": 0.15,
+       "cars": 0.7,
+       "waste": 0.6,
+       "sand": 0.8
+      },
+      "streetColor": null,
+      "groundColor": "#9a8a7a"
+     },
+     {
+      "id": "downtown_trash_chokes",
+      "title": "City center drowned in waste",
+      "icon": "🗑️",
+      "place": "goetheplatz",
+      "radius": 200,
+      "story": "Litter uncollected. Bins overflow. Streets smell. Historic squares buried under decades of carelessness.",
+      "mood": "bad",
+      "visual": {
+       "bikes": 0.1,
+       "people": 0.3,
+       "waste": 0.85
+      },
+      "streetColor": null,
+      "groundColor": "#8b7355"
+     },
+     {
+      "id": "smog_permanent",
+      "title": "Exhaust layer never lifts",
+      "icon": "💨",
+      "place": "hauptbahnhof",
+      "radius": 400,
+      "story": "Solo drivers in SUVs. No public transit priority. Smog settles year-round. Breathing is labor here.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.72,
+       "smog": 0.75,
+       "dark_buildings": 0.6
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": 0.28,
+     "green": 0.18,
+     "mobility": 0.15,
+     "river": 0.32,
+     "trees": 0.12,
+     "clean": 0.22
+    },
+    "world": {
+     "sky": "#a89080",
+     "ground": "#8b7d75",
+     "buildings": "#d4c8b8",
+     "vegetation": 0.22,
+     "water": 0.35,
+     "haze": 0.68,
+     "traffic": 0.72,
+     "crowds": 0.38,
+     "light": "day"
+    }
+   }
+  }
+ ],
+ "id": "20261027223914"
+}

@@ -826,3 +826,1612 @@ button.icon {
     animation: none;
   }
 }
+
+/* ---- AI Future tab ---- */
+
+.y2077.mode-future .tab.future.on {
+  background: rgba(79, 224, 138, 0.14);
+  border-color: #4fe08a;
+  box-shadow: 0 0 12px rgba(79, 224, 138, 0.3);
+}
+
+.future {
+  margin: 4px 0 10px;
+  font-size: 12.5px;
+}
+
+.future-source {
+  margin: 6px 0;
+  color: #9fffc9;
+  font-size: 12px;
+}
+
+.future-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.future button {
+  font: inherit;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 229, 255, 0.55);
+  background: rgba(0, 229, 255, 0.08);
+  color: #e8ecf6;
+  cursor: pointer;
+}
+
+.future button:hover,
+.future button.on {
+  background: rgba(0, 229, 255, 0.24);
+}
+
+.future button.primary {
+  border-color: #4fe08a;
+  background: rgba(79, 224, 138, 0.2);
+  font-weight: 600;
+}
+
+.future-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10px 0 4px;
+  border-top: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+.ft-dot {
+  position: relative;
+  flex: 1;
+  padding-top: 8px;
+  font: 10px ui-monospace, Consolas, monospace;
+  color: #8f9ab3;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ft-dot::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  border-radius: 50%;
+  background: #2a3150;
+}
+
+.ft-dot.on::before {
+  background: #4fe08a;
+  box-shadow: 0 0 6px #4fe08a;
+}
+
+.ft-dot.on {
+  color: #e8ecf6;
+}
+
+.ft-dot.next::before {
+  background: #fcee0a;
+  animation: ft-blink 0.9s ease-in-out infinite;
+}
+
+@keyframes ft-blink {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.future-thinking {
+  color: #fcee0a;
+  margin: 6px 0;
+}
+
+.future-state {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0;
+}
+
+.future-state li {
+  display: grid;
+  grid-template-columns: 96px 1fr 44px;
+  align-items: center;
+  gap: 6px;
+  margin: 3px 0;
+}
+
+.fs-bar {
+  height: 7px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.fs-bar span {
+  display: block;
+  height: 100%;
+  transition: width 1.2s ease, background 1.2s ease;
+}
+
+.fs-val {
+  font: 11px ui-monospace, Consolas, monospace;
+  text-align: right;
+}
+
+.up {
+  color: #4fe08a;
+}
+
+.down {
+  color: #ff6b5a;
+}
+
+.future-real {
+  margin: 4px 0;
+  padding-left: 16px;
+}
+
+.future-slider {
+  display: block;
+  margin: 6px 0;
+}
+
+.future-slider span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.future-slider input {
+  width: 100%;
+  accent-color: #00e5ff;
+}
+
+.future-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 6px 0;
+}
+
+.future-actions button.good {
+  border-color: #4fe08a;
+}
+
+.future-actions button.bad {
+  border-color: #ff6b5a;
+}
+
+.future-step {
+  margin: 8px 0;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.fst-year {
+  font: 700 11px ui-monospace, Consolas, monospace;
+  color: #fcee0a;
+}
+
+.fst-headline {
+  font-weight: 600;
+  margin: 2px 0 4px;
+}
+
+.fst-event {
+  color: #ffc56b;
+  font-size: 11.5px;
+}
+
+.fst-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 4px 0;
+}
+
+.chip {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 8px;
+  border: 1px solid #5d6680;
+  cursor: help;
+}
+
+.chip.beneficial {
+  border-color: #4fe08a;
+  color: #9fffc9;
+}
+
+.chip.harmful {
+  border-color: #ff6b5a;
+  color: #ffb3a8;
+}
+
+.fst-decision {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 4px;
+  margin: 6px 0;
+  padding-left: 6px;
+  border-left: 3px solid #4fe08a;
+}
+
+.fst-decision.bad {
+  border-left-color: #ff4a3a;
+}
+
+.fst-outlook {
+  font-style: italic;
+}
+
+.before-after {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.before-after figure {
+  margin: 0;
+  text-align: center;
+}
+
+.before-after svg {
+  display: block;
+  width: 100%;
+  max-width: 130px;
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.before-after figcaption {
+  font: 10px ui-monospace, Consolas, monospace;
+  color: #8f9ab3;
+  text-transform: uppercase;
+}
+
+.ba-arrow {
+  color: #fcee0a;
+  font-weight: 700;
+}
+
+/* the year and the AI's headline over the map */
+.future-banner {
+  position: absolute;
+  z-index: 11;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-30%);
+  max-width: min(560px, calc(100% - 400px));
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(8, 10, 22, 0.85);
+  border: 1px solid rgba(79, 224, 138, 0.5);
+  color: #e8ecf6;
+  pointer-events: none;
+}
+
+.future-banner.compare {
+  border-color: #fcee0a;
+}
+
+.fb-year {
+  font: 800 30px ui-monospace, Consolas, monospace;
+  color: #4fe08a;
+}
+
+.future-banner.compare .fb-year {
+  color: #fcee0a;
+}
+
+.fb-text {
+  font-size: 13.5px;
+  line-height: 1.35;
+}
+
+/* the AI's message over a place on the map */
+.future-label {
+  width: 220px;
+  padding: 5px 9px 6px;
+  background: rgba(8, 10, 22, 0.86);
+  border: 1px solid #4fe08a;
+  color: #e8ecf6;
+  font-size: 11.5px;
+  line-height: 1.3;
+  animation: fw-in 0.8s ease-out both;
+}
+
+.future-label.bad {
+  border-color: #ff4a3a;
+}
+
+.fl-head {
+  font: 700 10.5px ui-monospace, Consolas, monospace;
+  color: #4fe08a;
+  text-transform: uppercase;
+}
+
+.future-label.bad .fl-head {
+  color: #ff6b5a;
+}
+
+@media (max-width: 760px) {
+  .future-banner {
+    top: auto;
+    bottom: 48px;
+    left: 12px;
+    right: 12px;
+    transform: none;
+    max-width: none;
+  }
+}
+
+/* ---- what the AI watches and thinks ---- */
+
+.future-label.mixed {
+  border-color: #fcee0a;
+}
+
+.future-label.mixed .fl-head {
+  color: #fcee0a;
+}
+
+.fst-decision.mixed {
+  border-left-color: #fcee0a;
+}
+
+.future-watching {
+  margin: 8px 0;
+  padding: 6px 8px;
+  border: 1px dashed rgba(252, 238, 10, 0.6);
+}
+
+.future-watching h2 {
+  margin: 0 0 4px;
+  color: #fcee0a;
+}
+
+.future-watching ul,
+.fst-seen ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 11.5px;
+}
+
+.future-watching li {
+  margin: 2px 0;
+  animation: fw-in 0.6s ease-out both;
+}
+
+.future-watching li.you {
+  color: #9fffc9;
+}
+
+.fst-seen {
+  margin: 4px 0;
+  font-size: 11.5px;
+  color: #b3bccf;
+}
+
+.fst-seen summary {
+  cursor: pointer;
+}
+
+.fst-thought {
+  margin: 4px 0;
+  padding-left: 6px;
+  border-left: 2px solid #5d6680;
+  font-size: 11.5px;
+}
+
+.fst-thought.good {
+  border-left-color: #4fe08a;
+}
+
+.fst-thought.bad {
+  border-left-color: #ff4a3a;
+}
+
+.fst-thought.mixed {
+  border-left-color: #fcee0a;
+}
+
+.future-slider span span {
+  display: inline;
+}
+
+/* a person the AI sees, on the map */
+.seen {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: max-content;
+  max-width: 200px;
+  padding: 2px 7px 2px 3px;
+  background: rgba(8, 10, 22, 0.82);
+  border: 1px solid rgba(252, 238, 10, 0.7);
+  border-radius: 12px;
+  color: #f4f0d8;
+  font-size: 10.5px;
+  line-height: 1.2;
+  animation: fw-in 0.6s ease-out both;
+}
+
+.seen.you {
+  border-color: #4fe08a;
+}
+
+.seen-icon {
+  font-size: 15px;
+}
+
+/* ---- the game: questions before a run, the ending after ---- */
+
+.question {
+  margin: 8px 0;
+}
+
+.q-text {
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.q-answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4px;
+}
+
+.future .q-answers button {
+  padding: 5px 4px;
+  font-size: 11px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.future .q-answers button.on {
+  background: rgba(252, 238, 10, 0.22);
+  border-color: #fcee0a;
+  color: #fff;
+  font-weight: 600;
+}
+
+.future button.big {
+  display: block;
+  width: 100%;
+  margin: 10px 0 4px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.future button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.recorded ul {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0;
+}
+
+.future .recorded button {
+  display: block;
+  width: 100%;
+  margin: 4px 0;
+  text-align: left;
+}
+
+.recorded button .small {
+  display: block;
+}
+
+.your-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 4px 0;
+}
+
+.your-choices .chip {
+  border-color: #fcee0a;
+  color: #fff6a8;
+  cursor: default;
+}
+
+.ending {
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid #fcee0a;
+  background: rgba(252, 238, 10, 0.08);
+  animation: fw-in 0.8s ease-out both;
+}
+
+.ending-year {
+  font: 700 12px ui-monospace, Consolas, monospace;
+  color: #fcee0a;
+  text-transform: uppercase;
+}
+
+.ending-headline {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 4px 0;
+}
+
+/* ======== the game on the screen ======== */
+
+.game {
+  --ink: #f2f4f8;
+  --muted: #b9c2d3;
+  --glass: rgba(14, 18, 30, 0.86);
+  --edge: rgba(255, 255, 255, 0.16);
+  --accent: #fcd34d;
+}
+
+.game button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* a full-screen layer that centres a card, letting the map show around it */
+.stage {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  pointer-events: none;
+}
+
+.card {
+  pointer-events: auto;
+  width: min(560px, 100%);
+  max-height: calc(100% - 32px);
+  overflow-y: auto;
+  padding: 26px 28px;
+  color: var(--ink);
+  background: var(--glass);
+  border: 1px solid var(--edge);
+  border-radius: 14px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  animation: card-in 0.5s ease-out both;
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+}
+
+.card-tag {
+  font: 700 11px ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.card h1 {
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 8px 0 10px;
+  color: var(--ink);
+  font-family: system-ui, sans-serif;
+}
+
+.card h2 {
+  font-size: 24px;
+  line-height: 1.25;
+  margin: 12px 0 16px;
+  color: var(--ink);
+  font-family: system-ui, sans-serif;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.card .note,
+.hud .note {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+.note.warn {
+  color: #ff9a8a;
+}
+
+.go {
+  display: block;
+  width: 100%;
+  margin: 18px 0 6px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #1b1b1b;
+  font-size: 17px !important;
+  font-weight: 700;
+}
+
+.go:hover {
+  filter: brightness(1.08);
+}
+
+.go:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.dots span {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dots span.done {
+  background: var(--accent);
+}
+
+.dots span.now {
+  background: rgba(252, 211, 77, 0.55);
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.answers button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-height: 120px;
+  padding: 14px 10px;
+  border: 1px solid var(--edge);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.3;
+  transition: transform 0.15s, background 0.15s, border-color 0.15s;
+}
+
+.answers button:hover {
+  transform: translateY(-3px);
+  background: rgba(252, 211, 77, 0.14);
+  border-color: var(--accent);
+}
+
+.answer-icon {
+  font-size: 36px;
+}
+
+.back {
+  margin-top: 14px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.card .recorded {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.card .recorded summary {
+  cursor: pointer;
+}
+
+.card .recorded button {
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+  padding: 8px 10px;
+  text-align: left;
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ink);
+}
+
+.card .recorded button span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* the year banner, centred over the map */
+.game .future-banner {
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: min(720px, calc(100% - 32px));
+  border-radius: 10px;
+  background: var(--glass);
+  border-color: var(--edge);
+  z-index: 15;
+}
+
+.game .fb-year {
+  color: var(--accent);
+}
+
+/* the small card during the run */
+.hud {
+  position: absolute;
+  z-index: 15;
+  left: 50%;
+  bottom: 44px;
+  transform: translateX(-50%);
+  width: min(760px, calc(100% - 32px));
+  padding: 12px 16px 12px;
+  color: var(--ink);
+  background: var(--glass);
+  border: 1px solid var(--edge);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  font-size: 13px;
+}
+
+.hud .future-timeline {
+  margin: 4px 0 12px;
+}
+
+.hud-watch ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.hud-watch li {
+  padding: 3px 9px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  font-size: 12px;
+  animation: card-in 0.5s ease-out both;
+}
+
+.thought {
+  margin: 0 0 6px;
+  padding-left: 8px;
+  border-left: 3px solid #e0b400;
+  line-height: 1.4;
+}
+
+.thought.good {
+  border-left-color: #3fbf6a;
+}
+
+.thought.bad {
+  border-left-color: #e0402e;
+}
+
+.hud-changes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.change {
+  padding: 3px 9px;
+  border-radius: 12px;
+  border: 1px solid #e0b400;
+  font-size: 12px;
+}
+
+.change.good {
+  border-color: #3fbf6a;
+}
+
+.change.bad {
+  border-color: #e0402e;
+}
+
+.hud-buttons,
+.ending-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.hud-buttons button,
+.ending-buttons button {
+  padding: 6px 12px;
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.hud-buttons button:hover,
+.hud-buttons button.on,
+.ending-buttons button:hover {
+  background: rgba(252, 211, 77, 0.18);
+  border-color: var(--accent);
+}
+
+.ending-buttons .go {
+  margin: 4px 0 6px;
+  flex-basis: 100%;
+}
+
+/* the ending */
+.ending-card {
+  width: min(620px, 100%);
+}
+
+.ending-card .chip {
+  border-color: var(--edge);
+  color: var(--ink);
+  cursor: default;
+}
+
+.compare-bars {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+}
+
+.compare-bars li {
+  display: grid;
+  grid-template-columns: 110px 1fr 1fr;
+  align-items: center;
+  gap: 8px;
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.compare-bars .fs-bar.then span {
+  background: #7d8596;
+}
+
+/* the AI's whole story */
+.story {
+  position: absolute;
+  z-index: 25;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(440px, 100%);
+  overflow-y: auto;
+  padding: 18px 18px 40px;
+  color: var(--ink);
+  background: rgba(12, 15, 26, 0.95);
+  border-left: 1px solid var(--edge);
+  font-size: 13px;
+  animation: story-in 0.35s ease-out both;
+}
+
+@keyframes story-in {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+}
+
+.story h2 {
+  margin: 4px 30px 8px 0;
+  font-size: 17px;
+  color: var(--accent);
+}
+
+.story .small {
+  color: var(--muted);
+}
+
+.story .close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: none;
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.game .attribution {
+  font-size: 9.5px;
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .answers {
+    grid-template-columns: 1fr;
+  }
+
+  .answers button {
+    flex-direction: row;
+    min-height: 0;
+  }
+
+  .answer-icon {
+    font-size: 26px;
+  }
+
+  .card h1 {
+    font-size: 24px;
+  }
+
+  .hud {
+    bottom: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .hud-watch li,
+  .story {
+    animation: none;
+  }
+}
+
+.card h2 {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* a close look at one person on the street */
+.close-up {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 14px;
+  align-items: center;
+  margin-top: 8px;
+  animation: card-in 0.35s ease-out both;
+}
+
+.vignette {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--edge);
+}
+
+.close-up-text {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.close-up-place {
+  display: block;
+  font: 700 11px ui-monospace, Consolas, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 3px;
+}
+
+@media (max-width: 600px) {
+  .close-up {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* the years going by, on top */
+.years {
+  position: absolute;
+  z-index: 15;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: min(640px, calc(100% - 32px));
+  text-align: center;
+  color: var(--ink);
+  pointer-events: none;
+}
+
+.years-number {
+  font: 800 64px/1 ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55), 0 0 2px rgba(0, 0, 0, 0.8);
+  font-variant-numeric: tabular-nums;
+}
+
+.years.compare .years-number {
+  color: var(--accent);
+}
+
+.years-text {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 12px;
+  border-radius: 14px;
+  background: var(--glass);
+  font-size: 14px;
+}
+
+/* time passing, at the bottom */
+.timebar {
+  position: absolute;
+  z-index: 15;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  width: min(720px, calc(100% - 32px));
+  padding: 10px 14px 8px;
+  color: var(--ink);
+  background: var(--glass);
+  border: 1px solid var(--edge);
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.timebar-track {
+  position: relative;
+  height: 6px;
+  margin: 4px 4px 8px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.timebar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--accent);
+  transition: width 2.6s linear;
+}
+
+.timebar-tick {
+  position: absolute;
+  top: -3px;
+  width: 2px;
+  height: 12px;
+  margin-left: -1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.timebar-tick.on {
+  background: var(--accent);
+}
+
+.timebar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font: 600 11px ui-monospace, Consolas, monospace;
+  color: var(--muted);
+}
+
+.timebar-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.timebar-buttons button {
+  padding: 4px 10px;
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+}
+
+.timebar-buttons button:hover,
+.timebar-buttons button.on {
+  background: rgba(252, 211, 77, 0.18);
+  border-color: var(--accent);
+}
+
+/* a person on the street: a small illustration standing on a pin */
+.street-person {
+  width: 120px;
+  transform: translate(-50%, calc(-100% - 10px));
+  animation: person-in 0.4s ease-out both;
+}
+
+.street-person .vignette {
+  border: 2px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.street-person::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 2px;
+  height: 10px;
+  margin-left: -1px;
+  background: #fff;
+}
+
+@keyframes person-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-100% + 4px));
+  }
+}
+
+@media (max-width: 600px) {
+  .years-number {
+    font-size: 44px;
+  }
+
+  .street-person {
+    width: 84px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .street-person {
+    animation: none;
+  }
+}
+
+/* the town is thinking: a small pulsing dot next to the year */
+.stirring {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  vertical-align: super;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: stir 1s ease-in-out infinite;
+}
+
+@keyframes stir {
+  50% {
+    opacity: 0.25;
+    transform: scale(0.7);
+  }
+}
+
+.years-thought {
+  margin-top: 4px;
+  font-size: 12.5px;
+  font-style: italic;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* something nobody saw coming */
+.surprise {
+  position: absolute;
+  z-index: 16;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(460px, calc(100% - 32px));
+  padding: 12px 16px;
+  color: #fff;
+  background: rgba(150, 30, 20, 0.92);
+  border: 2px solid #ffb35a;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+  animation: card-in 0.4s ease-out both;
+  pointer-events: none;
+}
+
+.surprise b {
+  display: block;
+  font-size: 18px;
+}
+
+.surprise span {
+  font-size: 13.5px;
+}
+
+/* how the people of Weimar live, at the bottom: one tile per habit, three icons to pick from (bad · middle · good) */
+.habits {
+  position: absolute;
+  z-index: 15;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  width: min(900px, calc(100% - 24px));
+  padding: 8px 10px;
+  color: var(--ink);
+  background: var(--glass);
+  border: 1px solid var(--edge);
+  border-radius: 12px;
+}
+
+.habits-progress {
+  height: 4px;
+  margin: 0 2px 8px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.habits-progress span {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.habits-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.habit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 5px 3px;
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ink);
+  font-size: 10.5px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.habit.level0 {
+  border-bottom: 3px solid #e0402e;
+}
+
+.habit.level1 {
+  border-bottom: 3px solid #e0b400;
+}
+
+.habit.level2 {
+  border-bottom: 3px solid #3fbf6a;
+}
+
+.habit-text {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.habit-pick {
+  display: flex;
+  gap: 2px;
+}
+
+.habit-pick button {
+  padding: 1px 3px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: none;
+  font-size: 15px;
+  line-height: 1.2;
+  opacity: 0.35;
+  filter: grayscale(1);
+}
+
+.habit-pick button.on {
+  opacity: 1;
+  filter: none;
+  border-color: var(--edge);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.habit-pick button:not(:disabled):hover {
+  opacity: 1;
+  filter: none;
+}
+
+.habit-pick button:disabled {
+  cursor: default;
+}
+
+.habits-line {
+  margin: 2px 4px 2px;
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.habits-line.struck {
+  color: #ffb35a;
+  font-weight: 600;
+}
+
+.habits-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 7px;
+}
+
+.habits-buttons button {
+  padding: 4px 10px;
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.habits-buttons button:hover,
+.habits-buttons button.on {
+  background: rgba(252, 211, 77, 0.18);
+  border-color: var(--accent);
+}
+
+.future-step.struck {
+  border-color: #ffb35a;
+}
+
+@media (max-width: 700px) {
+  .habits-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .surprise {
+    top: 120px;
+  }
+}
+
+.years-thought {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* the one thing that just happened, on the whole screen, while the camera flies to it and circles it */
+.moment {
+  --glow: #fcee0a;
+  position: absolute;
+  inset: 0;
+  z-index: 16;
+  pointer-events: none;
+}
+
+.moment.good {
+  --glow: #4fe08a;
+}
+
+.moment.bad {
+  --glow: #ff4a3a;
+}
+
+.moment.strange {
+  --glow: #ff9f1c;
+}
+
+.moment.last {
+  --glow: #c9a7ff;
+}
+
+.moment.last.good {
+  --glow: #4fe08a;
+}
+
+.moment.last.bad {
+  --glow: #ff4a3a;
+}
+
+/* a glow of the event's colour at the edges of the screen */
+.moment .bars {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 160px color-mix(in srgb, var(--glow) 45%, transparent);
+  animation: fade-in 0.5s ease-out;
+}
+
+.moment .flash {
+  position: absolute;
+  inset: 0;
+  background: var(--glow);
+  opacity: 0;
+  animation: flash 0.9s ease-out;
+}
+
+.moment.strange .flash,
+.moment.last .flash {
+  background: #fff;
+  animation: flash 1.4s ease-out;
+}
+
+.moment.strange .spot,
+.moment.last .spot {
+  animation: spot-in 0.6s ease-out, shake 0.5s ease-in-out 0.1s;
+}
+
+.spot {
+  position: absolute;
+  top: 13vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(820px, calc(100% - 32px));
+  text-align: center;
+  color: #fff;
+  animation: spot-in 0.6s ease-out;
+}
+
+.spot-icon {
+  font-size: 80px;
+  line-height: 1;
+  filter: drop-shadow(0 0 24px var(--glow));
+  animation: pop 0.7s cubic-bezier(0.2, 1.6, 0.4, 1);
+}
+
+.moment.strange .spot-icon,
+.moment.last .spot-icon {
+  font-size: 110px;
+}
+
+.spot-title {
+  margin-top: 10px;
+  font-size: clamp(32px, 6vw, 60px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: #fff;
+  text-shadow: 0 0 18px var(--glow), 0 0 42px var(--glow), 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.spot-story {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.55);
+  font-size: clamp(16px, 2.3vw, 21px);
+  line-height: 1.35;
+}
+
+.spot-place {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--glow);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+}
+
+@keyframes spot-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 24px) scale(0.92);
+  }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  20%,
+  60% {
+    margin-left: -10px;
+  }
+  40%,
+  80% {
+    margin-left: 10px;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* 2077: the whole town from above, and what shape it is in */
+.verdict {
+  position: absolute;
+  z-index: 20;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(720px, calc(100% - 32px));
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75);
+  animation: spot-in 1s ease-out 2.2s both;
+}
+
+.verdict-icon {
+  font-size: 110px;
+  line-height: 1;
+  animation: pop 0.8s cubic-bezier(0.2, 1.6, 0.4, 1) 2.2s both;
+}
+
+.verdict-word {
+  font-size: clamp(44px, 9vw, 84px);
+  font-weight: 900;
+  line-height: 1.05;
+  text-shadow: 0 0 24px currentColor, 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+.verdict-word.good {
+  color: #9ff0b5;
+}
+
+.verdict-word.bad {
+  color: #ff9a8a;
+}
+
+.verdict-word.mixed {
+  color: #ffe08a;
+}
+
+.verdict-line {
+  margin: 10px auto 18px;
+  max-width: 560px;
+  font-size: 18px;
+}
+
+.verdict .ending-buttons {
+  text-shadow: none;
+}
+
+/* the emoji floating over the place where something is happening */
+.beacon-icon {
+  font-size: 64px;
+  filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.9));
+  animation: pop 0.7s cubic-bezier(0.2, 1.6, 0.4, 1), bob 2s ease-in-out 0.7s infinite;
+}
+
+@keyframes bob {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* a filmic finish over the town: colours a little richer, the corners a little darker */
+.app.game canvas {
+  filter: saturate(1.18) contrast(1.08);
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.45) 100%);
+}

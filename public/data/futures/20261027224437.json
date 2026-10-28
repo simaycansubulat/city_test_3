@@ -1,0 +1,527 @@
+{
+ "recordedAt": "2026-10-27T22:44:37.056Z",
+ "model": "anthropic/claude-4.5-haiku",
+ "choices": {
+  "move": 0,
+  "litter": 1,
+  "recycle": 1,
+  "river": 2,
+  "green": 1,
+  "energy": 1,
+  "water": 1
+ },
+ "headline": "Weimar: half trying, half broken",
+ "real": {
+  "fetchedAt": "2026-10-27T22:43:50.946Z",
+  "air": {
+   "time": "2026-10-27T23:00",
+   "european_aqi": 29,
+   "pm2_5": 9.4,
+   "pm10": 12.7,
+   "no2": 7.5,
+   "source": "real: Open-Meteo air quality (CAMS Europe model) for Weimar"
+  },
+  "weather": {
+   "time": "2026-10-27T23:30",
+   "temperature_c": 10.2,
+   "rain_last_30_days_mm": 34,
+   "source": "real: Open-Meteo weather for Weimar"
+  },
+  "river": {
+   "today_m3s": 2.65,
+   "mean_last_30_days_m3s": 0.85,
+   "source": "real: Open-Meteo flood API (GloFAS model), river Ilm at Weimar"
+  }
+ },
+ "facts": {
+  "map_area_km2": 2.6,
+  "buildings": 4316,
+  "green_share": 0.08,
+  "water_share": 0.013,
+  "bus_lines": 9,
+  "source": "real: city kit (LoD2 buildings, land use plots) and OpenStreetMap bus lines"
+ },
+ "seed": 453011,
+ "startState": {
+  "air": 0.71,
+  "green": 0.32,
+  "mobility": 0.45,
+  "river": 0.55,
+  "trees": 0.6,
+  "clean": 0.6
+ },
+ "startWorld": {
+  "sky": "#9cc7ea",
+  "ground": "#d6d0c2",
+  "buildings": "#f2ead8",
+  "vegetation": 0.85,
+  "water": 0.8,
+  "haze": 0.19,
+  "light": "day",
+  "traffic": 0.6,
+  "crowds": 0.6
+ },
+ "timeline": [
+  {
+   "year": 2035,
+   "kind": "think",
+   "entry": {
+    "why": "time starts to run in Weimar",
+    "people": [
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "duchess_anna_amalia_library",
+      "act": "Someone waters the street tree in front of the house",
+      "text": "Someone near Duchess Anna Amalia Library waters the street tree in front of the house."
+     },
+     {
+      "choice": "recycle",
+      "first": false,
+      "icon": "🚮",
+      "place": "city_palace",
+      "act": "Someone buys a new phone every year and bins the old one",
+      "text": "Someone near City Palace buys a new phone every year and bins the old one."
+     },
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "goetheplatz",
+      "act": "Someone leaves every screen in the flat on all night",
+      "text": "Someone near Goetheplatz leaves every screen in the flat on all night."
+     },
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "liszt_house",
+      "act": "Someone runs the air conditioner with the window open",
+      "text": "Someone near Liszt House runs the air conditioner with the window open."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar starts clean and green. People drive everywhere, leaving cars and trash. Some care about recycling and the river. I see habits forming: constant driving,",
+    "surprise": null,
+    "verdict": null,
+    "headline": "Clean town wakes to daily habits",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "parking_pressure_green_3",
+      "title": "Parking circles worn",
+      "icon": "🚗",
+      "place": "park_3",
+      "radius": 120,
+      "story": "Drivers loop the block for space daily",
+      "mood": "bad",
+      "visual": {
+       "trees": 0.35,
+       "cars": 0.4
+      },
+      "streetColor": null,
+      "groundColor": "#c4a87a"
+     },
+     {
+      "id": "screen_glow_goetheplatz",
+      "title": "Night lights always on",
+      "icon": "💡",
+      "place": "goetheplatz",
+      "radius": 180,
+      "story": "Windows glow through every night",
+      "mood": "bad",
+      "visual": {
+       "smog": 0.15
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "phone_waste_palace",
+      "title": "E-waste pile grows",
+      "icon": "📱",
+      "place": "city_palace",
+      "radius": 60,
+      "story": "Old phones thrown away each year",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.2
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#9cc7ea",
+     "ground": "#d6d0c2",
+     "buildings": "#f2ead8",
+     "vegetation": 0.85,
+     "water": 0.8,
+     "haze": 0.19,
+     "traffic": 0.6,
+     "crowds": 0.6,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2049,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "park_1",
+      "act": "Someone waters the lawn at noon in a drought",
+      "text": "Someone near Green area 1 (4.7 ha) waters the lawn at noon in a drought."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "park_2",
+      "act": "Someone leaves the engine running while waiting",
+      "text": "Someone near Green area 2 (3.0 ha) leaves the engine running while waiting."
+     },
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "park_2",
+      "act": "Someone turns a parking space into a small garden",
+      "text": "Someone near Green area 2 (3.0 ha) turns a parking space into a small garden."
+     },
+     {
+      "choice": "energy",
+      "first": true,
+      "icon": "☀",
+      "place": "goetheplatz",
+      "act": "Someone switches off the lights in empty rooms",
+      "text": "Someone near Goetheplatz switches off the lights in empty rooms."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Driving everywhere kills the air and green. Watering lawns in drought breaks trust. Paving gardens for cars spreads. Some care, but habits shape the town now.",
+    "surprise": null,
+    "verdict": null,
+    "headline": "Weimar trades green for parking",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "drought_stress_green_1",
+      "title": "Lawn watering in drought",
+      "icon": "🏜️",
+      "place": "park_1",
+      "radius": 80,
+      "story": "Green spaces turn brown as water runs out",
+      "mood": "bad",
+      "visual": {
+       "trees": 0.6,
+       "dead_trees": 0.2,
+       "smog": 0.15
+      },
+      "streetColor": null,
+      "groundColor": "#c4b59a"
+     },
+     {
+      "id": "car_exhaust_green_2",
+      "title": "Engine idle smog",
+      "icon": "💨",
+      "place": "park_2",
+      "radius": 120,
+      "story": "Fumes from waiting cars kill the air",
+      "mood": "bad",
+      "visual": {
+       "trees": 0.7,
+       "cars": 0.5,
+       "smog": 0.35
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "paved_gardens_spread",
+      "title": "Front gardens gone",
+      "icon": "🅿️",
+      "place": "park_2",
+      "radius": 100,
+      "story": "Parking grows where flowers used to be",
+      "mood": "bad",
+      "visual": {
+       "trees": 0.65,
+       "cars": 0.55,
+       "green_roofs": 0.1
+      },
+      "streetColor": null,
+      "groundColor": "#696969"
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#a8b8d8",
+     "ground": "#c9c0b0",
+     "vegetation": 0.78,
+     "haze": 0.28,
+     "traffic": 0.68,
+     "crowds": 0.58
+    }
+   }
+  },
+  {
+   "year": 2065,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed, and something nobody expected is stirring in Weimar: you decide what it is, or let it pass",
+    "people": [
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "cranach_house",
+      "act": "Someone leaves the engine running while waiting",
+      "text": "Someone near Cranach House leaves the engine running while waiting."
+     },
+     {
+      "choice": "litter",
+      "first": false,
+      "icon": "🗑",
+      "place": "german_national_theatre",
+      "act": "Someone leaves bags of rubbish next to a full bin",
+      "text": "Someone near German National Theatre leaves bags of rubbish next to a full bin."
+     },
+     {
+      "choice": "energy",
+      "first": true,
+      "icon": "☀",
+      "place": "city_palace",
+      "act": "Someone insulates the attic of an old house",
+      "text": "Someone near City Palace insulates the attic of an old house."
+     },
+     {
+      "choice": "energy",
+      "first": true,
+      "icon": "☀",
+      "place": "liszt_house",
+      "act": "Someone switches off the lights in empty rooms",
+      "text": "Someone near Liszt House switches off the lights in empty rooms."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Cars idle everywhere. Trash piles grow. People leave screens on all night. The river is protected but the air chokes. Water waste spreads. Weimar splits: some c",
+    "surprise": null,
+    "verdict": null,
+    "headline": "Half Weimar tries. Half Weimar kills itself slowly.",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "idle_engine_pollution_2049",
+      "title": "Idling cars choke the air",
+      "icon": "💨",
+      "place": "cranach_house",
+      "radius": 80,
+      "story": "Engines run empty. Smog thickens around the waiting cars.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.4,
+       "smog": 0.6
+      },
+      "streetColor": "#8a8a7a",
+      "groundColor": null
+     },
+     {
+      "id": "trash_overflow_theatre",
+      "title": "Bins burst. Bags sit outside.",
+      "icon": "🗑️",
+      "place": "german_national_theatre",
+      "radius": 60,
+      "story": "Full bins. Rubbish bags wait on the ground. Rats come.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.7
+      },
+      "streetColor": null,
+      "groundColor": "#a89070"
+     },
+     {
+      "id": "insulation_hope_palace",
+      "title": "Old walls get warmer clothes",
+      "icon": "🏠",
+      "place": "city_palace",
+      "radius": 100,
+      "story": "Someone insulates. One house uses less heat now.",
+      "mood": "good",
+      "visual": {
+       "solar": 0.15
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#9aaccd",
+     "ground": "#c9c0b0",
+     "buildings": "#f2ead8",
+     "vegetation": 0.74,
+     "water": 0.8,
+     "haze": 0.35,
+     "traffic": 0.68,
+     "crowds": 0.56,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2077,
+   "kind": "think",
+   "entry": {
+    "why": "It is now 2077: time has run out. Give your final picture of Weimar, with indicators and outlook.",
+    "people": [
+     {
+      "choice": "river",
+      "first": false,
+      "icon": "🛢",
+      "place": "ilm_river",
+      "act": "Someone washes the car next to the river",
+      "text": "Someone near River Ilm washes the car next to the river."
+     },
+     {
+      "choice": "energy",
+      "first": true,
+      "icon": "☀",
+      "place": "bauhaus_museum",
+      "act": "Someone insulates the attic of an old house",
+      "text": "Someone near Bauhaus-Museum insulates the attic of an old house."
+     },
+     {
+      "choice": "water",
+      "first": true,
+      "icon": "💧",
+      "place": "goetheplatz",
+      "act": "Someone fixes a dripping tap",
+      "text": "Someone near Goetheplatz fixes a dripping tap."
+     },
+     {
+      "choice": "water",
+      "first": true,
+      "icon": "💧",
+      "place": "park_1",
+      "act": "Someone collects rainwater for the garden",
+      "text": "Someone near Green area 1 (4.7 ha) collects rainwater for the garden."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar: cars still rule the streets. Some people insulate homes and fix taps. Others idle engines and cut trees. The river stays protected but air stays grey. G",
+    "surprise": null,
+    "verdict": {
+     "word": "Stuck",
+     "icon": "⚖️",
+     "mood": "mixed"
+    },
+    "headline": "Weimar: half trying, half broken",
+    "outlook": "Weimar splits in two: cars choke the streets while some homes warm and the river stays alive.",
+    "observed": [],
+    "changes": [
+     {
+      "id": "final_car_choke_2077",
+      "title": "Traffic never stops",
+      "icon": "🚗",
+      "place": "hauptbahnhof",
+      "radius": 200,
+      "story": "Cars queue. Engines run. Air turns brown.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.8,
+       "people": 0.4,
+       "smog": 0.7
+      },
+      "streetColor": "#8b7d6b",
+      "groundColor": null
+     },
+     {
+      "id": "split_effort_2077",
+      "title": "Insulation spreads slowly",
+      "icon": "🏠",
+      "place": "bauhaus_museum",
+      "radius": 150,
+      "story": "Old walls wrap in wool. Some homes warm.",
+      "mood": "good",
+      "visual": {
+       "green_roofs": 0.2,
+       "solar": 0.3
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "river_defended_2077",
+      "title": "Ilm still runs clean",
+      "icon": "💧",
+      "place": "ilm_river",
+      "radius": 300,
+      "story": "People guard the water. It stays blue.",
+      "mood": "good",
+      "visual": {
+       "clean_water": 0.85
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": 0.55,
+     "green": 0.65,
+     "mobility": 0.42,
+     "river": 0.82,
+     "trees": 0.68,
+     "clean": 0.58
+    },
+    "world": {
+     "sky": "#9aaccd",
+     "ground": "#c9c0b0",
+     "buildings": "#f2ead8",
+     "vegetation": 0.72,
+     "water": 0.81,
+     "haze": 0.38,
+     "traffic": 0.68,
+     "crowds": 0.54,
+     "light": "day"
+    }
+   }
+  }
+ ],
+ "id": "20261027224437"
+}

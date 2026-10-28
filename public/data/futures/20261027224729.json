@@ -1,0 +1,427 @@
+{
+ "recordedAt": "2026-10-27T22:47:29.219Z",
+ "model": "anthropic/claude-4.5-haiku",
+ "choices": {
+  "move": 1,
+  "litter": 0,
+  "recycle": 1,
+  "river": 0,
+  "green": 1,
+  "energy": 2,
+  "water": 1
+ },
+ "headline": "Weimar survives divided: solar and gardens versus pollution, trash, and a dying river.",
+ "real": {
+  "fetchedAt": "2026-10-27T22:46:48.364Z",
+  "air": {
+   "time": "2026-10-27T23:00",
+   "european_aqi": 29,
+   "pm2_5": 9.4,
+   "pm10": 12.7,
+   "no2": 7.5,
+   "source": "real: Open-Meteo air quality (CAMS Europe model) for Weimar"
+  },
+  "weather": {
+   "time": "2026-10-27T23:45",
+   "temperature_c": 10.3,
+   "rain_last_30_days_mm": 34,
+   "source": "real: Open-Meteo weather for Weimar"
+  },
+  "river": {
+   "today_m3s": 2.65,
+   "mean_last_30_days_m3s": 0.85,
+   "source": "real: Open-Meteo flood API (GloFAS model), river Ilm at Weimar"
+  }
+ },
+ "facts": {
+  "map_area_km2": 2.6,
+  "buildings": 4316,
+  "green_share": 0.08,
+  "water_share": 0.013,
+  "bus_lines": 9,
+  "source": "real: city kit (LoD2 buildings, land use plots) and OpenStreetMap bus lines"
+ },
+ "seed": 720914,
+ "startState": {
+  "air": 0.71,
+  "green": 0.32,
+  "mobility": 0.45,
+  "river": 0.55,
+  "trees": 0.6,
+  "clean": 0.6
+ },
+ "startWorld": {
+  "sky": "#9cc7ea",
+  "ground": "#d6d0c2",
+  "buildings": "#f2ead8",
+  "vegetation": 0.85,
+  "water": 0.8,
+  "haze": 0.19,
+  "light": "day",
+  "traffic": 0.6,
+  "crowds": 0.6
+ },
+ "timeline": [
+  {
+   "year": 2034,
+   "kind": "think",
+   "entry": {
+    "why": "time starts to run in Weimar",
+    "people": [
+     {
+      "choice": "river",
+      "first": false,
+      "icon": "🛢",
+      "place": "ilm_river",
+      "act": "Someone throws a bag of rubbish into the Ilm",
+      "text": "Someone near River Ilm throws a bag of rubbish into the Ilm."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "park_4",
+      "act": "Someone repairs a chair instead of throwing it away",
+      "text": "Someone near Green area 4 (1.0 ha) repairs a chair instead of throwing it away."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "liszt_house",
+      "act": "Someone takes old electronics to the recycling yard",
+      "text": "Someone near Liszt House takes old electronics to the recycling yard."
+     },
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "cranach_house",
+      "act": "Someone turns a parking space into a small garden",
+      "text": "Someone near Cranach House turns a parking space into a small garden."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar splits between repair-minded citizens and careless polluters. The Ilm will suffer badly from dumping. Solar roofs grow quietly. Small gardens replace par",
+    "surprise": null,
+    "verdict": null,
+    "headline": "Trash enters the Ilm while some fix and grow instead of discarding.",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "ilm_pollution_start",
+      "title": "Rubbish piles cloud the river",
+      "icon": "💧",
+      "place": "ilm_river",
+      "radius": 200,
+      "story": "Bags of waste thrown into the Ilm begin to clog the banks and cloud the water brown.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.25,
+       "dirty_water": 0.3
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "cranach_parking_garden",
+      "title": "First parking space turns to garden",
+      "icon": "🌱",
+      "place": "cranach_house",
+      "radius": 80,
+      "story": "A resident dug up asphalt and planted vegetables and flowers where a car used to sit.",
+      "mood": "good",
+      "visual": {
+       "trees": 0.15,
+       "people": 0.3
+      },
+      "streetColor": null,
+      "groundColor": "#8b6f47"
+     },
+     {
+      "id": "solar_roofs_early",
+      "title": "Solar panels spread on rooftops",
+      "icon": "☀️",
+      "place": "goetheplatz",
+      "radius": 120,
+      "story": "Homes and small buildings across the town fit solar panels, cutting grid demand quietly.",
+      "mood": "good",
+      "visual": {
+       "solar": 0.2
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#9cc7ea",
+     "ground": "#d6d0c2",
+     "buildings": "#f2ead8",
+     "vegetation": 0.85,
+     "water": 0.8,
+     "haze": 0.19,
+     "traffic": 0.6,
+     "crowds": 0.6,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2051,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "schiller_s_house",
+      "act": "Someone drives alone to work in a large SUV",
+      "text": "Someone near Schiller's House drives alone to work in a large SUV."
+     },
+     {
+      "choice": "river",
+      "first": false,
+      "icon": "🛢",
+      "place": "ilm_river",
+      "act": "Someone pours paint thinner down a drain",
+      "text": "Someone near River Ilm pours paint thinner down a drain."
+     },
+     {
+      "choice": "move",
+      "first": true,
+      "icon": "🚲",
+      "place": "cranach_house",
+      "act": "Someone takes the bus to the Hauptbahnhof",
+      "text": "Someone near Cranach House takes the bus to the Hauptbahnhof."
+     },
+     {
+      "choice": "green",
+      "first": false,
+      "icon": "🧱",
+      "place": "goethe_s_house",
+      "act": "Someone paves the front garden for a parking space",
+      "text": "Someone near Goethe's House paves the front garden for a parking space."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Paint thinner poisoning the Ilm daily now; SUV drivers ignore transit; gardens vanish under asphalt. Solar grows but too slow to fix the damage starting.",
+    "surprise": {
+     "title": "The Ilm turns sickly yellow-green",
+     "story": "Paint thinner from drains has stained the river yellow-green, killing fish.",
+     "icon": "☠️",
+     "place": "ilm_river"
+    },
+    "verdict": null,
+    "headline": "Chemical waste poisons the river while cars and concrete swallow Weimar's green.",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "ilm_chemical_poisoning",
+      "title": "River choked by paint waste",
+      "icon": "☠️",
+      "place": "ilm_river",
+      "radius": 200,
+      "story": "Paint thinner dumped repeatedly has turned the Ilm sickly yellow-green and killed fish.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.6,
+       "clean_water": 0.1,
+       "dirty_water": 0.8
+      },
+      "streetColor": null,
+      "groundColor": "#e8d4a0"
+     },
+     {
+      "id": "parking_sprawl_spreads",
+      "title": "Parking spaces replace front gardens",
+      "icon": "🅿️",
+      "place": "goethe_s_house",
+      "radius": 150,
+      "story": "More households are paving their small gardens to park cars instead of walking or cycling.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.5,
+       "green_roofs": 0.1
+      },
+      "streetColor": null,
+      "groundColor": "#808080"
+     },
+     {
+      "id": "trash_streets_grow",
+      "title": "Litter spreads across streets and squares",
+      "icon": "🗑️",
+      "place": "goetheplatz",
+      "radius": 120,
+      "story": "Discarded trash piles up on pavements as more people throw waste directly onto streets.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.5,
+       "recycling": 0.2
+      },
+      "streetColor": null,
+      "groundColor": "#a89968"
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#a8b8d8",
+     "ground": "#c4b8a0",
+     "buildings": "#e8dcc8",
+     "vegetation": 0.72,
+     "water": 0.5,
+     "haze": 0.35,
+     "traffic": 0.65,
+     "crowds": 0.55
+    }
+   }
+  },
+  {
+   "year": 2077,
+   "kind": "think",
+   "entry": {
+    "why": "It is now 2077: time has run out. Give your final picture of Weimar, with indicators and outlook.",
+    "people": [
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "van_de_velde_building",
+      "act": "Someone fills a private pool every week",
+      "text": "Someone near Van de Velde Building fills a private pool every week."
+     },
+     {
+      "choice": "energy",
+      "first": true,
+      "icon": "☀",
+      "place": "city_palace",
+      "act": "Someone puts solar panels on the roof",
+      "text": "Someone near City Palace puts solar panels on the roof."
+     },
+     {
+      "choice": "river",
+      "first": false,
+      "icon": "🛢",
+      "place": "ilm_river",
+      "act": "Someone pours paint thinner down a drain",
+      "text": "Someone near River Ilm pours paint thinner down a drain."
+     },
+     {
+      "choice": "water",
+      "first": true,
+      "icon": "💧",
+      "place": "goethe_s_house",
+      "act": "Someone takes short showers",
+      "text": "Someone near Goethe's House takes short showers."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar: split between solar pioneers and polluters who dump, drive short distances, ignore the poisoned Ilm. Gardens survived but asphalt and trash dominate. Th",
+    "surprise": null,
+    "verdict": {
+     "word": "Compromised survival",
+     "icon": "⚖️",
+     "mood": "bad"
+    },
+    "headline": "Weimar survives divided: solar and gardens versus pollution, trash, and a dying river.",
+    "outlook": "Weimar is a town of two minds: solar panels and survival gardens on one side, poisoned river and choking streets on the other, held together by habit and resignation.",
+    "observed": [],
+    "changes": [
+     {
+      "id": "ilm_final_state",
+      "title": "River reduced to toxic sludge bed",
+      "icon": "☠️",
+      "place": "ilm_river",
+      "radius": 200,
+      "story": "The Ilm runs brown and thin, choked with decades of paint thinner, car wash runoff, and dumped trash.",
+      "mood": "bad",
+      "visual": {
+       "trees": 0.1,
+       "waste": 0.8,
+       "clean_water": 0.05,
+       "dirty_water": 0.95
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "streets_choked_with_cars",
+      "title": "Parking and traffic strangle the streets",
+      "icon": "🚗",
+      "place": "goetheplatz",
+      "radius": 150,
+      "story": "Half of Weimar still drives short distances; streets are lined with parked cars and exhaust hangs over the squares.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.7,
+       "people": 0.3,
+       "smog": 0.6
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "solar_saves_some",
+      "title": "Solar panels keep the lights on",
+      "icon": "☀️",
+      "place": "city_palace",
+      "radius": 120,
+      "story": "Rooftops across Weimar carry solar panels; energy saving meant some homes stayed off the grid, but the town's air and water were never fixed.",
+      "mood": "good",
+      "visual": {
+       "green_roofs": 0.3,
+       "solar": 0.65
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [
+     "ilm_pollution_start",
+     "ilm_chemical_poisoning",
+     "trash_streets_grow"
+    ],
+    "state": {
+     "air": 0.45,
+     "green": 0.68,
+     "mobility": 0.55,
+     "river": 0.15,
+     "trees": 0.65,
+     "clean": 0.35
+    },
+    "world": {
+     "sky": "#9aa8c0",
+     "ground": "#bfb5a0",
+     "buildings": "#e0d4c0",
+     "vegetation": 0.68,
+     "water": 0.35,
+     "haze": 0.45,
+     "traffic": 0.65,
+     "crowds": 0.5,
+     "light": "day"
+    }
+   }
+  }
+ ],
+ "id": "20261027224729"
+}

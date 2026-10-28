@@ -1,0 +1,463 @@
+{
+ "recordedAt": "2026-10-27T23:13:08.865Z",
+ "model": "anthropic/claude-4.5-haiku",
+ "choices": {
+  "move": 0,
+  "litter": 2,
+  "recycle": 1,
+  "river": 1,
+  "green": 0,
+  "energy": 1,
+  "water": 2
+ },
+ "headline": "Solar roofs spread while drivers stay alone and groundwater drops; trees keep falling.",
+ "real": {
+  "fetchedAt": "2026-10-27T23:10:19.170Z",
+  "air": {
+   "time": "2026-10-28T00:00",
+   "european_aqi": 29,
+   "pm2_5": 9.6,
+   "pm10": 13.9,
+   "no2": 6.8,
+   "source": "real: Open-Meteo air quality (CAMS Europe model) for Weimar"
+  },
+  "weather": {
+   "time": "2026-10-28T00:00",
+   "temperature_c": 10.1,
+   "rain_last_30_days_mm": 37,
+   "source": "real: Open-Meteo weather for Weimar"
+  },
+  "river": {
+   "today_m3s": 2.65,
+   "mean_last_30_days_m3s": 0.85,
+   "source": "real: Open-Meteo flood API (GloFAS model), river Ilm at Weimar"
+  }
+ },
+ "facts": {
+  "map_area_km2": 2.6,
+  "buildings": 4316,
+  "green_share": 0.08,
+  "water_share": 0.013,
+  "bus_lines": 9,
+  "source": "real: city kit (LoD2 buildings, land use plots) and OpenStreetMap bus lines"
+ },
+ "seed": 112923,
+ "startState": {
+  "air": 0.71,
+  "green": 0.32,
+  "mobility": 0.45,
+  "river": 0.55,
+  "trees": 0.6,
+  "clean": 0.6
+ },
+ "startWorld": {
+  "sky": "#9cc7ea",
+  "ground": "#d6d0c2",
+  "buildings": "#f2ead8",
+  "vegetation": 0.85,
+  "water": 0.8,
+  "haze": 0.19,
+  "light": "day",
+  "traffic": 0.6,
+  "crowds": 0.6
+ },
+ "timeline": [
+  {
+   "year": 2034,
+   "kind": "think",
+   "entry": {
+    "why": "time starts to run in Weimar",
+    "people": [
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "herderkirche",
+      "act": "Someone takes old electronics to the recycling yard",
+      "text": "Someone near Herderkirche takes old electronics to the recycling yard."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "herderkirche",
+      "act": "Someone drives alone to work in a large SUV",
+      "text": "Someone near Herderkirche drives alone to work in a large SUV."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "hauptbahnhof",
+      "act": "Someone sorts glass, paper and plastic",
+      "text": "Someone near Hauptbahnhof sorts glass, paper and plastic."
+     },
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "goetheplatz",
+      "act": "Someone heats with an old oil boiler",
+      "text": "Someone near Goetheplatz heats with an old oil boiler."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar: most people drive alone, some recycle, heating is old and wasteful, but the air is still clean and the Ilm flows well. Small habits are forming.",
+    "surprise": null,
+    "finalEvent": null,
+    "verdict": null,
+    "headline": "More cars clog the centre as most drivers go alone; some recycle, but oil heating stays.",
+    "outlook": "",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "8400",
+     "bus_passengers_per_day": "2100",
+     "waste_to_recycling_percent": "35",
+     "heating_oil_boilers_percent": "62",
+     "single_occupant_cars_percent": "78"
+    },
+    "judged": [
+     {
+      "behaviour": "driving alone in SUV",
+      "value": -0.8
+     },
+     {
+      "behaviour": "recycling electronics and sorting waste",
+      "value": 0.7
+     },
+     {
+      "behaviour": "heating with old oil boiler",
+      "value": -0.7
+     },
+     {
+      "behaviour": "picking up dropped litter",
+      "value": 0.5
+     }
+    ],
+    "changes": [
+     {
+      "id": "suv_traffic_growth",
+      "title": "SUV traffic grows in town",
+      "icon": "🚙",
+      "place": "goetheplatz",
+      "radius": 200,
+      "story": "More large SUVs park and drive through Goetheplatz every day, taking up more road space.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.35
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "recycling_stations_expand",
+      "title": "Recycling stations spread",
+      "icon": "♻️",
+      "place": "herderkirche",
+      "radius": 150,
+      "story": "New recycling bins for glass, paper and plastic appear near Herderkirche as more people sort waste.",
+      "mood": "good",
+      "visual": {
+       "recycling": 0.4
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#9cb5d4",
+     "haze": 0.22,
+     "traffic": 0.65
+    }
+   }
+  },
+  {
+   "year": 2051,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "river",
+      "first": true,
+      "icon": "🌊",
+      "place": "ilm_river",
+      "act": "Someone pulls plastic out of the water",
+      "text": "Someone near River Ilm pulls plastic out of the water."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "park_3",
+      "act": "Someone sorts glass, paper and plastic",
+      "text": "Someone near Green area 3 (1.6 ha) sorts glass, paper and plastic."
+     },
+     {
+      "choice": "water",
+      "first": true,
+      "icon": "💧",
+      "place": "duchess_anna_amalia_library",
+      "act": "Someone collects rainwater for the garden",
+      "text": "Someone near Duchess Anna Amalia Library collects rainwater for the garden."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "hauptbahnhof",
+      "act": "Someone circles the block looking for parking",
+      "text": "Someone near Hauptbahnhof circles the block looking for parking."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar splits. Some pull trash from the Ilm and recycle; others pave gardens and drive alone. Solar spreads but so do cut trees. Water is scarce, heating unchan",
+    "surprise": null,
+    "finalEvent": null,
+    "verdict": null,
+    "headline": "Solar panels grow as drivers still circle for parking; river volunteers fight pollution while gardens shrink",
+    "outlook": "",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "8900",
+     "bus_passengers_per_day": "1950",
+     "waste_to_recycling_percent": "42",
+     "heating_oil_boilers_percent": "58",
+     "single_occupant_cars_percent": "76",
+     "solar_panels_installed_percent": "18",
+     "groundwater_level_m": "4.2",
+     "street_trees_lost_since_2034_percent": "12"
+    },
+    "judged": [
+     {
+      "behaviour": "driving alone to work",
+      "value": -0.7
+     },
+     {
+      "behaviour": "sorting recycling",
+      "value": 0.8
+     },
+     {
+      "behaviour": "cleaning the river",
+      "value": 0.9
+     },
+     {
+      "behaviour": "cutting down trees",
+      "value": -0.8
+     },
+     {
+      "behaviour": "installing solar panels",
+      "value": 0.7
+     },
+     {
+      "behaviour": "saving water",
+      "value": 0.6
+     },
+     {
+      "behaviour": "parking circles in town",
+      "value": -0.6
+     }
+    ],
+    "changes": [
+     {
+      "id": "ilm_cleanup_volunteers",
+      "title": "River volunteers remove plastic litter",
+      "icon": "♻️",
+      "place": "ilm_river",
+      "radius": 200,
+      "story": "People pull plastic bags and bottles from the Ilm every week; the water runs clearer near the town.",
+      "mood": "good",
+      "visual": {
+       "people": 0.3,
+       "clean_water": 0.5,
+       "dirty_water": 0.3
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "garden_paving_spreads",
+      "title": "Gardens paved over for parking and patios",
+      "icon": "🏗️",
+      "place": "park_3",
+      "radius": 150,
+      "story": "Homeowners cut trees and pave backyards; green space shrinks as hard surfaces spread across the town.",
+      "mood": "bad",
+      "visual": {
+       "trees": 0.2,
+       "dead_trees": 0.08
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#9ab0cc",
+     "ground": "#d9d3c5",
+     "buildings": "#f0e6d2",
+     "vegetation": 0.81,
+     "water": 0.75,
+     "haze": 0.24,
+     "traffic": 0.66,
+     "crowds": 0.58,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2075,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "energy",
+      "first": true,
+      "icon": "☀",
+      "place": "schiller_s_house",
+      "act": "Someone puts solar panels on the roof",
+      "text": "Someone near Schiller's House puts solar panels on the roof."
+     },
+     {
+      "choice": "river",
+      "first": true,
+      "icon": "🌊",
+      "place": "ilm_river",
+      "act": "Someone teaches a school class about the river",
+      "text": "Someone near River Ilm teaches a school class about the river."
+     },
+     {
+      "choice": "green",
+      "first": false,
+      "icon": "🧱",
+      "place": "herderkirche",
+      "act": "Someone cuts down a tree in the backyard",
+      "text": "Someone near Herderkirche cuts down a tree in the backyard."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "hauptbahnhof",
+      "act": "Someone leaves the engine running while waiting",
+      "text": "Someone near Hauptbahnhof leaves the engine running while waiting."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar now splits sharply: solar and river care grow, but driving alone stays high and trees keep falling. Water is precious, yet most still waste energy. The t",
+    "surprise": null,
+    "finalEvent": null,
+    "verdict": null,
+    "headline": "Solar roofs spread while drivers stay alone and groundwater drops; trees keep falling.",
+    "outlook": "",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "9100",
+     "bus_passengers_per_day": "1820",
+     "waste_to_recycling_percent": "48",
+     "heating_oil_boilers_percent": "54",
+     "single_occupant_cars_percent": "74",
+     "solar_panels_installed_percent": "26",
+     "groundwater_level_m": "3.8",
+     "street_trees_lost_since_2034_percent": "17",
+     "e_waste_tonnes_per_year": "34"
+    },
+    "judged": [
+     {
+      "behaviour": "driving alone to work",
+      "value": -0.8
+     },
+     {
+      "behaviour": "installing solar panels",
+      "value": 0.9
+     },
+     {
+      "behaviour": "teaching about the river",
+      "value": 0.85
+     },
+     {
+      "behaviour": "cutting down backyard trees",
+      "value": -0.7
+     },
+     {
+      "behaviour": "throwing old phones away",
+      "value": -0.6
+     },
+     {
+      "behaviour": "saving water at home",
+      "value": 0.75
+     }
+    ],
+    "changes": [
+     {
+      "id": "solar_roof_expansion_2065",
+      "title": "Solar panels multiply on roofs",
+      "icon": "☀️",
+      "place": "schiller_s_house",
+      "radius": 200,
+      "story": "Solar panels now cover nearly a third of Weimar's roofs as more households switch to the sun.",
+      "mood": "good",
+      "visual": {
+       "solar": 0.75
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "e_waste_pile_grows",
+      "title": "Electronic waste mounts in bins",
+      "icon": "📱",
+      "place": "park_4",
+      "radius": 150,
+      "story": "Old phones and gadgets pile up faster as people buy new devices yearly, swamping recycling.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.6
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#8fa8c0",
+     "ground": "#d4cfc0",
+     "buildings": "#ede4d0",
+     "vegetation": 0.78,
+     "water": 0.71,
+     "haze": 0.28,
+     "traffic": 0.67,
+     "crowds": 0.56,
+     "light": "day"
+    }
+   }
+  }
+ ],
+ "id": "20261027231308"
+}

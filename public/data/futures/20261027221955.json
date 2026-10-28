@@ -1,0 +1,569 @@
+{
+ "recordedAt": "2026-10-27T22:19:55.799Z",
+ "model": "anthropic/claude-4.5-haiku",
+ "choices": {
+  "move": 1,
+  "litter": 1,
+  "recycle": 1,
+  "river": 1,
+  "green": 1,
+  "energy": 1,
+  "water": 1
+ },
+ "headline": "Weimar at 2077: mixed habits, partial green, river still wounded",
+ "real": {
+  "fetchedAt": "2026-10-27T22:18:55.784Z",
+  "air": {
+   "time": "2026-10-27T23:00",
+   "european_aqi": 29,
+   "pm2_5": 9.4,
+   "pm10": 12.7,
+   "no2": 7.5,
+   "source": "real: Open-Meteo air quality (CAMS Europe model) for Weimar"
+  },
+  "weather": {
+   "time": "2026-10-27T23:15",
+   "temperature_c": 10.5,
+   "rain_last_30_days_mm": 34,
+   "source": "real: Open-Meteo weather for Weimar"
+  },
+  "river": {
+   "today_m3s": 2.65,
+   "mean_last_30_days_m3s": 0.85,
+   "source": "real: Open-Meteo flood API (GloFAS model), river Ilm at Weimar"
+  }
+ },
+ "facts": {
+  "map_area_km2": 2.6,
+  "buildings": 4316,
+  "green_share": 0.08,
+  "water_share": 0.013,
+  "bus_lines": 9,
+  "source": "real: city kit (LoD2 buildings, land use plots) and OpenStreetMap bus lines"
+ },
+ "seed": 943946,
+ "startState": {
+  "air": 0.71,
+  "green": 0.32,
+  "mobility": 0.45,
+  "river": 0.55,
+  "trees": 0.6,
+  "clean": 0.6
+ },
+ "startWorld": {
+  "sky": "#9cc7ea",
+  "ground": "#d6d0c2",
+  "buildings": "#f2ead8",
+  "vegetation": 0.85,
+  "water": 0.8,
+  "haze": 0.19,
+  "light": "day",
+  "traffic": 0.6,
+  "crowds": 0.6
+ },
+ "timeline": [
+  {
+   "year": 2034,
+   "kind": "think",
+   "entry": {
+    "why": "time starts to run in Weimar",
+    "people": [
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "herderkirche",
+      "act": "Someone circles the block looking for parking",
+      "text": "Someone near Herderkirche circles the block looking for parking."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "bauhaus_museum",
+      "act": "Someone drives alone to work in a large SUV",
+      "text": "Someone near Bauhaus-Museum drives alone to work in a large SUV."
+     },
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "goetheplatz",
+      "act": "Someone waters the lawn at noon in a drought",
+      "text": "Someone near Goetheplatz waters the lawn at noon in a drought."
+     },
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "hauptbahnhof",
+      "act": "Someone leaves every screen in the flat on all night",
+      "text": "Someone near Hauptbahnhof leaves every screen in the flat on all night."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar 2026: comfortable inertia. Cars dominate movement, water ignored, energy wasted. Small signs of care (balcony flowers) won't shift the pattern yet.",
+    "surprise": null,
+    "headline": "Comfortable Weimar, inefficient habits, Ilm forgotten",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "parking_pressure_herder",
+      "title": "Parking stress near Herderkirche",
+      "place": "herderkirche",
+      "radius": 80,
+      "story": "Drivers circle for parking; the old quarter feels congested. A sign of car dependency.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.75
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "lawn_watering_crisis",
+      "title": "Noon watering during drought",
+      "place": "goetheplatz",
+      "radius": 60,
+      "story": "Visible waste: lawns watered at peak heat. Water runs off unused while Ilm dries.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.3
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "balcony_green_hope",
+      "title": "Small green gesture",
+      "place": "park_2",
+      "radius": 50,
+      "story": "Someone plants flowers on a balcony. Care exists but isolated, not yet systemic.",
+      "mood": "good",
+      "visual": {
+       "trees": 0.15
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#9cc7ea",
+     "ground": "#d6d0c2",
+     "buildings": "#f2ead8",
+     "vegetation": 0.85,
+     "water": 0.8,
+     "haze": 0.19,
+     "traffic": 0.6,
+     "crowds": 0.6,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2040,
+   "kind": "habits",
+   "choices": {
+    "move": 2,
+    "litter": 1,
+    "recycle": 1,
+    "river": 1,
+    "green": 1,
+    "energy": 1,
+    "water": 1
+   }
+  },
+  {
+   "year": 2040,
+   "kind": "habits",
+   "choices": {
+    "move": 2,
+    "litter": 1,
+    "recycle": 1,
+    "river": 1,
+    "green": 1,
+    "energy": 1,
+    "water": 1
+   }
+  },
+  {
+   "year": 2040,
+   "kind": "habits",
+   "choices": {
+    "move": 1,
+    "litter": 1,
+    "recycle": 1,
+    "river": 1,
+    "green": 1,
+    "energy": 2,
+    "water": 1
+   }
+  },
+  {
+   "year": 2040,
+   "kind": "habits",
+   "choices": {
+    "move": 1,
+    "litter": 1,
+    "recycle": 1,
+    "river": 1,
+    "green": 1,
+    "energy": 2,
+    "water": 1
+   }
+  },
+  {
+   "year": 2048,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "recycle",
+      "first": false,
+      "icon": "🚮",
+      "place": "bauhaus_museum",
+      "act": "Someone throws everything into one bin",
+      "text": "Someone near Bauhaus-Museum throws everything into one bin."
+     },
+     {
+      "choice": "litter",
+      "first": true,
+      "icon": "🧹",
+      "place": "van_de_velde_building",
+      "act": "Someone carries an empty can home",
+      "text": "Someone near Van de Velde Building carries an empty can home."
+     },
+     {
+      "choice": "river",
+      "first": true,
+      "icon": "🌊",
+      "place": "ilm_river",
+      "act": "Someone teaches a school class about the river",
+      "text": "Someone near River Ilm teaches a school class about the river."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "city_palace",
+      "act": "Someone drives alone to work in a large SUV",
+      "text": "Someone near City Palace drives alone to work in a large SUV."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "2034: Weimar splits. Half-hearted recycling, lone teachers, solo drivers, ignored river. Comfort prevents change—until pressure mounts.",
+    "surprise": null,
+    "headline": "Weimar at crossroads: care and carelessness coexist",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "ilm_awareness_seedling",
+      "title": "River education begins",
+      "place": "ilm_river",
+      "radius": 200,
+      "story": "School groups now visit the Ilm. Small signs mark its banks. Awareness grows quietly.",
+      "mood": "good",
+      "visual": {
+       "people": 0.3,
+       "clean_water": 0.6
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "recycling_cluster_growth",
+      "title": "Sorting spreads near green spaces",
+      "place": "park_2",
+      "radius": 120,
+      "story": "Residents near parks begin sorting earnestly. Recycling bins fill. A small social norm emerges.",
+      "mood": "good",
+      "visual": {
+       "people": 0.4,
+       "recycling": 0.5
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "solo_driver_inertia",
+      "title": "Car culture still dominant",
+      "place": "city_palace",
+      "radius": 150,
+      "story": "SUVs idle outside offices. Solo commuting persists. Public transit underused. Habit trumps efficiency.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.7,
+       "smog": 0.25
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#a8d5f0",
+     "ground": "#d9d3c5",
+     "buildings": "#f3eee0",
+     "vegetation": 0.84,
+     "water": 0.78,
+     "haze": 0.21,
+     "traffic": 0.58,
+     "crowds": 0.62,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2064,
+   "kind": "think",
+   "entry": {
+    "why": "people changed how they live ()",
+    "people": [
+     {
+      "choice": "green",
+      "first": false,
+      "icon": "🧱",
+      "place": "liszt_house",
+      "act": "Someone cuts down a tree in the backyard",
+      "text": "Someone near Liszt House cuts down a tree in the backyard."
+     },
+     {
+      "choice": "energy",
+      "first": true,
+      "icon": "☀",
+      "place": "city_palace",
+      "act": "Someone insulates the attic of an old house",
+      "text": "Someone near City Palace insulates the attic of an old house."
+     },
+     {
+      "choice": "green",
+      "first": false,
+      "icon": "🧱",
+      "place": "park_1",
+      "act": "Someone cuts down a tree in the backyard",
+      "text": "Someone near Green area 1 (4.7 ha) cuts down a tree in the backyard."
+     },
+     {
+      "choice": "litter",
+      "first": true,
+      "icon": "🧹",
+      "place": "goetheplatz",
+      "act": "Someone picks up a bottle someone dropped",
+      "text": "Someone near Goetheplatz picks up a bottle someone dropped."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "2048: Weimar fractures—solar panels and tree-cutting, pickups and litter, attic insulation and idle engines. Care and carelessness fight. River still blank. Pre",
+    "surprise": {
+     "title": "Ilm flooding after spring thaw",
+     "story": "Heavy snow melt and blocked culverts cause the Ilm to breach its banks near Goetheplatz. Raw sewage surfaces. A wake-up call."
+    },
+    "headline": "Weimar splits: half-measures, mixed signals, old habits hold",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "ilm_flood_crisis",
+      "title": "Ilm breach near Goetheplatz",
+      "place": "goetheplatz",
+      "radius": 120,
+      "story": "Spring melt floods low areas. Raw sewage spills. Community forms task force to clear culverts and restore riverbank.",
+      "mood": "bad",
+      "visual": {
+       "people": 0.4,
+       "waste": 0.6,
+       "flood": 0.7,
+       "dirty_water": 0.8
+      },
+      "streetColor": null,
+      "groundColor": "#8b7355"
+     },
+     {
+      "id": "solar_retrofit_wave",
+      "title": "Solar panels spreading",
+      "place": "park_2",
+      "radius": 200,
+      "story": "Homeowners near green spaces invest in rooftop solar after flood alarm. Visible on older villas and terraces.",
+      "mood": "good",
+      "visual": {
+       "green_roofs": 0.3,
+       "solar": 0.5
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "river_cleanup_movement",
+      "title": "Ilm restoration begins",
+      "place": "ilm_river",
+      "radius": 300,
+      "story": "Flood triggers citizens' group to remove litter, plant willows, map culverts. First real Ilm attention in years.",
+      "mood": "good",
+      "visual": {
+       "trees": 0.4,
+       "people": 0.5,
+       "clean_water": 0.3
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [
+     "lawn_watering_crisis"
+    ],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#b8c9e0",
+     "ground": "#d4cfc0",
+     "buildings": "#f1ede5",
+     "vegetation": 0.82,
+     "water": 0.55,
+     "haze": 0.24,
+     "traffic": 0.57,
+     "crowds": 0.68,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2077,
+   "kind": "think",
+   "entry": {
+    "why": "It is now 2077: time has run out. Give your final picture of Weimar, with indicators and outlook.",
+    "people": [
+     {
+      "choice": "move",
+      "first": true,
+      "icon": "🚲",
+      "place": "liszt_house",
+      "act": "Someone cycles to work instead of taking the car",
+      "text": "Someone near Liszt House cycles to work instead of taking the car."
+     },
+     {
+      "choice": "energy",
+      "first": true,
+      "icon": "☀",
+      "place": "van_de_velde_building",
+      "act": "Someone switches off the lights in empty rooms",
+      "text": "Someone near Van de Velde Building switches off the lights in empty rooms."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "park_4",
+      "act": "Someone repairs a chair instead of throwing it away",
+      "text": "Someone near Green area 4 (1.0 ha) repairs a chair instead of throwing it away."
+     },
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "park_3",
+      "act": "Someone waters the street tree in front of the house",
+      "text": "Someone near Green area 3 (1.6 ha) waters the street tree in front of the house."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "2077: Weimar has learned slowly. Half the town cycles and saves energy; half still drives and wastes. The Ilm flooded once, was cleaned partly. Care and careles",
+    "surprise": null,
+    "headline": "Weimar at 2077: mixed habits, partial green, river still wounded",
+    "outlook": "Weimar has split in half: one side solar-lit and cycling, the other still driving and wasting; the Ilm breathes again but remembers the flood; care and carelessness live as neighbors.",
+    "observed": [],
+    "changes": [
+     {
+      "id": "cycling_culture_rooted",
+      "title": "Bikes now half the traffic",
+      "place": "liszt_house",
+      "radius": 200,
+      "story": "Cycle lanes marked, bike repair stands. Young and old ride. Cars share space, grudgingly.",
+      "mood": "good",
+      "visual": {
+       "cars": 0.5,
+       "bikes": 0.5
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "solar_common_sight",
+      "title": "Rooftops wear panels",
+      "place": "van_de_velde_building",
+      "radius": 300,
+      "story": "Solar panels on half of all roofs now. Heating bills dropped. Night lights dimmer. A slow win.",
+      "mood": "good",
+      "visual": {
+       "solar": 0.5,
+       "dark_buildings": 0.3
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "ilm_half_restored",
+      "title": "River half-healed, still scarred",
+      "place": "ilm_river",
+      "radius": 400,
+      "story": "Water clearer. Reeds grow. Fish returned. But litter lingers. Flooding scar visible. Progress, not cure.",
+      "mood": "mixed",
+      "visual": {
+       "flood": 0.2,
+       "clean_water": 0.5,
+       "dirty_water": 0.3
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": 0.68,
+     "green": 0.72,
+     "mobility": 0.58,
+     "river": 0.48,
+     "trees": 0.78,
+     "clean": 0.55
+    },
+    "world": {
+     "sky": "#b8c9e0",
+     "ground": "#d4cfc0",
+     "buildings": "#f1ede5",
+     "vegetation": 0.82,
+     "water": 0.55,
+     "haze": 0.24,
+     "traffic": 0.57,
+     "crowds": 0.68,
+     "light": "day"
+    }
+   }
+  }
+ ],
+ "id": "20261027221955"
+}

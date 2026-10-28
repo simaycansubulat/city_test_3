@@ -1,0 +1,558 @@
+{
+ "recordedAt": "2026-10-27T22:21:08.348Z",
+ "model": "anthropic/claude-4.5-haiku",
+ "choices": {
+  "move": 1,
+  "litter": 1,
+  "recycle": 1,
+  "river": 1,
+  "green": 1,
+  "energy": 1,
+  "water": 1
+ },
+ "headline": "Weimar: green gains, old divides persist",
+ "real": {
+  "fetchedAt": "2026-10-27T22:20:08.017Z",
+  "air": {
+   "time": "2026-10-27T23:00",
+   "european_aqi": 29,
+   "pm2_5": 9.4,
+   "pm10": 12.7,
+   "no2": 7.5,
+   "source": "real: Open-Meteo air quality (CAMS Europe model) for Weimar"
+  },
+  "weather": {
+   "time": "2026-10-27T23:15",
+   "temperature_c": 10.5,
+   "rain_last_30_days_mm": 34,
+   "source": "real: Open-Meteo weather for Weimar"
+  },
+  "river": {
+   "today_m3s": 2.65,
+   "mean_last_30_days_m3s": 0.85,
+   "source": "real: Open-Meteo flood API (GloFAS model), river Ilm at Weimar"
+  }
+ },
+ "facts": {
+  "map_area_km2": 2.6,
+  "buildings": 4316,
+  "green_share": 0.08,
+  "water_share": 0.013,
+  "bus_lines": 9,
+  "source": "real: city kit (LoD2 buildings, land use plots) and OpenStreetMap bus lines"
+ },
+ "seed": 445027,
+ "startState": {
+  "air": 0.71,
+  "green": 0.32,
+  "mobility": 0.45,
+  "river": 0.55,
+  "trees": 0.6,
+  "clean": 0.6
+ },
+ "startWorld": {
+  "sky": "#9cc7ea",
+  "ground": "#d6d0c2",
+  "buildings": "#f2ead8",
+  "vegetation": 0.85,
+  "water": 0.8,
+  "haze": 0.19,
+  "light": "day",
+  "traffic": 0.6,
+  "crowds": 0.6
+ },
+ "timeline": [
+  {
+   "year": 2034,
+   "kind": "think",
+   "entry": {
+    "why": "time starts to run in Weimar",
+    "people": [
+     {
+      "choice": "litter",
+      "first": false,
+      "icon": "🗑",
+      "place": "goetheplatz",
+      "act": "Someone drops cigarette butts into the gutter",
+      "text": "Someone near Goetheplatz drops cigarette butts into the gutter."
+     },
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "park_4",
+      "act": "Someone heats with an old oil boiler",
+      "text": "Someone near Green area 4 (1.0 ha) heats with an old oil boiler."
+     },
+     {
+      "choice": "litter",
+      "first": true,
+      "icon": "🧹",
+      "place": "goethe_s_house",
+      "act": "Someone sweeps the pavement in front of the shop",
+      "text": "Someone near Goethe's House sweeps the pavement in front of the shop."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "herderkirche",
+      "act": "Someone sorts glass, paper and plastic",
+      "text": "Someone near Herderkirche sorts glass, paper and plastic."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar starts mixed: some care (recycling, rainwater), much neglect (cigarettes, old oil heating, river ignored). Half walk, half drive. Time to watch.",
+    "surprise": null,
+    "headline": "Weimar: half-awake, half-aware",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "cigarette_litter_goetheplatz",
+      "title": "Litter accumulates at Goetheplatz",
+      "place": "goetheplatz",
+      "radius": 60,
+      "story": "Cigarette butts and street waste gather where people pause. Small habit, small mess—for now.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.15
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "oil_heating_pollution",
+      "title": "Old heating rigs pollute quietly",
+      "place": "park_1",
+      "radius": 120,
+      "story": "Two oil boilers near green areas emit year-round. Clean air now, but cost building up downwind.",
+      "mood": "bad",
+      "visual": {
+       "smog": 0.08
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "rainwater_garden_care",
+      "title": "Green area 2 gets water-wise tending",
+      "place": "park_2",
+      "radius": 80,
+      "story": "One person collects rain for gardens. Small seed of awareness in how the town uses water.",
+      "mood": "good",
+      "visual": {
+       "trees": 0.12
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#9cc7ea",
+     "ground": "#d6d0c2",
+     "buildings": "#f2ead8",
+     "vegetation": 0.85,
+     "water": 0.8,
+     "haze": 0.19,
+     "traffic": 0.6,
+     "crowds": 0.6,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2040,
+   "kind": "habits",
+   "choices": {
+    "move": 2,
+    "litter": 1,
+    "recycle": 1,
+    "river": 1,
+    "green": 1,
+    "energy": 1,
+    "water": 1
+   }
+  },
+  {
+   "year": 2040,
+   "kind": "habits",
+   "choices": {
+    "move": 2,
+    "litter": 1,
+    "recycle": 1,
+    "river": 1,
+    "green": 1,
+    "energy": 1,
+    "water": 1
+   }
+  },
+  {
+   "year": 2040,
+   "kind": "habits",
+   "choices": {
+    "move": 1,
+    "litter": 1,
+    "recycle": 1,
+    "river": 1,
+    "green": 1,
+    "energy": 2,
+    "water": 1
+   }
+  },
+  {
+   "year": 2040,
+   "kind": "habits",
+   "choices": {
+    "move": 1,
+    "litter": 1,
+    "recycle": 1,
+    "river": 1,
+    "green": 1,
+    "energy": 2,
+    "water": 1
+   }
+  },
+  {
+   "year": 2048,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "goetheplatz",
+      "act": "Someone leaves the engine running while waiting",
+      "text": "Someone near Goetheplatz leaves the engine running while waiting."
+     },
+     {
+      "choice": "green",
+      "first": false,
+      "icon": "🧱",
+      "place": "van_de_velde_building",
+      "act": "Someone covers a lawn with gravel",
+      "text": "Someone near Van de Velde Building covers a lawn with gravel."
+     },
+     {
+      "choice": "move",
+      "first": true,
+      "icon": "🚲",
+      "place": "duchess_anna_amalia_library",
+      "act": "Someone rides an e-bike with a trailer of shopping",
+      "text": "Someone near Duchess Anna Amalia Library rides an e-bike with a trailer of shopping."
+     },
+     {
+      "choice": "litter",
+      "first": false,
+      "icon": "🗑",
+      "place": "park_4",
+      "act": "Someone leaves a pizza box on a bench",
+      "text": "Someone near Green area 4 (1.0 ha) leaves a pizza box on a bench."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Mixed signals: some adopt e-bikes and short showers, but idling engines and gravel lawns show inertia. Litter persists. The river stays ignored despite 80% flow",
+    "surprise": null,
+    "headline": "Weimar: slow progress, stubborn habits",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "idling_engine_habit_goetheplatz",
+      "title": "Engine idling normalised",
+      "place": "goetheplatz",
+      "radius": 80,
+      "story": "Drivers wait with engines running; air quality dips slightly. A small habit, repeated daily.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.05,
+       "smog": 0.15
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "lawn_replaced_gravel_van_de_velde",
+      "title": "Gravel replaces lawn",
+      "place": "van_de_velde_building",
+      "radius": 60,
+      "story": "Someone paves over green; no water infiltration, no shade. A choice against care.",
+      "mood": "bad",
+      "visual": {},
+      "streetColor": null,
+      "groundColor": "#a89968"
+     },
+     {
+      "id": "pizza_box_litter_park_4",
+      "title": "Fast food waste on benches",
+      "place": "park_4",
+      "radius": 40,
+      "story": "Cardboard and grease left behind. Small act, big message about who uses the space.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.12
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#a8d0e8",
+     "haze": 0.22,
+     "traffic": 0.58,
+     "crowds": 0.6
+    }
+   }
+  },
+  {
+   "year": 2063,
+   "kind": "think",
+   "entry": {
+    "why": "people changed how they live ()",
+    "people": [
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "van_de_velde_building",
+      "act": "Someone fills a private pool every week",
+      "text": "Someone near Van de Velde Building fills a private pool every week."
+     },
+     {
+      "choice": "litter",
+      "first": false,
+      "icon": "🗑",
+      "place": "city_palace",
+      "act": "Someone drops cigarette butts into the gutter",
+      "text": "Someone near City Palace drops cigarette butts into the gutter."
+     },
+     {
+      "choice": "litter",
+      "first": true,
+      "icon": "🧹",
+      "place": "city_palace",
+      "act": "Someone sweeps the pavement in front of the shop",
+      "text": "Someone near City Palace sweeps the pavement in front of the shop."
+     },
+     {
+      "choice": "litter",
+      "first": false,
+      "icon": "🗑",
+      "place": "bauhaus_museum",
+      "act": "Someone drops cigarette butts into the gutter",
+      "text": "Someone near Bauhaus-Museum drops cigarette butts into the gutter."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar splits: cyclists and recyclers gain ground, yet pool-fillers and litter-droppers show inequality. River still forgotten. Inertia vs. action.",
+    "surprise": null,
+    "headline": "Weimar: uneven green shift, old habits persist",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "e_bike_adoption_spreading",
+      "title": "E-bikes replace cars on key routes",
+      "place": "goetheplatz",
+      "radius": 200,
+      "story": "Van de Velde cyclist inspires shift. Half commutes now pedal; traffic eases slightly.",
+      "mood": "good",
+      "visual": {
+       "cars": 0.42,
+       "bikes": 0.65
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "recycling_culture_grows",
+      "title": "Glass, paper, plastic sorting spreads",
+      "place": "liszt_house",
+      "radius": 150,
+      "story": "Liszt House neighbour's habit spreads nearby. Some streets now have sorting bins.",
+      "mood": "good",
+      "visual": {
+       "waste": 0.35,
+       "recycling": 0.55
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "private_pool_water_waste",
+      "title": "Private pool fills weekly, water tension",
+      "place": "van_de_velde_building",
+      "radius": 100,
+      "story": "Van de Velde resident refills pool while others save water. Visible inequality. No action yet.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.4
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#a8d0e8",
+     "ground": "#d6d0c2",
+     "buildings": "#f2ead8",
+     "vegetation": 0.85,
+     "water": 0.8,
+     "haze": 0.2,
+     "traffic": 0.52,
+     "crowds": 0.6,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2077,
+   "kind": "think",
+   "entry": {
+    "why": "It is now 2077: time has run out. Give your final picture of Weimar, with indicators and outlook.",
+    "people": [
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "liszt_house",
+      "act": "Someone fills a private pool every week",
+      "text": "Someone near Liszt House fills a private pool every week."
+     },
+     {
+      "choice": "energy",
+      "first": true,
+      "icon": "☀",
+      "place": "park_1",
+      "act": "Someone insulates the attic of an old house",
+      "text": "Someone near Green area 1 (4.7 ha) insulates the attic of an old house."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "schiller_s_house",
+      "act": "Someone circles the block looking for parking",
+      "text": "Someone near Schiller's House circles the block looking for parking."
+     },
+     {
+      "choice": "energy",
+      "first": true,
+      "icon": "☀",
+      "place": "duchess_anna_amalia_library",
+      "act": "Someone insulates the attic of an old house",
+      "text": "Someone near Duchess Anna Amalia Library insulates the attic of an old house."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar in 2077: split society. Solar and attic insulation show commitment; pool-filling and river-washing show denial. Half walk, half drive. Litter lingers. Ri",
+    "surprise": {
+     "title": "Silent aquifer stress emerges",
+     "story": "Private pools and usual water habits drain groundwater. Wells drop 3m since 2063. Pool-fillers ignored warnings. By 2077, summer water rationing begins."
+    },
+    "headline": "Weimar: green gains, old divides persist",
+    "outlook": "Weimar in 2077 is a town of contradictions: solar panels and insulated homes exist alongside pool-fillers and litter; cycling grows while the river remains neglected and aquifers stress; green gains mask deepening inequality.",
+    "observed": [],
+    "changes": [
+     {
+      "id": "water_rationing_begins_2077",
+      "title": "Summer water rationing enforced",
+      "place": "van_de_velde_building",
+      "radius": 200,
+      "story": "Pool-filling now restricted to twice monthly. Showers limited. River Ilm use monitored. Tension rises between private wealth and public scarcity.",
+      "mood": "bad",
+      "visual": {
+       "solar": 0.4,
+       "dirty_water": 0.6
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "river_ilm_cleanup_stalled",
+      "title": "River cleanup halted by apathy",
+      "place": "ilm_river",
+      "radius": 450,
+      "story": "Car-washing near river persists. No enforcement. Flow at 80% but banks littered. Aquatic life scarce. Restoration funds redirected to rationing infrastructure.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.5,
+       "dirty_water": 0.65
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "attic_insulation_pockets_of_hope",
+      "title": "Insulation spreads, unequally",
+      "place": "liszt_house",
+      "radius": 150,
+      "story": "Three households now heavily insulated; heating cuts 40%. Solar on 15% of roofs. Retrofitting costs exclude poorer districts. Energy inequality widens.",
+      "mood": "good",
+      "visual": {
+       "green_roofs": 0.3,
+       "solar": 0.5
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [
+     "cigarette_litter_goetheplatz",
+     "oil_heating_pollution",
+     "idling_engine_habit_goetheplatz",
+     "pizza_box_litter_park_4"
+    ],
+    "state": {
+     "air": 0.72,
+     "green": 0.78,
+     "mobility": 0.65,
+     "river": 0.35,
+     "trees": 0.8,
+     "clean": 0.58
+    },
+    "world": {
+     "sky": "#9bc4d8",
+     "ground": "#d4cfc0",
+     "buildings": "#ebe5dc",
+     "vegetation": 0.82,
+     "water": 0.65,
+     "haze": 0.25,
+     "traffic": 0.51,
+     "crowds": 0.58,
+     "light": "day"
+    }
+   }
+  }
+ ],
+ "id": "20261027222108"
+}

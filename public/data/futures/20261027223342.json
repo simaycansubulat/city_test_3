@@ -1,0 +1,405 @@
+{
+ "recordedAt": "2026-10-27T22:33:42.126Z",
+ "model": "anthropic/claude-4.5-haiku",
+ "choices": {
+  "move": 0,
+  "litter": 0,
+  "recycle": 0,
+  "river": 0,
+  "green": 1,
+  "energy": 0,
+  "water": 0
+ },
+ "headline": "Weimar consumed itself: a town of waste, drought, and broken water",
+ "real": {
+  "fetchedAt": "2026-10-27T22:32:05.264Z",
+  "air": {
+   "time": "2026-10-27T23:00",
+   "european_aqi": 29,
+   "pm2_5": 9.4,
+   "pm10": 12.7,
+   "no2": 7.5,
+   "source": "real: Open-Meteo air quality (CAMS Europe model) for Weimar"
+  },
+  "weather": {
+   "time": "2026-10-27T23:30",
+   "temperature_c": 10.2,
+   "rain_last_30_days_mm": 34,
+   "source": "real: Open-Meteo weather for Weimar"
+  },
+  "river": {
+   "today_m3s": 2.65,
+   "mean_last_30_days_m3s": 0.85,
+   "source": "real: Open-Meteo flood API (GloFAS model), river Ilm at Weimar"
+  }
+ },
+ "facts": {
+  "map_area_km2": 2.6,
+  "buildings": 4316,
+  "green_share": 0.08,
+  "water_share": 0.013,
+  "bus_lines": 9,
+  "source": "real: city kit (LoD2 buildings, land use plots) and OpenStreetMap bus lines"
+ },
+ "seed": 470879,
+ "startState": {
+  "air": 0.71,
+  "green": 0.32,
+  "mobility": 0.45,
+  "river": 0.55,
+  "trees": 0.6,
+  "clean": 0.6
+ },
+ "startWorld": {
+  "sky": "#9cc7ea",
+  "ground": "#d6d0c2",
+  "buildings": "#f2ead8",
+  "vegetation": 0.85,
+  "water": 0.8,
+  "haze": 0.19,
+  "light": "day",
+  "traffic": 0.6,
+  "crowds": 0.6
+ },
+ "timeline": [
+  {
+   "year": 2034,
+   "kind": "think",
+   "entry": {
+    "why": "time starts to run in Weimar",
+    "people": [
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "herderkirche",
+      "act": "Someone drives 400 m to buy bread",
+      "text": "Someone near Herderkirche drives 400 m to buy bread."
+     },
+     {
+      "choice": "litter",
+      "first": false,
+      "icon": "🗑",
+      "place": "liszt_house",
+      "act": "Someone drops cigarette butts into the gutter",
+      "text": "Someone near Liszt House drops cigarette butts into the gutter."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "goetheplatz",
+      "act": "Someone sorts glass, paper and plastic",
+      "text": "Someone near Goetheplatz sorts glass, paper and plastic."
+     },
+     {
+      "choice": "recycle",
+      "first": false,
+      "icon": "🚮",
+      "place": "goethe_s_house",
+      "act": "Someone puts old batteries in the household rubbish",
+      "text": "Someone near Goethe's House puts old batteries in the household rubbish."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar: shows a stark split: one person recycles while others dump trash, batteries, phones. Consumption is high, care is low. The Ilm runs full but receives po",
+    "surprise": null,
+    "headline": "A town consuming itself: waste grows while one voice sorts",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "littering_spreading",
+      "title": "Street litter accumulates",
+      "place": "goetheplatz",
+      "radius": 150,
+      "story": "Cigarette butts, discarded items pile in gutters. No one picks them up yet.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.3
+      },
+      "streetColor": null,
+      "groundColor": "#d4c9b0"
+     },
+     {
+      "id": "ilm_pollution_begins",
+      "title": "Ilm water quality declines",
+      "place": "ilm_river",
+      "radius": 300,
+      "story": "Dumping into the river begins. Banks show signs of stress. Still clear but darkening.",
+      "mood": "bad",
+      "visual": {
+       "dead_trees": 0.1,
+       "dirty_water": 0.2
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "recycling_station_goetheplatz",
+      "title": "One recycling point appears",
+      "place": "goetheplatz",
+      "radius": 80,
+      "story": "A single sorted recycling bin installed. One person uses it. Lonely but hopeful.",
+      "mood": "good",
+      "visual": {
+       "recycling": 0.2
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#9cc7ea",
+     "ground": "#d6d0c2",
+     "buildings": "#f2ead8",
+     "vegetation": 0.85,
+     "water": 0.8,
+     "haze": 0.19,
+     "traffic": 0.6,
+     "crowds": 0.6,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2050,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "river",
+      "first": false,
+      "icon": "🛢",
+      "place": "ilm_river",
+      "act": "Someone washes the car next to the river",
+      "text": "Someone near River Ilm washes the car next to the river."
+     },
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "park_3",
+      "act": "Someone plants flowers on a balcony",
+      "text": "Someone near Green area 3 (1.6 ha) plants flowers on a balcony."
+     },
+     {
+      "choice": "river",
+      "first": false,
+      "icon": "🛢",
+      "place": "ilm_river",
+      "act": "Someone washes the car next to the river",
+      "text": "Someone near River Ilm washes the car next to the river."
+     },
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "goethe_s_house",
+      "act": "Someone washes the pavement with a hose",
+      "text": "Someone near Goethe's House washes the pavement with a hose."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Water waste accelerates while one recycling point stands alone. Pollution spreads into the Ilm as car culture dominates. A split deepens between care and carele",
+    "surprise": null,
+    "headline": "Weimar splits: consumption rises, waste spreads, Ilm drowns",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "water_waste_spreading",
+      "title": "Hose washing spreads",
+      "place": "goetheplatz",
+      "radius": 120,
+      "story": "Pavements washed daily with hoses; water runs into streets and drains. Spreads from Goethe's House and Herderkirche across the town.",
+      "mood": "bad",
+      "visual": {
+       "smog": 0.15,
+       "waste": 0.3
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "car_culture_peak",
+      "title": "Traffic consolidates",
+      "place": "hauptbahnhof",
+      "radius": 200,
+      "story": "Cars dominate movement. Parking expands. Fumes settle over central streets. Few bikes, many engines.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.8,
+       "bikes": 0.1,
+       "smog": 0.25
+      },
+      "streetColor": null,
+      "groundColor": "#a89080"
+     },
+     {
+      "id": "ilm_degrades_fast",
+      "title": "Ilm toxicity rises",
+      "place": "ilm_river",
+      "radius": 300,
+      "story": "Car wash runoff, trash dumping accelerate. Water darkens. Banks show litter. Fish numbers drop. A visible scar.",
+      "mood": "bad",
+      "visual": {
+       "dead_trees": 0.2,
+       "waste": 0.5,
+       "dirty_water": 0.6
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#a8c5e0",
+     "ground": "#ccc4b8",
+     "buildings": "#ebe3d8",
+     "vegetation": 0.8,
+     "water": 0.7,
+     "haze": 0.32,
+     "traffic": 0.75,
+     "crowds": 0.55
+    }
+   }
+  },
+  {
+   "year": 2077,
+   "kind": "think",
+   "entry": {
+    "why": "It is now 2077: time has run out. Give your final picture of Weimar, with indicators and outlook.",
+    "people": [
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "schiller_s_house",
+      "act": "Someone fills a private pool every week",
+      "text": "Someone near Schiller's House fills a private pool every week."
+     },
+     {
+      "choice": "recycle",
+      "first": false,
+      "icon": "🚮",
+      "place": "park_3",
+      "act": "Someone throws everything into one bin",
+      "text": "Someone near Green area 3 (1.6 ha) throws everything into one bin."
+     },
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "schiller_s_house",
+      "act": "Someone fills a private pool every week",
+      "text": "Someone near Schiller's House fills a private pool every week."
+     },
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "park_4",
+      "act": "Someone waters the lawn at noon in a drought",
+      "text": "Someone near Green area 4 (1.0 ha) waters the lawn at noon in a drought."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar: a town that chose convenience over care. Waste chokes streets, the Ilm is toxic, pools drain aquifers while lawns burn. One recycling station stands alo",
+    "surprise": {
+     "title": "The Ilm runs backwards",
+     "story": "In 2071, a pump failure reversed the Ilm's flow. Now it backs up into streets near Goetheplatz, carrying industrial sludge from downstream. Nobody fixed it."
+    },
+    "headline": "Weimar consumed itself: a town of waste, drought, and broken water",
+    "outlook": "Weimar is a drought-stricken town of abandoned streets, toxic water, and parched earth, where one recycling bin symbolizes decades of ignored warnings.",
+    "observed": [],
+    "changes": [
+     {
+      "id": "ilm_toxic_backflow",
+      "title": "Ilm reversal and stagnation",
+      "place": "ilm_river",
+      "radius": 200,
+      "story": "The Ilm no longer flows naturally. Polluted water pools, spreads into streets.",
+      "mood": "bad",
+      "visual": {
+       "dead_trees": 0.6,
+       "waste": 0.8,
+       "dirty_water": 0.95
+      },
+      "streetColor": null,
+      "groundColor": "#5a4a3a"
+     },
+     {
+      "id": "goetheplatz_collapse",
+      "title": "Goetheplatz: waste and flood",
+      "place": "goetheplatz",
+      "radius": 120,
+      "story": "Litter piles block drainage. Ilm backflow floods the square. The lone recycling station is submerged.",
+      "mood": "bad",
+      "visual": {
+       "people": 0.2,
+       "waste": 0.9,
+       "recycling": 0.1,
+       "flood": 0.6
+      },
+      "streetColor": null,
+      "groundColor": "#6b5344"
+     },
+     {
+      "id": "schiller_district_parched",
+      "title": "Schiller's House: drought and pools",
+      "place": "schiller_s_house",
+      "radius": 150,
+      "story": "Private pools drain groundwater. Gardens dead. Lawns watered at noon burn anyway. Aquifer stress visible.",
+      "mood": "bad",
+      "visual": {
+       "dead_trees": 0.7,
+       "cars": 0.8
+      },
+      "streetColor": null,
+      "groundColor": "#d9c8a8"
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": 0.25,
+     "green": 0.12,
+     "mobility": 0.15,
+     "river": 0.1,
+     "trees": 0.18,
+     "clean": 0.08
+    },
+    "world": {
+     "sky": "#b8a899",
+     "ground": "#9d8f7f",
+     "buildings": "#d4c4b4",
+     "vegetation": 0.15,
+     "water": 0.2,
+     "haze": 0.68,
+     "traffic": 0.8,
+     "crowds": 0.3,
+     "light": "day"
+    }
+   }
+  }
+ ],
+ "id": "20261027223342"
+}

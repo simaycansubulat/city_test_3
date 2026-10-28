@@ -1,0 +1,540 @@
+{
+ "recordedAt": "2026-10-27T22:56:26.349Z",
+ "model": "anthropic/claude-4.5-haiku",
+ "choices": {
+  "move": 1,
+  "litter": 0,
+  "recycle": 1,
+  "river": 0,
+  "green": 1,
+  "energy": 0,
+  "water": 0
+ },
+ "headline": "Weimar survives split in half: cars and waste fight gardens and transit.",
+ "real": {
+  "fetchedAt": "2026-10-27T22:54:30.362Z",
+  "air": {
+   "time": "2026-10-27T23:00",
+   "european_aqi": 29,
+   "pm2_5": 9.4,
+   "pm10": 12.7,
+   "no2": 7.5,
+   "source": "real: Open-Meteo air quality (CAMS Europe model) for Weimar"
+  },
+  "weather": {
+   "time": "2026-10-27T23:45",
+   "temperature_c": 10.3,
+   "rain_last_30_days_mm": 34,
+   "source": "real: Open-Meteo weather for Weimar"
+  },
+  "river": {
+   "today_m3s": 2.65,
+   "mean_last_30_days_m3s": 0.85,
+   "source": "real: Open-Meteo flood API (GloFAS model), river Ilm at Weimar"
+  }
+ },
+ "facts": {
+  "map_area_km2": 2.6,
+  "buildings": 4316,
+  "green_share": 0.08,
+  "water_share": 0.013,
+  "bus_lines": 9,
+  "source": "real: city kit (LoD2 buildings, land use plots) and OpenStreetMap bus lines"
+ },
+ "seed": 827203,
+ "startState": {
+  "air": 0.71,
+  "green": 0.32,
+  "mobility": 0.45,
+  "river": 0.55,
+  "trees": 0.6,
+  "clean": 0.6
+ },
+ "startWorld": {
+  "sky": "#9cc7ea",
+  "ground": "#d6d0c2",
+  "buildings": "#f2ead8",
+  "vegetation": 0.85,
+  "water": 0.8,
+  "haze": 0.19,
+  "light": "day",
+  "traffic": 0.6,
+  "crowds": 0.6
+ },
+ "timeline": [
+  {
+   "year": 2040,
+   "kind": "think",
+   "entry": {
+    "why": "time starts to run in Weimar",
+    "people": [
+     {
+      "choice": "green",
+      "first": false,
+      "icon": "🧱",
+      "place": "city_palace",
+      "act": "Someone paves the front garden for a parking space",
+      "text": "Someone near City Palace paves the front garden for a parking space."
+     },
+     {
+      "choice": "move",
+      "first": true,
+      "icon": "🚲",
+      "place": "duchess_anna_amalia_library",
+      "act": "Someone rides an e-bike with a trailer of shopping",
+      "text": "Someone near Duchess Anna Amalia Library rides an e-bike with a trailer of shopping."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "bauhaus_museum",
+      "act": "Someone drives alone to work in a large SUV",
+      "text": "Someone near Bauhaus-Museum drives alone to work in a large SUV."
+     },
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "park_4",
+      "act": "Someone fills a private pool every week",
+      "text": "Someone near Green area 4 (1.0 ha) fills a private pool every week."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar: half the people drive cars alone, half use other transport; some throw trash, some recycle; green spaces exist but are shrinking as gardens become parki",
+    "surprise": {
+     "title": "The Ilm floods badly",
+     "story": "Heavy rain swells the river Ilm; it breaks its banks and floods cellars across town.",
+     "icon": "🌊",
+     "place": "ilm_river"
+    },
+    "verdict": null,
+    "headline": "Cars spread, trees vanish, but some ride bikes and recycle wisely.",
+    "outlook": "",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "2400",
+     "solo_driving_percent": "48",
+     "e_bikes_sold_per_year": "340",
+     "waste_on_streets_kg_per_day": "180",
+     "recycling_rate_percent": "35",
+     "private_gardens_paved_per_year": "12",
+     "trees_cut_per_year": "8",
+     "bus_tram_passengers_per_day": "4200",
+     "private_pools_in_town": "7",
+     "water_use_per_capita_liters_day": "142"
+    },
+    "judged": [
+     {
+      "behaviour": "paving gardens for parking",
+      "value": -0.8
+     },
+     {
+      "behaviour": "e-bike shopping with trailer",
+      "value": 0.9
+     },
+     {
+      "behaviour": "solo driving large SUV",
+      "value": -0.95
+     },
+     {
+      "behaviour": "filling private pool weekly",
+      "value": -0.7
+     },
+     {
+      "behaviour": "cutting down backyard trees",
+      "value": -0.8
+     },
+     {
+      "behaviour": "taking electronics to recycling",
+      "value": 0.85
+     }
+    ],
+    "changes": [
+     {
+      "id": "city_palace_carpark",
+      "title": "Paved garden becomes parking",
+      "icon": "🅿️",
+      "place": "city_palace",
+      "radius": 60,
+      "story": "A front garden near City Palace is stripped and paved for private cars.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.15
+      },
+      "streetColor": null,
+      "groundColor": "#888888"
+     },
+     {
+      "id": "library_tree_loss",
+      "title": "Mature tree felled in backyard",
+      "icon": "🪵",
+      "place": "duchess_anna_amalia_library",
+      "radius": 80,
+      "story": "A large tree in a backyard near the library is cut down for space.",
+      "mood": "bad",
+      "visual": {},
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "ilm_flood_damage",
+      "title": "Flood sweeps through cellars",
+      "icon": "💧",
+      "place": "ilm_river",
+      "radius": 200,
+      "story": "The swollen Ilm floods into cellars and storerooms along its banks.",
+      "mood": "bad",
+      "visual": {
+       "flood": 0.35,
+       "dirty_water": 0.4
+      },
+      "streetColor": null,
+      "groundColor": "#8b7d6b"
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#a8c9e8",
+     "ground": "#d0c8b8",
+     "vegetation": 0.83,
+     "water": 0.72,
+     "haze": 0.21,
+     "traffic": 0.58,
+     "crowds": 0.55
+    }
+   }
+  },
+  {
+   "year": 2053,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "river",
+      "first": false,
+      "icon": "🛢",
+      "place": "ilm_river",
+      "act": "Someone throws a bag of rubbish into the Ilm",
+      "text": "Someone near River Ilm throws a bag of rubbish into the Ilm."
+     },
+     {
+      "choice": "move",
+      "first": true,
+      "icon": "🚲",
+      "place": "park_3",
+      "act": "Someone walks the children to school",
+      "text": "Someone near Green area 3 (1.6 ha) walks the children to school."
+     },
+     {
+      "choice": "water",
+      "first": true,
+      "icon": "💧",
+      "place": "goethe_s_house",
+      "act": "Someone takes short showers",
+      "text": "Someone near Goethe's House takes short showers."
+     },
+     {
+      "choice": "green",
+      "first": false,
+      "icon": "🧱",
+      "place": "hauptbahnhof",
+      "act": "Someone paves the front garden for a parking space",
+      "text": "Someone near Hauptbahnhof paves the front garden for a parking space."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar splits: half drive, half don't; trash piles up in streets and river; gardens become parking; the flood of 2040 damaged the town but people keep wasting. ",
+    "surprise": {
+     "title": "Pink foam blooms on the Ilm",
+     "story": "Detergent from illegal dumping has turned the river pink foam that sticks to banks.",
+     "icon": "🫧",
+     "place": "ilm_river"
+    },
+    "verdict": null,
+    "headline": "Rubbish chokes the Ilm, parking spreads, oil smoke darkens the air.",
+    "outlook": "",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "2550",
+     "solo_driving_percent": "51",
+     "e_bikes_sold_per_year": "320",
+     "waste_on_streets_kg_per_day": "220",
+     "recycling_rate_percent": "32",
+     "private_gardens_paved_per_year": "18",
+     "trees_cut_per_year": "12",
+     "bus_tram_passengers_per_day": "3900",
+     "private_pools_in_town": "9",
+     "water_use_per_capita_liters_day": "155"
+    },
+    "judged": [
+     {
+      "behaviour": "throwing rubbish in the Ilm",
+      "value": -1
+     },
+     {
+      "behaviour": "paving front gardens for parking",
+      "value": -0.9
+     },
+     {
+      "behaviour": "heating with old oil boilers",
+      "value": -0.85
+     },
+     {
+      "behaviour": "leaving rubbish on streets",
+      "value": -0.8
+     },
+     {
+      "behaviour": "walking children to school",
+      "value": 0.8
+     },
+     {
+      "behaviour": "taking short showers",
+      "value": 0.7
+     }
+    ],
+    "changes": [
+     {
+      "id": "ilm_foam_bloom",
+      "title": "Pink foam on the river",
+      "icon": "🫧",
+      "place": "ilm_river",
+      "radius": 400,
+      "story": "Detergent chemicals from street dumping have made the Ilm foam bright pink along its entire length.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.6,
+       "dirty_water": 0.8
+      },
+      "streetColor": null,
+      "groundColor": "#ffb3d9"
+     },
+     {
+      "id": "hauptbahnhof_carpark_sprawl",
+      "title": "Car park grows toward the park",
+      "icon": "🚗",
+      "place": "hauptbahnhof",
+      "radius": 120,
+      "story": "The station car park has spread into park grass, paving over fifty metres toward the green.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.7
+      },
+      "streetColor": null,
+      "groundColor": "#666666"
+     },
+     {
+      "id": "air_darkens_oil_smoke",
+      "title": "Brown haze from heating oil",
+      "icon": "💨",
+      "place": "schiller_s_house",
+      "radius": 300,
+      "story": "Old oil boilers across the town pour soot and smoke into the sky; on still days the haze turns brown.",
+      "mood": "bad",
+      "visual": {
+       "smog": 0.6,
+       "dark_buildings": 0.4
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#9ba89a",
+     "ground": "#cfc8b0",
+     "buildings": "#ede5d8",
+     "vegetation": 0.79,
+     "water": 0.65,
+     "haze": 0.35,
+     "traffic": 0.62,
+     "crowds": 0.52
+    }
+   }
+  },
+  {
+   "year": 2077,
+   "kind": "think",
+   "entry": {
+    "why": "It is now 2077: time has run out. Give your final picture of Weimar, with indicators and outlook.",
+    "people": [
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "duchess_anna_amalia_library",
+      "act": "Someone runs the air conditioner with the window open",
+      "text": "Someone near Duchess Anna Amalia Library runs the air conditioner with the window open."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "park_2",
+      "act": "Someone circles the block looking for parking",
+      "text": "Someone near Green area 2 (3.0 ha) circles the block looking for parking."
+     },
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "cranach_house",
+      "act": "Someone leaves every screen in the flat on all night",
+      "text": "Someone near Cranach House leaves every screen in the flat on all night."
+     },
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "park_1",
+      "act": "Someone turns a parking space into a small garden",
+      "text": "Someone near Green area 1 (4.7 ha) turns a parking space into a small garden."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar is split in half. Half drive alone, half use transit; some recycle, some dump trash; gardens become parking; the Ilm is damaged but flows; air is grey bu",
+    "surprise": {
+     "title": "Statue of Goethe turns green",
+     "story": "A sudden algae bloom covers the statue in luminous verdigris overnight.",
+     "icon": "🟢",
+     "place": "goethe_s_house"
+    },
+    "verdict": {
+     "word": "Divided but standing",
+     "icon": "⚖️",
+     "mood": "mixed"
+    },
+    "headline": "Weimar survives split in half: cars and waste fight gardens and transit.",
+    "outlook": "Weimar in 2077 is a town of two paths: half its people choose cars and waste, half choose transit and gardens; the Ilm is damaged but not dead; air is grey but not toxic; trees struggle but endure; the town has not healed, but it has not collapsed either, and small acts of care k",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "2480",
+     "solo_driving_percent": "49",
+     "e_bikes_sold_per_year": "420",
+     "waste_on_streets_kg_per_day": "185",
+     "recycling_rate_percent": "38",
+     "private_gardens_paved_per_year": "8",
+     "trees_cut_per_year": "4",
+     "bus_tram_passengers_per_day": "4200",
+     "private_pools_in_town": "12",
+     "water_use_per_capita_liters_day": "148"
+    },
+    "judged": [
+     {
+      "behaviour": "running air conditioner with window open",
+      "value": -0.8
+     },
+     {
+      "behaviour": "circling block looking for parking",
+      "value": -0.7
+     },
+     {
+      "behaviour": "leaving all screens on all night",
+      "value": -0.9
+     },
+     {
+      "behaviour": "turning parking space into small garden",
+      "value": 0.85
+     },
+     {
+      "behaviour": "filling private pool weekly",
+      "value": -0.75
+     },
+     {
+      "behaviour": "some recycling, some transit use",
+      "value": 0.4
+     }
+    ],
+    "changes": [
+     {
+      "id": "goethe_statue_algae_bloom",
+      "title": "Algae blooms on Goethe statue",
+      "icon": "🟢",
+      "place": "goethe_s_house",
+      "radius": 80,
+      "story": "The statue glows bright green from thick algae, symbol of the Ilm's phosphate pollution and the town's split nature.",
+      "mood": "bad",
+      "visual": {
+       "dirty_water": 0.7
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "park_1_recovered_forest",
+      "title": "Forest returns to park edge",
+      "icon": "🌲",
+      "place": "park_1",
+      "radius": 200,
+      "story": "Where cars were parked, young birches and oaks now grow thick; birds have returned to nest in the canopy.",
+      "mood": "good",
+      "visual": {
+       "trees": 0.6,
+       "bikes": 0.4
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "ilm_muddy_banks",
+      "title": "Ilm banks collapse under load",
+      "icon": "⚠️",
+      "place": "ilm_river",
+      "radius": 150,
+      "story": "The riverbanks erode from past floods and current waste dumping; mud and debris litter the water edge; cleanup volunteers work but cannot keep pace.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.4,
+       "sand": 0.5,
+       "dirty_water": 0.65
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [
+     "city_palace_carpark",
+     "hauptbahnhof_carpark_sprawl"
+    ],
+    "state": {
+     "air": 0.62,
+     "green": 0.72,
+     "mobility": 0.58,
+     "river": 0.48,
+     "trees": 0.71,
+     "clean": 0.54
+    },
+    "world": {
+     "sky": "#a8b8a8",
+     "ground": "#d4cdc0",
+     "buildings": "#ede5d8",
+     "vegetation": 0.79,
+     "water": 0.62,
+     "haze": 0.32,
+     "traffic": 0.58,
+     "crowds": 0.56,
+     "light": "day"
+    }
+   }
+  }
+ ],
+ "id": "20261027225626"
+}

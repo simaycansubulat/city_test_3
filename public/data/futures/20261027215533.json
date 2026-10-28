@@ -1,0 +1,1668 @@
+{
+ "recordedAt": "2026-10-27T21:55:33.420Z",
+ "model": "anthropic/claude-4.5-haiku",
+ "choices": {
+  "move": 2,
+  "litter": 2,
+  "recycle": 2,
+  "river": 2,
+  "green": 2,
+  "energy": 2,
+  "water": 2
+ },
+ "real": {
+  "fetchedAt": "2026-10-27T21:54:39.228Z",
+  "air": {
+   "time": "2026-10-27T22:00",
+   "european_aqi": 28,
+   "pm2_5": 8.9,
+   "pm10": 12.4,
+   "no2": 8.4,
+   "source": "real: Open-Meteo air quality (CAMS Europe model) for Weimar"
+  },
+  "weather": {
+   "time": "2026-10-27T22:45",
+   "temperature_c": 10.6,
+   "rain_last_30_days_mm": 34,
+   "source": "real: Open-Meteo weather for Weimar"
+  },
+  "river": {
+   "today_m3s": 2.65,
+   "mean_last_30_days_m3s": 0.85,
+   "source": "real: Open-Meteo flood API (GloFAS model), river Ilm at Weimar"
+  }
+ },
+ "facts": {
+  "map_area_km2": 2.6,
+  "buildings": 4316,
+  "green_share": 0.08,
+  "water_share": 0.013,
+  "bus_lines": 9,
+  "source": "real: city kit (LoD2 buildings, land use plots) and OpenStreetMap bus lines"
+ },
+ "seed": 852203,
+ "startState": {
+  "air": 0.72,
+  "green": 0.32,
+  "mobility": 0.45,
+  "river": 0.55,
+  "trees": 0.6,
+  "clean": 0.6
+ },
+ "startWorld": {
+  "sky": "#9cc7ea",
+  "ground": "#d6d0c2",
+  "buildings": "#f2ead8",
+  "vegetation": 0.85,
+  "water": 0.8,
+  "haze": 0.19,
+  "light": "day"
+ },
+ "steps": [
+  {
+   "year": 2031,
+   "from": 2026,
+   "event": null,
+   "observations": [
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "cranach_house",
+     "act": "Someone sweeps the pavement in front of the shop",
+     "text": "Someone near Cranach House sweeps the pavement in front of the shop."
+    },
+    {
+     "choice": "river",
+     "first": true,
+     "icon": "🌊",
+     "place": "ilm_river",
+     "act": "Someone pulls plastic out of the water",
+     "text": "Someone near River Ilm pulls plastic out of the water."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "city_palace",
+     "act": "Someone cycles to work instead of taking the car",
+     "text": "Someone near City Palace cycles to work instead of taking the car."
+    },
+    {
+     "choice": "energy",
+     "first": false,
+     "icon": "🔥",
+     "place": "hauptbahnhof",
+     "act": "Someone runs the air conditioner with the window open",
+     "text": "Someone near Hauptbahnhof runs the air conditioner with the window open."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "duchess_anna_amalia_library",
+     "act": "Someone collects rainwater for the garden",
+     "text": "Someone near Duchess Anna Amalia Library collects rainwater for the garden."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "goethe_s_house",
+     "act": "Someone takes short showers",
+     "text": "Someone near Goethe's House takes short showers."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "german_national_theatre",
+     "act": "Someone repairs a chair instead of throwing it away",
+     "text": "Someone near German National Theatre repairs a chair instead of throwing it away."
+    },
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "park_1",
+     "act": "Someone waters the street tree in front of the house",
+     "text": "Someone near Green area 1 (4.7 ha) waters the street tree in front of the house."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "bauhaus_museum",
+     "act": "Someone sweeps the pavement in front of the shop",
+     "text": "Someone near Bauhaus-Museum sweeps the pavement in front of the shop."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "duchess_anna_amalia_library",
+     "act": "Someone cycles to work instead of taking the car",
+     "text": "Someone near Duchess Anna Amalia Library cycles to work instead of taking the car."
+    },
+    {
+     "choice": "river",
+     "first": false,
+     "icon": "🛢",
+     "place": "ilm_river",
+     "act": "Someone pours paint thinner down a drain",
+     "text": "Someone near River Ilm pours paint thinner down a drain."
+    },
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "hauptbahnhof",
+     "act": "Someone waters the street tree in front of the house",
+     "text": "Someone near Hauptbahnhof waters the street tree in front of the house."
+    }
+   ],
+   "model": "anthropic/claude-4.5-haiku",
+   "headline": "Weimar wakes to repair and care",
+   "outlook": "",
+   "observed": [
+    {
+     "pattern": "Cycling spreads, showers shorten, trash pulled from Ilm, roofs get solar",
+     "assumption": "Small daily choices compound: water use drops, air clears, green energy roots",
+     "mood": "good"
+    }
+   ],
+   "changes": [
+    {
+     "id": "early_cycling_culture",
+     "title": "Cycling spreads",
+     "place": "city_palace",
+     "radius": 450,
+     "story": "More people bike to work. Fewer car trips. Streets still car-heavy but shift begins.",
+     "mood": "good",
+     "visual": {
+      "cars": 0.7,
+      "bikes": 0.3
+     },
+     "streetColor": null,
+     "groundColor": null
+    },
+    {
+     "id": "ilm_volunteers",
+     "title": "River cleanup starts",
+     "place": "ilm_river",
+     "radius": 150,
+     "story": "Young people pull plastic from Ilm banks. Water still low but cleaner. Hope grows.",
+     "mood": "good",
+     "visual": {
+      "people": 0.4,
+      "clean_water": 0.4,
+      "dirty_water": 0.3
+     },
+     "streetColor": null,
+     "groundColor": null
+    }
+   ],
+   "removed": [],
+   "state": {
+    "air": null,
+    "green": null,
+    "mobility": null,
+    "river": null,
+    "trees": null,
+    "clean": null
+   },
+   "world": {
+    "sky": "#a8cce8",
+    "ground": "#d4cfc0",
+    "buildings": "#f0e8d6",
+    "vegetation": 0.85,
+    "water": 0.75,
+    "haze": 0.17,
+    "light": "day"
+   }
+  },
+  {
+   "year": 2036,
+   "from": 2031,
+   "event": null,
+   "observations": [
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "park_4",
+     "act": "Someone takes short showers",
+     "text": "Someone near Green area 4 (1.0 ha) takes short showers."
+    },
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "schiller_s_house",
+     "act": "Someone insulates the attic of an old house",
+     "text": "Someone near Schiller's House insulates the attic of an old house."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "park_1",
+     "act": "Someone carries an empty can home",
+     "text": "Someone near Green area 1 (4.7 ha) carries an empty can home."
+    },
+    {
+     "choice": "river",
+     "first": true,
+     "icon": "🌊",
+     "place": "ilm_river",
+     "act": "Someone teaches a school class about the river",
+     "text": "Someone near River Ilm teaches a school class about the river."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "schiller_s_house",
+     "act": "Someone repairs a chair instead of throwing it away",
+     "text": "Someone near Schiller's House repairs a chair instead of throwing it away."
+    },
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "german_national_theatre",
+     "act": "Someone puts solar panels on the roof",
+     "text": "Someone near German National Theatre puts solar panels on the roof."
+    },
+    {
+     "choice": "recycle",
+     "first": false,
+     "icon": "🚮",
+     "place": "liszt_house",
+     "act": "Someone buys a new phone every year and bins the old one",
+     "text": "Someone near Liszt House buys a new phone every year and bins the old one."
+    },
+    {
+     "choice": "water",
+     "first": false,
+     "icon": "🚿",
+     "place": "goetheplatz",
+     "act": "Someone fills a private pool every week",
+     "text": "Someone near Goetheplatz fills a private pool every week."
+    },
+    {
+     "choice": "river",
+     "first": true,
+     "icon": "🌊",
+     "place": "ilm_river",
+     "act": "Someone joins a clean-up on the Ilm banks",
+     "text": "Someone near River Ilm joins a clean-up on the Ilm banks."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "bauhaus_museum",
+     "act": "Someone takes short showers",
+     "text": "Someone near Bauhaus-Museum takes short showers."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "goetheplatz",
+     "act": "Someone repairs a chair instead of throwing it away",
+     "text": "Someone near Goetheplatz repairs a chair instead of throwing it away."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "park_2",
+     "act": "Someone takes short showers",
+     "text": "Someone near Green area 2 (3.0 ha) takes short showers."
+    }
+   ],
+   "model": "anthropic/claude-4.5-haiku",
+   "headline": "Green pockets bloom, old houses breathe",
+   "outlook": "",
+   "observed": [
+    {
+     "pattern": "Parking spaces turn gardens, insulation spreads, recycling stations appear, rain harvested",
+     "assumption": "Habit chains: saving water leads to gardens, old buildings get sealed, waste separates",
+     "mood": "good"
+    }
+   ],
+   "changes": [
+    {
+     "id": "parklet_gardens",
+     "title": "Parking to gardens",
+     "place": "park_2",
+     "radius": 200,
+     "story": "Parking spaces across town become small planted gardens. Green share in parks rises.",
+     "mood": "good",
+     "visual": {
+      "trees": 0.5,
+      "people": 0.3,
+      "green_roofs": 0.2
+     },
+     "streetColor": null,
+     "groundColor": "#77aa44"
+    },
+    {
+     "id": "home_retrofits",
+     "title": "Old houses sealed tight",
+     "place": "schiller_s_house",
+     "radius": 180,
+     "story": "People insulate attics, fix dripping taps. Heat loss drops. Energy bills fall.",
+     "mood": "good",
+     "visual": {
+      "solar": 0.3
+     },
+     "streetColor": null,
+     "groundColor": null
+    }
+   ],
+   "removed": [],
+   "state": {
+    "air": null,
+    "green": null,
+    "mobility": null,
+    "river": null,
+    "trees": null,
+    "clean": null
+   },
+   "world": {
+    "sky": "#aad0eb",
+    "ground": "#d0cdb8",
+    "buildings": "#efe6d2",
+    "vegetation": 0.87,
+    "water": 0.7,
+    "haze": 0.15,
+    "light": "day"
+   }
+  },
+  {
+   "year": 2041,
+   "from": 2036,
+   "event": null,
+   "observations": [
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "goethe_s_house",
+     "act": "Someone collects rainwater for the garden",
+     "text": "Someone near Goethe's House collects rainwater for the garden."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "german_national_theatre",
+     "act": "Someone collects rainwater for the garden",
+     "text": "Someone near German National Theatre collects rainwater for the garden."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "schiller_s_house",
+     "act": "Someone picks up a bottle someone dropped",
+     "text": "Someone near Schiller's House picks up a bottle someone dropped."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "herderkirche",
+     "act": "Someone picks up a bottle someone dropped",
+     "text": "Someone near Herderkirche picks up a bottle someone dropped."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "van_de_velde_building",
+     "act": "Someone takes old electronics to the recycling yard",
+     "text": "Someone near Van de Velde Building takes old electronics to the recycling yard."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "goethe_s_house",
+     "act": "Someone sorts glass, paper and plastic",
+     "text": "Someone near Goethe's House sorts glass, paper and plastic."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "van_de_velde_building",
+     "act": "Someone takes old electronics to the recycling yard",
+     "text": "Someone near Van de Velde Building takes old electronics to the recycling yard."
+    },
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "duchess_anna_amalia_library",
+     "act": "Someone plants flowers on a balcony",
+     "text": "Someone near Duchess Anna Amalia Library plants flowers on a balcony."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "city_palace",
+     "act": "Someone walks the children to school",
+     "text": "Someone near City Palace walks the children to school."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "goetheplatz",
+     "act": "Someone takes short showers",
+     "text": "Someone near Goetheplatz takes short showers."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "german_national_theatre",
+     "act": "Someone takes short showers",
+     "text": "Someone near German National Theatre takes short showers."
+    },
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "park_2",
+     "act": "Someone turns a parking space into a small garden",
+     "text": "Someone near Green area 2 (3.0 ha) turns a parking space into a small garden."
+    }
+   ],
+   "model": "anthropic/claude-4.5-haiku",
+   "headline": "Weimar greens its heart",
+   "outlook": "",
+   "observed": [
+    {
+     "pattern": "School runs on foot, e-bikes appear, trees get tended daily, glass and plastic sorted",
+     "assumption": "Younger families walk, cycling links to lower car use, trees need care so care spreads",
+     "mood": "good"
+    }
+   ],
+   "changes": [
+    {
+     "id": "school_walk_routes",
+     "title": "Paths to school filled",
+     "place": "hauptbahnhof",
+     "radius": 250,
+     "story": "Parents walk children daily. Streets safer. Car traffic in school zones falls 40 percent.",
+     "mood": "good",
+     "visual": {
+      "cars": 0.3,
+      "bikes": 0.4,
+      "people": 0.5
+     },
+     "streetColor": null,
+     "groundColor": null
+    },
+    {
+     "id": "tree_tending_network",
+     "title": "Street trees cherished",
+     "place": "park_1",
+     "radius": 300,
+     "story": "Residents water and tend trees. Heat island shrinks. City cools visibly in summer.",
+     "mood": "good",
+     "visual": {
+      "trees": 0.7
+     },
+     "streetColor": null,
+     "groundColor": "#88bb33"
+    }
+   ],
+   "removed": [],
+   "state": {
+    "air": null,
+    "green": null,
+    "mobility": null,
+    "river": null,
+    "trees": null,
+    "clean": null
+   },
+   "world": {
+    "sky": "#b0d4ed",
+    "ground": "#cccab4",
+    "buildings": "#ede4ce",
+    "vegetation": 0.89,
+    "water": 0.68,
+    "haze": 0.13,
+    "light": "day"
+   }
+  },
+  {
+   "year": 2046,
+   "from": 2041,
+   "event": null,
+   "observations": [
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "goethe_s_house",
+     "act": "Someone collects rainwater for the garden",
+     "text": "Someone near Goethe's House collects rainwater for the garden."
+    },
+    {
+     "choice": "river",
+     "first": true,
+     "icon": "🌊",
+     "place": "ilm_river",
+     "act": "Someone joins a clean-up on the Ilm banks",
+     "text": "Someone near River Ilm joins a clean-up on the Ilm banks."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "cranach_house",
+     "act": "Someone walks the children to school",
+     "text": "Someone near Cranach House walks the children to school."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "van_de_velde_building",
+     "act": "Someone carries an empty can home",
+     "text": "Someone near Van de Velde Building carries an empty can home."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "park_2",
+     "act": "Someone takes the bus to the Hauptbahnhof",
+     "text": "Someone near Green area 2 (3.0 ha) takes the bus to the Hauptbahnhof."
+    },
+    {
+     "choice": "energy",
+     "first": false,
+     "icon": "🔥",
+     "place": "park_4",
+     "act": "Someone runs the air conditioner with the window open",
+     "text": "Someone near Green area 4 (1.0 ha) runs the air conditioner with the window open."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "van_de_velde_building",
+     "act": "Someone cycles to work instead of taking the car",
+     "text": "Someone near Van de Velde Building cycles to work instead of taking the car."
+    },
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "park_2",
+     "act": "Someone waters the street tree in front of the house",
+     "text": "Someone near Green area 2 (3.0 ha) waters the street tree in front of the house."
+    },
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "herderkirche",
+     "act": "Someone insulates the attic of an old house",
+     "text": "Someone near Herderkirche insulates the attic of an old house."
+    },
+    {
+     "choice": "river",
+     "first": true,
+     "icon": "🌊",
+     "place": "ilm_river",
+     "act": "Someone pulls plastic out of the water",
+     "text": "Someone near River Ilm pulls plastic out of the water."
+    },
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "city_palace",
+     "act": "Someone switches off the lights in empty rooms",
+     "text": "Someone near City Palace switches off the lights in empty rooms."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "duchess_anna_amalia_library",
+     "act": "Someone cycles to work instead of taking the car",
+     "text": "Someone near Duchess Anna Amalia Library cycles to work instead of taking the car."
+    }
+   ],
+   "model": "anthropic/claude-4.5-haiku",
+   "headline": "Solar and rainwater everywhere",
+   "outlook": "",
+   "observed": [
+    {
+     "pattern": "Roofs covered in solar, rainwater harvested, buses fill, old e-SUVs ignored",
+     "assumption": "Renewable energy normal, water self-supplied, transit preferred, fossil cars become visible shame",
+     "mood": "good"
+    }
+   ],
+   "changes": [
+    {
+     "id": "solar_density_rise",
+     "title": "Roofs glint gold",
+     "place": "german_national_theatre",
+     "radius": 280,
+     "story": "Most buildings now solar-covered. Grid demand drops. City generates own power.",
+     "mood": "good",
+     "visual": {
+      "solar": 0.65
+     },
+     "streetColor": null,
+     "groundColor": null
+    },
+    {
+     "id": "rainwater_systems",
+     "title": "Every roof catches rain",
+     "place": "duchess_anna_amalia_library",
+     "radius": 200,
+     "story": "Homes harvest rainwater. Gardens thrive. Municipal water system stress eases.",
+     "mood": "good",
+     "visual": {
+      "green_roofs": 0.4
+     },
+     "streetColor": null,
+     "groundColor": null
+    }
+   ],
+   "removed": [],
+   "state": {
+    "air": null,
+    "green": null,
+    "mobility": null,
+    "river": null,
+    "trees": null,
+    "clean": null
+   },
+   "world": {
+    "sky": "#b4d7f0",
+    "ground": "#c8c5aa",
+    "buildings": "#ebe2cc",
+    "vegetation": 0.9,
+    "water": 0.72,
+    "haze": 0.11,
+    "light": "day"
+   }
+  },
+  {
+   "year": 2051,
+   "from": 2046,
+   "event": null,
+   "observations": [
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "hauptbahnhof",
+     "act": "Someone turns a parking space into a small garden",
+     "text": "Someone near Hauptbahnhof turns a parking space into a small garden."
+    },
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "city_palace",
+     "act": "Someone switches off the lights in empty rooms",
+     "text": "Someone near City Palace switches off the lights in empty rooms."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "goetheplatz",
+     "act": "Someone takes short showers",
+     "text": "Someone near Goetheplatz takes short showers."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "liszt_house",
+     "act": "Someone rides an e-bike with a trailer of shopping",
+     "text": "Someone near Liszt House rides an e-bike with a trailer of shopping."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "herderkirche",
+     "act": "Someone takes old electronics to the recycling yard",
+     "text": "Someone near Herderkirche takes old electronics to the recycling yard."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "goetheplatz",
+     "act": "Someone walks the children to school",
+     "text": "Someone near Goetheplatz walks the children to school."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "city_palace",
+     "act": "Someone cycles to work instead of taking the car",
+     "text": "Someone near City Palace cycles to work instead of taking the car."
+    },
+    {
+     "choice": "water",
+     "first": false,
+     "icon": "🚿",
+     "place": "herderkirche",
+     "act": "Someone fills a private pool every week",
+     "text": "Someone near Herderkirche fills a private pool every week."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "liszt_house",
+     "act": "Someone repairs a chair instead of throwing it away",
+     "text": "Someone near Liszt House repairs a chair instead of throwing it away."
+    },
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "goethe_s_house",
+     "act": "Someone turns a parking space into a small garden",
+     "text": "Someone near Goethe's House turns a parking space into a small garden."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "park_2",
+     "act": "Someone repairs a chair instead of throwing it away",
+     "text": "Someone near Green area 2 (3.0 ha) repairs a chair instead of throwing it away."
+    },
+    {
+     "choice": "water",
+     "first": false,
+     "icon": "🚿",
+     "place": "park_3",
+     "act": "Someone waters the lawn at noon in a drought",
+     "text": "Someone near Green area 3 (1.6 ha) waters the lawn at noon in a drought."
+    }
+   ],
+   "model": "anthropic/claude-4.5-haiku",
+   "headline": "Car parks vanish into gardens",
+   "outlook": "",
+   "observed": [
+    {
+     "pattern": "Parking lots paved over for flowers, e-bikes with trailers replace shopping cars, pools fill rarely",
+     "assumption": "Car parks freed trigger cascades: shade trees cool blocks, bikes haul goods, water becomes luxury",
+     "mood": "good"
+    }
+   ],
+   "changes": [
+    {
+     "id": "car_park_conversion",
+     "title": "Lots become gardens",
+     "place": "goethe_s_house",
+     "radius": 200,
+     "story": "Half the parking area now planted. Trees grow tall. Shade and food where cars sat.",
+     "mood": "good",
+     "visual": {
+      "trees": 0.75,
+      "waste": 0.1
+     },
+     "streetColor": null,
+     "groundColor": "#66aa22"
+    },
+    {
+     "id": "e_cargo_bikes",
+     "title": "Trailers haul goods",
+     "place": "liszt_house",
+     "radius": 150,
+     "story": "E-bikes with cargo trailers fetch shopping. No car needed. Delivery vans electric and few.",
+     "mood": "good",
+     "visual": {
+      "cars": 0.15,
+      "bikes": 0.6
+     },
+     "streetColor": null,
+     "groundColor": null
+    }
+   ],
+   "removed": [],
+   "state": {
+    "air": null,
+    "green": null,
+    "mobility": null,
+    "river": null,
+    "trees": null,
+    "clean": null
+   },
+   "world": {
+    "sky": "#b8daf2",
+    "ground": "#c4c1a2",
+    "buildings": "#e9dfca",
+    "vegetation": 0.92,
+    "water": 0.7,
+    "haze": 0.1,
+    "light": "day"
+   }
+  },
+  {
+   "year": 2056,
+   "from": 2051,
+   "event": null,
+   "observations": [
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "schiller_s_house",
+     "act": "Someone turns a parking space into a small garden",
+     "text": "Someone near Schiller's House turns a parking space into a small garden."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "hauptbahnhof",
+     "act": "Someone walks the children to school",
+     "text": "Someone near Hauptbahnhof walks the children to school."
+    },
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "cranach_house",
+     "act": "Someone insulates the attic of an old house",
+     "text": "Someone near Cranach House insulates the attic of an old house."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "park_2",
+     "act": "Someone carries an empty can home",
+     "text": "Someone near Green area 2 (3.0 ha) carries an empty can home."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "park_3",
+     "act": "Someone walks the children to school",
+     "text": "Someone near Green area 3 (1.6 ha) walks the children to school."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "bauhaus_museum",
+     "act": "Someone cycles to work instead of taking the car",
+     "text": "Someone near Bauhaus-Museum cycles to work instead of taking the car."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "cranach_house",
+     "act": "Someone takes old electronics to the recycling yard",
+     "text": "Someone near Cranach House takes old electronics to the recycling yard."
+    },
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "herderkirche",
+     "act": "Someone insulates the attic of an old house",
+     "text": "Someone near Herderkirche insulates the attic of an old house."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "german_national_theatre",
+     "act": "Someone carries an empty can home",
+     "text": "Someone near German National Theatre carries an empty can home."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "german_national_theatre",
+     "act": "Someone sweeps the pavement in front of the shop",
+     "text": "Someone near German National Theatre sweeps the pavement in front of the shop."
+    },
+    {
+     "choice": "river",
+     "first": true,
+     "icon": "🌊",
+     "place": "ilm_river",
+     "act": "Someone joins a clean-up on the Ilm banks",
+     "text": "Someone near River Ilm joins a clean-up on the Ilm banks."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "goetheplatz",
+     "act": "Someone picks up a bottle someone dropped",
+     "text": "Someone near Goetheplatz picks up a bottle someone dropped."
+    }
+   ],
+   "model": "anthropic/claude-4.5-haiku",
+   "headline": "Heatwave hits green city hard",
+   "outlook": "",
+   "observed": [
+    {
+     "pattern": "Summer bakes for weeks, street trees saved by watering, taps get fixed faster, plastic still pulled from river",
+     "assumption": "Heat stresses green city but systems hold: trees worth the water fight, repair beats replace",
+     "mood": "mixed"
+    }
+   ],
+   "changes": [
+    {
+     "id": "drought_crisis_response",
+     "title": "Water emergency drills",
+     "place": "park_3",
+     "radius": 120,
+     "story": "Heatwave June-August. Street trees watered nightly. Lawns brown. Drought rules enforced.",
+     "mood": "bad",
+     "visual": {
+      "dead_trees": 0.2,
+      "sand": 0.3
+     },
+     "streetColor": null,
+     "groundColor": "#aa8844"
+    },
+    {
+     "id": "heatwave_roof_solar",
+     "title": "Panels save homes",
+     "place": "herderkirche",
+     "radius": 180,
+     "story": "AC demand spikes but rooftop solar meets it. Grid stable. Homes under 28°C.",
+     "mood": "good",
+     "visual": {
+      "solar": 0.75
+     },
+     "streetColor": null,
+     "groundColor": null
+    }
+   ],
+   "removed": [],
+   "state": {
+    "air": null,
+    "green": null,
+    "mobility": null,
+    "river": null,
+    "trees": null,
+    "clean": null
+   },
+   "world": {
+    "sky": "#d9a844",
+    "ground": "#bfbda0",
+    "buildings": "#e8ddc8",
+    "vegetation": 0.88,
+    "water": 0.55,
+    "haze": 0.25,
+    "light": "day"
+   }
+  },
+  {
+   "year": 2061,
+   "from": 2056,
+   "event": "a summer heatwave of several weeks",
+   "observations": [
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "herderkirche",
+     "act": "Someone fixes a dripping tap",
+     "text": "Someone near Herderkirche fixes a dripping tap."
+    },
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "liszt_house",
+     "act": "Someone turns a parking space into a small garden",
+     "text": "Someone near Liszt House turns a parking space into a small garden."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "park_1",
+     "act": "Someone sweeps the pavement in front of the shop",
+     "text": "Someone near Green area 1 (4.7 ha) sweeps the pavement in front of the shop."
+    },
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "liszt_house",
+     "act": "Someone puts solar panels on the roof",
+     "text": "Someone near Liszt House puts solar panels on the roof."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "city_palace",
+     "act": "Someone picks up a bottle someone dropped",
+     "text": "Someone near City Palace picks up a bottle someone dropped."
+    },
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "duchess_anna_amalia_library",
+     "act": "Someone turns a parking space into a small garden",
+     "text": "Someone near Duchess Anna Amalia Library turns a parking space into a small garden."
+    },
+    {
+     "choice": "recycle",
+     "first": false,
+     "icon": "🚮",
+     "place": "schiller_s_house",
+     "act": "Someone buys a new phone every year and bins the old one",
+     "text": "Someone near Schiller's House buys a new phone every year and bins the old one."
+    },
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "herderkirche",
+     "act": "Someone waters the street tree in front of the house",
+     "text": "Someone near Herderkirche waters the street tree in front of the house."
+    },
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "park_1",
+     "act": "Someone puts solar panels on the roof",
+     "text": "Someone near Green area 1 (4.7 ha) puts solar panels on the roof."
+    },
+    {
+     "choice": "energy",
+     "first": false,
+     "icon": "🔥",
+     "place": "hauptbahnhof",
+     "act": "Someone runs the air conditioner with the window open",
+     "text": "Someone near Hauptbahnhof runs the air conditioner with the window open."
+    },
+    {
+     "choice": "recycle",
+     "first": false,
+     "icon": "🚮",
+     "place": "bauhaus_museum",
+     "act": "Someone throws everything into one bin",
+     "text": "Someone near Bauhaus-Museum throws everything into one bin."
+    },
+    {
+     "choice": "river",
+     "first": true,
+     "icon": "🌊",
+     "place": "ilm_river",
+     "act": "Someone pulls plastic out of the water",
+     "text": "Someone near River Ilm pulls plastic out of the water."
+    }
+   ],
+   "model": "anthropic/claude-4.5-haiku",
+   "headline": "River cleaned, school teaches green",
+   "outlook": "",
+   "observed": [
+    {
+     "pattern": "Teachers guide classes to Ilm, plastic hauled yearly now, roofs fully solar, sorting is habit",
+     "assumption": "Young minds connected to river → lifelong stewardship, ritual cleanup sustains water, education compounds",
+     "mood": "good"
+    }
+   ],
+   "changes": [
+    {
+     "id": "river_education_hub",
+     "title": "Ilm field school born",
+     "place": "ilm_river",
+     "radius": 200,
+     "story": "Outdoor classroom at river. Kids learn ecology hands-on. Plastic pulls are class projects.",
+     "mood": "good",
+     "visual": {
+      "trees": 0.6,
+      "people": 0.5,
+      "clean_water": 0.65
+     },
+     "streetColor": null,
+     "groundColor": null
+    },
+    {
+     "id": "solar_city_milestone",
+     "title": "City runs on sun",
+     "place": "bauhaus_museum",
+     "radius": 350,
+     "story": "95 percent of roofs solar. Grid powered 60 percent from renewables. Coal barely seen.",
+     "mood": "good",
+     "visual": {
+      "solar": 0.9
+     },
+     "streetColor": null,
+     "groundColor": null
+    }
+   ],
+   "removed": [],
+   "state": {
+    "air": null,
+    "green": null,
+    "mobility": null,
+    "river": null,
+    "trees": null,
+    "clean": null
+   },
+   "world": {
+    "sky": "#acd4e8",
+    "ground": "#bebdb2",
+    "buildings": "#e6dac6",
+    "vegetation": 0.91,
+    "water": 0.72,
+    "haze": 0.09,
+    "light": "day"
+   }
+  },
+  {
+   "year": 2066,
+   "from": 2061,
+   "event": null,
+   "observations": [
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "schiller_s_house",
+     "act": "Someone puts solar panels on the roof",
+     "text": "Someone near Schiller's House puts solar panels on the roof."
+    },
+    {
+     "choice": "river",
+     "first": true,
+     "icon": "🌊",
+     "place": "ilm_river",
+     "act": "Someone teaches a school class about the river",
+     "text": "Someone near River Ilm teaches a school class about the river."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "park_2",
+     "act": "Someone sorts glass, paper and plastic",
+     "text": "Someone near Green area 2 (3.0 ha) sorts glass, paper and plastic."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "city_palace",
+     "act": "Someone repairs a chair instead of throwing it away",
+     "text": "Someone near City Palace repairs a chair instead of throwing it away."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "goetheplatz",
+     "act": "Someone repairs a chair instead of throwing it away",
+     "text": "Someone near Goetheplatz repairs a chair instead of throwing it away."
+    },
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "schiller_s_house",
+     "act": "Someone waters the street tree in front of the house",
+     "text": "Someone near Schiller's House waters the street tree in front of the house."
+    },
+    {
+     "choice": "river",
+     "first": true,
+     "icon": "🌊",
+     "place": "ilm_river",
+     "act": "Someone teaches a school class about the river",
+     "text": "Someone near River Ilm teaches a school class about the river."
+    },
+    {
+     "choice": "river",
+     "first": true,
+     "icon": "🌊",
+     "place": "ilm_river",
+     "act": "Someone pulls plastic out of the water",
+     "text": "Someone near River Ilm pulls plastic out of the water."
+    },
+    {
+     "choice": "river",
+     "first": true,
+     "icon": "🌊",
+     "place": "ilm_river",
+     "act": "Someone teaches a school class about the river",
+     "text": "Someone near River Ilm teaches a school class about the river."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "bauhaus_museum",
+     "act": "Someone sorts glass, paper and plastic",
+     "text": "Someone near Bauhaus-Museum sorts glass, paper and plastic."
+    },
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "park_2",
+     "act": "Someone switches off the lights in empty rooms",
+     "text": "Someone near Green area 2 (3.0 ha) switches off the lights in empty rooms."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "cranach_house",
+     "act": "Someone picks up a bottle someone dropped",
+     "text": "Someone near Cranach House picks up a bottle someone dropped."
+    }
+   ],
+   "model": "anthropic/claude-4.5-haiku",
+   "headline": "One exception mars green paradise",
+   "outlook": "",
+   "observed": [
+    {
+     "pattern": "Sorting and repair rule, cycling fills streets, river cleaned, but a few still litter and waste",
+     "assumption": "Cultural shift near total but outliers resist: old habits persist in pockets, drag on collective mood",
+     "mood": "mixed"
+    }
+   ],
+   "changes": [
+    {
+     "id": "waste_holdouts",
+     "title": "Careless few litter still",
+     "place": "park_2",
+     "radius": 100,
+     "story": "Despite culture, some throw butts, dump electronics. Shame and fines don't sway them all.",
+     "mood": "bad",
+     "visual": {
+      "people": 0.3,
+      "waste": 0.25
+     },
+     "streetColor": null,
+     "groundColor": null
+    },
+    {
+     "id": "repair_culture_peak",
+     "title": "Fix-it norm strong",
+     "place": "city_palace",
+     "radius": 200,
+     "story": "Repair cafes weekly. Chairs fixed, clothes mended, devices upgraded not replaced.",
+     "mood": "good",
+     "visual": {
+      "people": 0.4
+     },
+     "streetColor": null,
+     "groundColor": null
+    }
+   ],
+   "removed": [],
+   "state": {
+    "air": null,
+    "green": null,
+    "mobility": null,
+    "river": null,
+    "trees": null,
+    "clean": null
+   },
+   "world": {
+    "sky": "#afd6e9",
+    "ground": "#bbbfaa",
+    "buildings": "#e4d8c4",
+    "vegetation": 0.93,
+    "water": 0.73,
+    "haze": 0.08,
+    "light": "day"
+   }
+  },
+  {
+   "year": 2071,
+   "from": 2066,
+   "event": null,
+   "observations": [
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "german_national_theatre",
+     "act": "Someone puts solar panels on the roof",
+     "text": "Someone near German National Theatre puts solar panels on the roof."
+    },
+    {
+     "choice": "recycle",
+     "first": false,
+     "icon": "🚮",
+     "place": "van_de_velde_building",
+     "act": "Someone throws everything into one bin",
+     "text": "Someone near Van de Velde Building throws everything into one bin."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "city_palace",
+     "act": "Someone cycles to work instead of taking the car",
+     "text": "Someone near City Palace cycles to work instead of taking the car."
+    },
+    {
+     "choice": "recycle",
+     "first": true,
+     "icon": "♻",
+     "place": "german_national_theatre",
+     "act": "Someone repairs a chair instead of throwing it away",
+     "text": "Someone near German National Theatre repairs a chair instead of throwing it away."
+    },
+    {
+     "choice": "litter",
+     "first": false,
+     "icon": "🗑",
+     "place": "park_2",
+     "act": "Someone drops cigarette butts into the gutter",
+     "text": "Someone near Green area 2 (3.0 ha) drops cigarette butts into the gutter."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "park_3",
+     "act": "Someone takes short showers",
+     "text": "Someone near Green area 3 (1.6 ha) takes short showers."
+    },
+    {
+     "choice": "river",
+     "first": true,
+     "icon": "🌊",
+     "place": "ilm_river",
+     "act": "Someone teaches a school class about the river",
+     "text": "Someone near River Ilm teaches a school class about the river."
+    },
+    {
+     "choice": "river",
+     "first": true,
+     "icon": "🌊",
+     "place": "ilm_river",
+     "act": "Someone joins a clean-up on the Ilm banks",
+     "text": "Someone near River Ilm joins a clean-up on the Ilm banks."
+    },
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "cranach_house",
+     "act": "Someone plants flowers on a balcony",
+     "text": "Someone near Cranach House plants flowers on a balcony."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "goethe_s_house",
+     "act": "Someone carries an empty can home",
+     "text": "Someone near Goethe's House carries an empty can home."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "park_4",
+     "act": "Someone cycles to work instead of taking the car",
+     "text": "Someone near Green area 4 (1.0 ha) cycles to work instead of taking the car."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "park_4",
+     "act": "Someone takes short showers",
+     "text": "Someone near Green area 4 (1.0 ha) takes short showers."
+    }
+   ],
+   "model": "anthropic/claude-4.5-haiku",
+   "headline": "Green canopy thick, one last solo driver",
+   "outlook": "",
+   "observed": [
+    {
+     "pattern": "Every alley shaded by trees, bikes dominate, rainwater systems perfect, teaching spreads Ilm love, one SUV still drives alone",
+     "assumption": "Urban forest mature, mobility transformed, water secure, river healing reaches critical mass, but one holdout symbolizes past",
+     "mood": "good"
+    }
+   ],
+   "changes": [
+    {
+     "id": "forest_city_canopy",
+     "title": "Trees arch overhead",
+     "place": "park_1",
+     "radius": 450,
+     "story": "Parks and streets blend. Canopy covers 55 percent of city now. Ground stays 8°C cooler.",
+     "mood": "good",
+     "visual": {
+      "trees": 0.85
+     },
+     "streetColor": null,
+     "groundColor": "#55aa33"
+    },
+    {
+     "id": "mobility_transformed",
+     "title": "Bikes and transit rule",
+     "place": "hauptbahnhof",
+     "radius": 300,
+     "story": "90 percent of trips by bike, bus or foot. One solo SUV driver is now a visible anomaly.",
+     "mood": "good",
+     "visual": {
+      "cars": 0.05,
+      "bikes": 0.8
+     },
+     "streetColor": null,
+     "groundColor": null
+    }
+   ],
+   "removed": [],
+   "state": {
+    "air": null,
+    "green": null,
+    "mobility": null,
+    "river": null,
+    "trees": null,
+    "clean": null
+   },
+   "world": {
+    "sky": "#b2d8eb",
+    "ground": "#b8bcaa",
+    "buildings": "#e2d6c2",
+    "vegetation": 0.94,
+    "water": 0.74,
+    "haze": 0.07,
+    "light": "day"
+   }
+  },
+  {
+   "year": 2077,
+   "from": 2071,
+   "event": null,
+   "observations": [
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "park_2",
+     "act": "Someone cycles to work instead of taking the car",
+     "text": "Someone near Green area 2 (3.0 ha) cycles to work instead of taking the car."
+    },
+    {
+     "choice": "green",
+     "first": true,
+     "icon": "🌱",
+     "place": "schiller_s_house",
+     "act": "Someone waters the street tree in front of the house",
+     "text": "Someone near Schiller's House waters the street tree in front of the house."
+    },
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "park_1",
+     "act": "Someone insulates the attic of an old house",
+     "text": "Someone near Green area 1 (4.7 ha) insulates the attic of an old house."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "schiller_s_house",
+     "act": "Someone carries an empty can home",
+     "text": "Someone near Schiller's House carries an empty can home."
+    },
+    {
+     "choice": "energy",
+     "first": true,
+     "icon": "☀",
+     "place": "liszt_house",
+     "act": "Someone insulates the attic of an old house",
+     "text": "Someone near Liszt House insulates the attic of an old house."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "duchess_anna_amalia_library",
+     "act": "Someone collects rainwater for the garden",
+     "text": "Someone near Duchess Anna Amalia Library collects rainwater for the garden."
+    },
+    {
+     "choice": "move",
+     "first": true,
+     "icon": "🚲",
+     "place": "park_2",
+     "act": "Someone rides an e-bike with a trailer of shopping",
+     "text": "Someone near Green area 2 (3.0 ha) rides an e-bike with a trailer of shopping."
+    },
+    {
+     "choice": "litter",
+     "first": true,
+     "icon": "🧹",
+     "place": "van_de_velde_building",
+     "act": "Someone carries an empty can home",
+     "text": "Someone near Van de Velde Building carries an empty can home."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "van_de_velde_building",
+     "act": "Someone collects rainwater for the garden",
+     "text": "Someone near Van de Velde Building collects rainwater for the garden."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "city_palace",
+     "act": "Someone collects rainwater for the garden",
+     "text": "Someone near City Palace collects rainwater for the garden."
+    },
+    {
+     "choice": "move",
+     "first": false,
+     "icon": "🚗",
+     "place": "herderkirche",
+     "act": "Someone drives alone to work in a large SUV",
+     "text": "Someone near Herderkirche drives alone to work in a large SUV."
+    },
+    {
+     "choice": "water",
+     "first": true,
+     "icon": "💧",
+     "place": "duchess_anna_amalia_library",
+     "act": "Someone collects rainwater for the garden",
+     "text": "Someone near Duchess Anna Amalia Library collects rainwater for the garden."
+    }
+   ],
+   "model": "anthropic/claude-4.5-haiku",
+   "headline": "Weimar: forest city, water-wise, almost car-free",
+   "outlook": "Weimar became a forest city powered by sun and rain, where children walk tree-lined paths to schools that teach by the Ilm's recovering banks, and nearly everyone bikes or takes transit, except one stubborn driver in an electric SUV who remembers the car age fondly.",
+   "observed": [
+    {
+     "pattern": "Rainwater collected by all, attics insulated as standard, e-bikes haul goods and children, river teaches classes, one driver still resists",
+     "assumption": "Final habits lock in: water autonomous, heat avoided through shade, logistics electric, river restored, culture almost universal but not quite",
+     "mood": "good"
+    }
+   ],
+   "changes": [
+    {
+     "id": "autonomous_water_city",
+     "title": "Water: harvest not tap",
+     "place": "van_de_velde_building",
+     "radius": 250,
+     "story": "Every building collects and filters rainwater. Mains supply 20 percent. Drought-proof by design.",
+     "mood": "good",
+     "visual": {
+      "green_roofs": 0.6
+     },
+     "streetColor": null,
+     "groundColor": null
+    },
+    {
+     "id": "retrofit_complete",
+     "title": "All old houses sealed",
+     "place": "liszt_house",
+     "radius": 200,
+     "story": "Entire town retrofitted. Attics insulated, heat loss minimal. Heating costs fell 70 percent since 2031.",
+     "mood": "good",
+     "visual": {
+      "solar": 0.85
+     },
+     "streetColor": null,
+     "groundColor": null
+    }
+   ],
+   "removed": [],
+   "state": {
+    "air": 0.88,
+    "green": 0.94,
+    "mobility": 0.88,
+    "river": 0.8,
+    "trees": 0.9,
+    "clean": 0.85
+   },
+   "world": {
+    "sky": "#b5daea",
+    "ground": "#b4b9a8",
+    "buildings": "#e0d4c0",
+    "vegetation": 0.95,
+    "water": 0.78,
+    "haze": 0.06,
+    "light": "day"
+   }
+  }
+ ],
+ "id": "20261027215533"
+}

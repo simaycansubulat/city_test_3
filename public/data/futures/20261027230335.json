@@ -1,0 +1,700 @@
+{
+ "recordedAt": "2026-10-27T23:03:35.062Z",
+ "model": "anthropic/claude-4.5-haiku",
+ "choices": {
+  "move": 0,
+  "litter": 2,
+  "recycle": 1,
+  "river": 0,
+  "green": 1,
+  "energy": 1,
+  "water": 2
+ },
+ "headline": "Weimar chose cars and convenience over the river and trees.",
+ "real": {
+  "fetchedAt": "2026-10-27T23:02:36.989Z",
+  "air": {
+   "time": "2026-10-28T00:00",
+   "european_aqi": 29,
+   "pm2_5": 9.6,
+   "pm10": 13.9,
+   "no2": 6.8,
+   "source": "real: Open-Meteo air quality (CAMS Europe model) for Weimar"
+  },
+  "weather": {
+   "time": "2026-10-28T00:00",
+   "temperature_c": 10.1,
+   "rain_last_30_days_mm": 37,
+   "source": "real: Open-Meteo weather for Weimar"
+  },
+  "river": {
+   "today_m3s": 2.65,
+   "mean_last_30_days_m3s": 0.85,
+   "source": "real: Open-Meteo flood API (GloFAS model), river Ilm at Weimar"
+  }
+ },
+ "facts": {
+  "map_area_km2": 2.6,
+  "buildings": 4316,
+  "green_share": 0.08,
+  "water_share": 0.013,
+  "bus_lines": 9,
+  "source": "real: city kit (LoD2 buildings, land use plots) and OpenStreetMap bus lines"
+ },
+ "seed": 549695,
+ "startState": {
+  "air": 0.71,
+  "green": 0.32,
+  "mobility": 0.45,
+  "river": 0.55,
+  "trees": 0.6,
+  "clean": 0.6
+ },
+ "startWorld": {
+  "sky": "#9cc7ea",
+  "ground": "#d6d0c2",
+  "buildings": "#f2ead8",
+  "vegetation": 0.85,
+  "water": 0.8,
+  "haze": 0.19,
+  "light": "day",
+  "traffic": 0.6,
+  "crowds": 0.6
+ },
+ "timeline": [
+  {
+   "year": 2038,
+   "kind": "think",
+   "entry": {
+    "why": "time starts to run in Weimar",
+    "people": [
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "bauhaus_museum",
+      "act": "Someone waters the street tree in front of the house",
+      "text": "Someone near Bauhaus-Museum waters the street tree in front of the house."
+     },
+     {
+      "choice": "water",
+      "first": true,
+      "icon": "💧",
+      "place": "goethe_s_house",
+      "act": "Someone takes short showers",
+      "text": "Someone near Goethe's House takes short showers."
+     },
+     {
+      "choice": "green",
+      "first": false,
+      "icon": "🧱",
+      "place": "park_1",
+      "act": "Someone cuts down a tree in the backyard",
+      "text": "Someone near Green area 1 (4.7 ha) cuts down a tree in the backyard."
+     },
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "city_palace",
+      "act": "Someone heats with an old oil boiler",
+      "text": "Someone near City Palace heats with an old oil boiler."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar starts well: clean air, people care about trees and children, but everyone drives and one house burns oil. I see the seeds of what comes next.",
+    "surprise": null,
+    "finalEvent": null,
+    "verdict": null,
+    "headline": "Most people drive alone; some care for trees and water.",
+    "outlook": "",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "2840 vehicles",
+     "bus_passengers_per_day": "1620 people",
+     "household_waste_per_year": "890 tonnes",
+     "recycling_rate": "34 percent",
+     "oil_boilers_in_town": "287 buildings",
+     "street_trees_watered_by_hand": "12 trees per week",
+     "trees_cut_in_gardens_per_year": "8 trees"
+    },
+    "judged": [
+     {
+      "behaviour": "driving alone in large SUV",
+      "value": -0.8
+     },
+     {
+      "behaviour": "watering street tree",
+      "value": 0.7
+     },
+     {
+      "behaviour": "short showers",
+      "value": 0.5
+     },
+     {
+      "behaviour": "cutting backyard tree",
+      "value": -0.6
+     },
+     {
+      "behaviour": "heating with old oil boiler",
+      "value": -0.9
+     },
+     {
+      "behaviour": "walking children to school",
+      "value": 0.9
+     }
+    ],
+    "changes": [
+     {
+      "id": "suv_at_schiller",
+      "title": "SUV sits idling outside Schiller's House",
+      "icon": "🚙",
+      "place": "schiller_s_house",
+      "radius": 60,
+      "story": "A large black SUV idles alone in the drive every weekday morning for ten minutes before driving to work.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.3,
+       "smog": 0.2
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "tree_care_at_bauhaus",
+      "title": "Street tree thrives under daily care",
+      "icon": "🌳",
+      "place": "bauhaus_museum",
+      "radius": 50,
+      "story": "A resident waters the street tree every evening; it grows strong green leaves and becomes the healthiest tree on the block.",
+      "mood": "good",
+      "visual": {
+       "trees": 0.4,
+       "people": 0.2
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "oil_boiler_smoke_at_palace",
+      "title": "Old oil boiler fills Palace courtyard with smoke",
+      "icon": "💨",
+      "place": "city_palace",
+      "radius": 80,
+      "story": "The City Palace heating system burns heavy fuel oil; thick white smoke drifts across the courtyard on cold mornings.",
+      "mood": "bad",
+      "visual": {
+       "smog": 0.25
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#9cc7ea",
+     "ground": "#d6d0c2",
+     "buildings": "#f2ead8",
+     "vegetation": 0.85,
+     "water": 0.8,
+     "haze": 0.21,
+     "traffic": 0.6,
+     "crowds": 0.6,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2050,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "litter",
+      "first": true,
+      "icon": "🧹",
+      "place": "german_national_theatre",
+      "act": "Someone picks up a bottle someone dropped",
+      "text": "Someone near German National Theatre picks up a bottle someone dropped."
+     },
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "park_4",
+      "act": "Someone turns a parking space into a small garden",
+      "text": "Someone near Green area 4 (1.0 ha) turns a parking space into a small garden."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "bauhaus_museum",
+      "act": "Someone drives 400 m to buy bread",
+      "text": "Someone near Bauhaus-Museum drives 400 m to buy bread."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "park_1",
+      "act": "Someone drives alone to work in a large SUV",
+      "text": "Someone near Green area 1 (4.7 ha) drives alone to work in a large SUV."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar shows care for streets and trees, yet everyone drives and dumps in the Ilm. Oil smoke lingers. The contradictions will clash hard.",
+    "surprise": {
+     "title": "Ilm turns milk-white overnight",
+     "story": "The river filled with industrial paint waste from a burst pipe upstream.",
+     "icon": "🥛",
+     "place": "ilm_river"
+    },
+    "finalEvent": null,
+    "verdict": null,
+    "headline": "Care for streets and gardens grows, but car use and Ilm pollution rise fast.",
+    "outlook": "",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "2950 vehicles",
+     "bus_passengers_per_day": "1480 people",
+     "household_waste_per_year": "920 tonnes",
+     "recycling_rate": "36 percent",
+     "oil_boilers_in_town": "283 buildings",
+     "street_trees_watered_by_hand": "18 trees per week",
+     "trees_cut_in_gardens_per_year": "6 trees",
+     "litres_dumped_in_ilm_per_week": "4200 litres",
+     "parking_spaces_converted_to_green": "3 spaces"
+    },
+    "judged": [
+     {
+      "behaviour": "picking up litter",
+      "value": 0.9
+     },
+     {
+      "behaviour": "turning parking into gardens",
+      "value": 0.8
+     },
+     {
+      "behaviour": "sweeping pavements",
+      "value": 0.7
+     },
+     {
+      "behaviour": "driving alone in SUV",
+      "value": -0.85
+     },
+     {
+      "behaviour": "dumping into the Ilm",
+      "value": -0.95
+     },
+     {
+      "behaviour": "short drive for bread",
+      "value": -0.75
+     },
+     {
+      "behaviour": "heating with oil",
+      "value": -0.8
+     }
+    ],
+    "changes": [
+     {
+      "id": "ilm_paint_disaster",
+      "title": "Ilm turned white by paint spill",
+      "icon": "🌊",
+      "place": "ilm_river",
+      "radius": 450,
+      "story": "A ruptured pipe upstream dumped thousands of litres of industrial paint into the Ilm.",
+      "mood": "bad",
+      "visual": {
+       "dirty_water": 1
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "parking_garden_spreads",
+      "title": "Parking spaces bloom with vegetables",
+      "icon": "🌱",
+      "place": "bauhaus_museum",
+      "radius": 120,
+      "story": "A parking lot near the museum shrinks as residents plant fruit trees and raised beds.",
+      "mood": "good",
+      "visual": {
+       "green_roofs": 0.6
+      },
+      "streetColor": null,
+      "groundColor": "#8b7355"
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#a8c5dd",
+     "vegetation": 0.83,
+     "water": 0.2,
+     "haze": 0.28
+    }
+   }
+  },
+  {
+   "year": 2069,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "recycle",
+      "first": false,
+      "icon": "🚮",
+      "place": "cranach_house",
+      "act": "Someone puts old batteries in the household rubbish",
+      "text": "Someone near Cranach House puts old batteries in the household rubbish."
+     },
+     {
+      "choice": "water",
+      "first": true,
+      "icon": "💧",
+      "place": "cranach_house",
+      "act": "Someone fixes a dripping tap",
+      "text": "Someone near Cranach House fixes a dripping tap."
+     },
+     {
+      "choice": "water",
+      "first": true,
+      "icon": "💧",
+      "place": "park_2",
+      "act": "Someone collects rainwater for the garden",
+      "text": "Someone near Green area 2 (3.0 ha) collects rainwater for the garden."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "park_3",
+      "act": "Someone repairs a chair instead of throwing it away",
+      "text": "Someone near Green area 3 (1.6 ha) repairs a chair instead of throwing it away."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Everyone drives, dumps in Ilm, but saves water and bins waste. Trees dying from cuts, batteries in trash, AC windows open. Contradictions sharpening: care meets",
+    "surprise": {
+     "title": "The Ilm clogs with algae bloom",
+     "story": "A thick green sludge covers the Ilm from the paint spill chemicals mixing with warm summer water, blocking sunlight and killing fish.",
+     "icon": "🟢",
+     "place": "ilm_river"
+    },
+    "finalEvent": null,
+    "verdict": null,
+    "headline": "Water wisdom clashes with car use, Ilm poisoning, and reckless tree cutting.",
+    "outlook": "",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "3100 vehicles",
+     "bus_passengers_per_day": "1420 people",
+     "household_waste_per_year": "950 tonnes",
+     "recycling_rate": "34 percent",
+     "oil_boilers_in_town": "278 buildings",
+     "street_trees_watered_by_hand": "16 trees per week",
+     "trees_cut_in_gardens_per_year": "12 trees",
+     "litres_dumped_in_ilm_per_week": "5800 litres",
+     "parking_spaces_converted_to_green": "5 spaces",
+     "toxic_batteries_in_general_waste_per_year": "180 kg"
+    },
+    "judged": [
+     {
+      "behaviour": "dumping batteries in household rubbish",
+      "value": -0.9
+     },
+     {
+      "behaviour": "fixing dripping taps to save water",
+      "value": 0.8
+     },
+     {
+      "behaviour": "collecting rainwater for gardens",
+      "value": 0.85
+     },
+     {
+      "behaviour": "repairing furniture instead of discarding",
+      "value": 0.7
+     },
+     {
+      "behaviour": "running air conditioner with window open",
+      "value": -0.8
+     },
+     {
+      "behaviour": "cutting down backyard trees",
+      "value": -0.75
+     },
+     {
+      "behaviour": "everyone driving alone everywhere",
+      "value": -0.8
+     },
+     {
+      "behaviour": "dumping waste into the Ilm river",
+      "value": -0.95
+     }
+    ],
+    "changes": [
+     {
+      "id": "ilm_algae_chokes_river",
+      "title": "Ilm choked by toxic algae bloom",
+      "icon": "💀",
+      "place": "ilm_river",
+      "radius": 450,
+      "story": "The white paint spill mixed with household chemicals and warm water sparked a choking algae bloom that now covers the entire Ilm through Weimar.",
+      "mood": "bad",
+      "visual": {
+       "dead_trees": 0.3,
+       "waste": 0.6,
+       "dirty_water": 0.9
+      },
+      "streetColor": null,
+      "groundColor": "#7cb342"
+     },
+     {
+      "id": "toxic_battery_contamination",
+      "title": "Toxic batteries poison groundwater near Cranach House",
+      "icon": "🔋",
+      "place": "cranach_house",
+      "radius": 80,
+      "story": "Batteries thrown into household rubbish leaked heavy metals into the soil around Cranach House, contaminating groundwater and killing nearby plants.",
+      "mood": "bad",
+      "visual": {
+       "dead_trees": 0.5,
+       "waste": 0.7
+      },
+      "streetColor": null,
+      "groundColor": "#8b4513"
+     },
+     {
+      "id": "ac_heat_island_spreads",
+      "title": "Outdoor AC units create heat island at Theatre",
+      "icon": "🌡️",
+      "place": "german_national_theatre",
+      "radius": 100,
+      "story": "Running air conditioners with windows open at the Theatre pumps hot air outside, raising the local temperature and stressing nearby trees and gardens.",
+      "mood": "bad",
+      "visual": {
+       "dead_trees": 0.3,
+       "smog": 0.4
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#b0a88c",
+     "ground": "#d4c9ba",
+     "buildings": "#f0e6d8",
+     "vegetation": 0.78,
+     "water": 0.15,
+     "haze": 0.35,
+     "traffic": 0.62,
+     "crowds": 0.58
+    }
+   }
+  },
+  {
+   "year": 2077,
+   "kind": "think",
+   "entry": {
+    "why": "It is now 2077: time has run out. Pick the last event, then give your final picture of Weimar, with indicators, outlook and verdict. Your dice roll for the last event: 53 out of 100.",
+    "people": [
+     {
+      "choice": "river",
+      "first": false,
+      "icon": "🛢",
+      "place": "ilm_river",
+      "act": "Someone pours paint thinner down a drain",
+      "text": "Someone near River Ilm pours paint thinner down a drain."
+     },
+     {
+      "choice": "river",
+      "first": false,
+      "icon": "🛢",
+      "place": "ilm_river",
+      "act": "Someone pours paint thinner down a drain",
+      "text": "Someone near River Ilm pours paint thinner down a drain."
+     },
+     {
+      "choice": "move",
+      "first": false,
+      "icon": "🚗",
+      "place": "park_2",
+      "act": "Someone drives alone to work in a large SUV",
+      "text": "Someone near Green area 2 (3.0 ha) drives alone to work in a large SUV."
+     },
+     {
+      "choice": "water",
+      "first": true,
+      "icon": "💧",
+      "place": "park_2",
+      "act": "Someone takes short showers",
+      "text": "Someone near Green area 2 (3.0 ha) takes short showers."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar: everyone drives, dumps in the Ilm, saves water but bins waste. Trees half-gone, river poisoned, air grey. The town chose cars over change.",
+    "surprise": {
+     "title": "The Ilm runs backwards",
+     "story": "A sinkhole opens in the riverbed; the polluted Ilm drains into it and vanishes.",
+     "icon": "🌀",
+     "place": "ilm_river"
+    },
+    "finalEvent": {
+     "title": "A flock of storks arrives",
+     "story": "Thousands of storks land on Weimar's roofs, drawn by the empty Ilm's exposed insects.",
+     "icon": "🦢",
+     "place": null,
+     "mood": "good"
+    },
+    "verdict": {
+     "word": "Declining badly",
+     "icon": "📉",
+     "mood": "bad"
+    },
+    "headline": "Weimar chose cars and convenience over the river and trees.",
+    "outlook": "Weimar is a car-choked town with a dead river, dying trees, and grey air; only water discipline and waste binning kept it from total collapse.",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "3400 vehicles",
+     "bus_passengers_per_day": "890 people",
+     "household_waste_per_year": "1020 tonnes",
+     "recycling_rate": "31 percent",
+     "oil_boilers_in_town": "268 buildings",
+     "street_trees_watered_by_hand": "8 trees per week",
+     "trees_cut_in_gardens_per_year": "18 trees",
+     "litres_dumped_in_ilm_per_week": "7200 litres",
+     "parking_spaces_converted_to_green": "5 spaces",
+     "toxic_batteries_in_general_waste_per_year": "240 kg"
+    },
+    "judged": [
+     {
+      "behaviour": "everyone drives alone",
+      "value": -0.9
+     },
+     {
+      "behaviour": "dumping in the Ilm",
+      "value": -0.95
+     },
+     {
+      "behaviour": "saving water at home",
+      "value": 0.6
+     },
+     {
+      "behaviour": "binning waste properly",
+      "value": 0.5
+     },
+     {
+      "behaviour": "picking up dropped bottles",
+      "value": 0.7
+     },
+     {
+      "behaviour": "leaving trees alone",
+      "value": 0.3
+     },
+     {
+      "behaviour": "low recycling rate",
+      "value": -0.5
+     }
+    ],
+    "changes": [
+     {
+      "id": "ilm_sinkhole_void",
+      "title": "The Ilm vanishes into the earth",
+      "icon": "🌀",
+      "place": "ilm_river",
+      "radius": 200,
+      "story": "A sinkhole swallows the Ilm; the riverbed is now a dark void with exposed pipes.",
+      "mood": "bad",
+      "visual": {
+       "flood": 0.6,
+       "sand": 0.8
+      },
+      "streetColor": null,
+      "groundColor": "#2a2a2a"
+     },
+     {
+      "id": "downtown_cars_clogged",
+      "title": "Cars sink into melting asphalt",
+      "icon": "🚗",
+      "place": "goetheplatz",
+      "radius": 120,
+      "story": "Summer heat has softened the asphalt; parked cars sink slowly into the road.",
+      "mood": "bad",
+      "visual": {
+       "cars": 0.7,
+       "dark_buildings": 0.5
+      },
+      "streetColor": null,
+      "groundColor": "#5a4a3a"
+     },
+     {
+      "id": "tree_death_spreads",
+      "title": "Most street trees are now dead",
+      "icon": "💀",
+      "place": "bauhaus_museum",
+      "radius": 150,
+      "story": "Years of neglect and heat stress killed the trees; only grey stubs remain on the streets.",
+      "mood": "bad",
+      "visual": {
+       "trees": 0.1,
+       "dead_trees": 0.75
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [
+     "tree_care_at_bauhaus",
+     "parking_garden_spreads"
+    ],
+    "state": {
+     "air": 0.35,
+     "green": 0.35,
+     "mobility": 0.15,
+     "river": 0.02,
+     "trees": 0.25,
+     "clean": 0.25
+    },
+    "world": {
+     "sky": "#8b7d6b",
+     "ground": "#c9b8a0",
+     "buildings": "#e8d9c8",
+     "vegetation": 0.42,
+     "water": 0.05,
+     "haze": 0.52,
+     "traffic": 0.68,
+     "crowds": 0.45,
+     "light": "day"
+    }
+   }
+  }
+ ],
+ "id": "20261027230335"
+}

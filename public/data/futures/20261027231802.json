@@ -1,0 +1,485 @@
+{
+ "recordedAt": "2026-10-27T23:18:02.571Z",
+ "model": "anthropic/claude-4.5-haiku",
+ "choices": {
+  "move": 1,
+  "litter": 1,
+  "recycle": 1,
+  "river": 2,
+  "green": 1,
+  "energy": 1,
+  "water": 1
+ },
+ "headline": "Care habits spread.",
+ "real": {
+  "fetchedAt": "2026-10-27T23:16:58.599Z",
+  "air": {
+   "time": "2026-10-28T00:00",
+   "european_aqi": 29,
+   "pm2_5": 9.6,
+   "pm10": 13.9,
+   "no2": 6.8,
+   "source": "real: Open-Meteo air quality (CAMS Europe model) for Weimar"
+  },
+  "weather": {
+   "time": "2026-10-28T00:15",
+   "temperature_c": 9.9,
+   "rain_last_30_days_mm": 37,
+   "source": "real: Open-Meteo weather for Weimar"
+  },
+  "river": {
+   "today_m3s": 2.65,
+   "mean_last_30_days_m3s": 0.85,
+   "source": "real: Open-Meteo flood API (GloFAS model), river Ilm at Weimar"
+  }
+ },
+ "facts": {
+  "map_area_km2": 2.6,
+  "buildings": 4316,
+  "green_share": 0.08,
+  "water_share": 0.013,
+  "bus_lines": 9,
+  "source": "real: city kit (LoD2 buildings, land use plots) and OpenStreetMap bus lines"
+ },
+ "seed": 517637,
+ "startState": {
+  "air": 0.71,
+  "green": 0.32,
+  "mobility": 0.45,
+  "river": 0.55,
+  "trees": 0.6,
+  "clean": 0.6
+ },
+ "startWorld": {
+  "sky": "#9cc7ea",
+  "ground": "#d6d0c2",
+  "buildings": "#f2ead8",
+  "vegetation": 0.85,
+  "water": 0.8,
+  "haze": 0.19,
+  "light": "day",
+  "traffic": 0.6,
+  "crowds": 0.6
+ },
+ "timeline": [
+  {
+   "year": 2035,
+   "kind": "think",
+   "entry": {
+    "why": "time starts to run in Weimar",
+    "people": [
+     {
+      "choice": "river",
+      "first": true,
+      "icon": "🌊",
+      "place": "ilm_river",
+      "act": "Someone joins a clean-up on the Ilm banks",
+      "text": "Someone near River Ilm joins a clean-up on the Ilm banks."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "park_4",
+      "act": "Someone sorts glass, paper and plastic",
+      "text": "Someone near Green area 4 (1.0 ha) sorts glass, paper and plastic."
+     },
+     {
+      "choice": "water",
+      "first": true,
+      "icon": "💧",
+      "place": "bauhaus_museum",
+      "act": "Someone takes short showers",
+      "text": "Someone near Bauhaus-Museum takes short showers."
+     },
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "goetheplatz",
+      "act": "Someone waters the lawn at noon in a drought",
+      "text": "Someone near Goetheplatz waters the lawn at noon in a drought."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar wakes in 2027: some people clean the river and sort waste, but half still drive; I see both care and habit, so I'll let both grow.",
+    "surprise": null,
+    "finalEvent": null,
+    "verdict": null,
+    "headline": "River cleanup and recycling start.",
+    "outlook": "",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "2800",
+     "bus_and_tram_trips_per_day": "1400",
+     "households_with_solar": "120",
+     "tonnes_of_waste_per_month": "580",
+     "tonnes_recycled_per_month": "95",
+     "people_volunteering_monthly": "35"
+    },
+    "judged": [
+     {
+      "behaviour": "driving to work alone",
+      "value": -0.6
+     },
+     {
+      "behaviour": "taking the bus or riding a bike",
+      "value": 0.7
+     },
+     {
+      "behaviour": "cleaning up the river",
+      "value": 0.9
+     },
+     {
+      "behaviour": "sorting waste at home",
+      "value": 0.8
+     },
+     {
+      "behaviour": "putting solar panels on the roof",
+      "value": 0.85
+     },
+     {
+      "behaviour": "watering the lawn in drought",
+      "value": -0.5
+     },
+     {
+      "behaviour": "teaching about the river",
+      "value": 0.75
+     }
+    ],
+    "changes": [
+     {
+      "id": "ilm_cleanup_2027",
+      "title": "River cleanup begins",
+      "icon": "🌊",
+      "place": "ilm_river",
+      "radius": 300,
+      "story": "Volunteers gather to pull rubbish from the banks and clear the water.",
+      "mood": "good",
+      "visual": {
+       "waste": 0.05,
+       "clean_water": 0.15
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "green_area_4_solar_2027",
+      "title": "Solar panels catch the sun",
+      "icon": "☀️",
+      "place": "park_4",
+      "radius": 80,
+      "story": "A building near the green space now has solar panels on its roof.",
+      "mood": "good",
+      "visual": {
+       "solar": 0.12
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#9cc7ea",
+     "ground": "#d6d0c2",
+     "buildings": "#f2ead8",
+     "vegetation": 0.85,
+     "water": 0.78,
+     "haze": 0.19,
+     "traffic": 0.6,
+     "crowds": 0.65,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2059,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "goethe_s_house",
+      "act": "Someone fills a private pool every week",
+      "text": "Someone near Goethe's House fills a private pool every week."
+     },
+     {
+      "choice": "water",
+      "first": true,
+      "icon": "💧",
+      "place": "park_2",
+      "act": "Someone takes short showers",
+      "text": "Someone near Green area 2 (3.0 ha) takes short showers."
+     },
+     {
+      "choice": "litter",
+      "first": true,
+      "icon": "🧹",
+      "place": "liszt_house",
+      "act": "Someone picks up a bottle someone dropped",
+      "text": "Someone near Liszt House picks up a bottle someone dropped."
+     },
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "herderkirche",
+      "act": "Someone waters the lawn at noon in a drought",
+      "text": "Someone near Herderkirche waters the lawn at noon in a drought."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "By 2049, Weimar splits: some protect the river and save water, but others waste it on pools and lawns. Care spreads unevenly, so I'll let both choices shape the",
+    "surprise": null,
+    "finalEvent": null,
+    "verdict": null,
+    "headline": "Water waste spreads.",
+    "outlook": "",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "2650",
+     "bus_and_tram_trips_per_day": "1520",
+     "households_with_solar": "180",
+     "tonnes_of_waste_per_month": "560",
+     "tonnes_recycled_per_month": "140",
+     "people_volunteering_monthly": "45",
+     "litres_wasted_on_pools_weekly": "8000",
+     "garden_watering_midday_percent": "22"
+    },
+    "judged": [
+     {
+      "behaviour": "filling private pools in drought",
+      "value": -0.8
+     },
+     {
+      "behaviour": "watering lawns at noon in dry time",
+      "value": -0.7
+     },
+     {
+      "behaviour": "taking short showers",
+      "value": 0.9
+     },
+     {
+      "behaviour": "picking up dropped waste",
+      "value": 0.8
+     },
+     {
+      "behaviour": "switching off lights",
+      "value": 0.6
+     },
+     {
+      "behaviour": "carrying empty cans home to recycle",
+      "value": 0.85
+     },
+     {
+      "behaviour": "protecting the river",
+      "value": 0.75
+     }
+    ],
+    "changes": [
+     {
+      "id": "water_stress_2049",
+      "title": "Dry gardens and shrinking fountains",
+      "icon": "🏜️",
+      "place": "goetheplatz",
+      "radius": 300,
+      "story": "Grass yellows and fountains run only part-time.",
+      "mood": "bad",
+      "visual": {
+       "dead_trees": 0.15,
+       "sand": 0.08
+      },
+      "streetColor": null,
+      "groundColor": "#e8dcc8"
+     },
+     {
+      "id": "volunteer_river_guards_2049",
+      "title": "River watchers meet each week",
+      "icon": "👥",
+      "place": "ilm_river",
+      "radius": 450,
+      "story": "Fifty people now patrol the bank and remove trash.",
+      "mood": "good",
+      "visual": {
+       "people": 0.35,
+       "clean_water": 0.82
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#9bc5e3",
+     "ground": "#d8d2c5",
+     "buildings": "#f2ead8",
+     "vegetation": 0.82,
+     "water": 0.71,
+     "haze": 0.18,
+     "traffic": 0.58,
+     "crowds": 0.63,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2076,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "litter",
+      "first": true,
+      "icon": "🧹",
+      "place": "van_de_velde_building",
+      "act": "Someone picks up a bottle someone dropped",
+      "text": "Someone near Van de Velde Building picks up a bottle someone dropped."
+     },
+     {
+      "choice": "energy",
+      "first": true,
+      "icon": "☀",
+      "place": "bauhaus_museum",
+      "act": "Someone insulates the attic of an old house",
+      "text": "Someone near Bauhaus-Museum insulates the attic of an old house."
+     },
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "goethe_s_house",
+      "act": "Someone heats with an old oil boiler",
+      "text": "Someone near Goethe's House heats with an old oil boiler."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "van_de_velde_building",
+      "act": "Someone repairs a chair instead of throwing it away",
+      "text": "Someone near Van de Velde Building repairs a chair instead of throwing it away."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "By 2066, care spreads slowly: half use transit, some insulate and repair, river watchers protect the Ilm. Good habits grow but old waste and heating remain. I'l",
+    "surprise": null,
+    "finalEvent": null,
+    "verdict": null,
+    "headline": "Care habits spread.",
+    "outlook": "",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "2400",
+     "bus_and_tram_trips_per_day": "1890",
+     "households_with_solar": "240",
+     "tonnes_of_waste_per_month": "510",
+     "tonnes_recycled_per_month": "185",
+     "people_volunteering_monthly": "62",
+     "litres_wasted_on_pools_weekly": "5200",
+     "garden_watering_midday_percent": "14",
+     "households_with_heat_pump": "95",
+     "households_insulating_per_year": "28"
+    },
+    "judged": [
+     {
+      "behaviour": "picking up litter",
+      "value": 0.9
+     },
+     {
+      "behaviour": "insulating old buildings",
+      "value": 0.85
+     },
+     {
+      "behaviour": "repairing instead of replacing",
+      "value": 0.8
+     },
+     {
+      "behaviour": "taking short showers",
+      "value": 0.75
+     },
+     {
+      "behaviour": "heating with old oil boiler",
+      "value": -0.7
+     },
+     {
+      "behaviour": "half the town still driving cars",
+      "value": -0.3
+     }
+    ],
+    "changes": [
+     {
+      "id": "bike_lanes_expand_2066",
+      "title": "New bike lanes grow across town",
+      "icon": "🚴",
+      "place": "hauptbahnhof",
+      "radius": 250,
+      "story": "Protected bike paths now connect the station to the Ilm and parks.",
+      "mood": "good",
+      "visual": {
+       "cars": 0.42,
+       "bikes": 0.65
+      },
+      "streetColor": "#ff6b35",
+      "groundColor": null
+     },
+     {
+      "id": "old_boilers_replaced_2066",
+      "title": "Heat pumps replace old oil boilers",
+      "icon": "🔥",
+      "place": "goethe_s_house",
+      "radius": 150,
+      "story": "More households switch from oil heating to electric heat pumps.",
+      "mood": "good",
+      "visual": {
+       "solar": 0.35,
+       "dark_buildings": 0.3
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#a8d5f0",
+     "ground": "#d8d2c5",
+     "buildings": "#f0e8d8",
+     "vegetation": 0.84,
+     "water": 0.73,
+     "haze": 0.14,
+     "traffic": 0.52,
+     "crowds": 0.64,
+     "light": "day"
+    }
+   }
+  }
+ ],
+ "id": "20261027231802"
+}

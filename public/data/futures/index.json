@@ -1,0 +1,242 @@
+[
+ {
+  "id": "20261027210342",
+  "file": "20261027210342.json",
+  "recordedAt": "2026-10-27T21:03:42.298Z",
+  "choices": {
+   "move": 0,
+   "litter": 0,
+   "recycle": 0,
+   "river": 0,
+   "green": 0,
+   "energy": 0,
+   "water": 0
+  },
+  "headline": "Weimar 2077: a dust town of gravel, glowing screens and a dead Ilm"
+ },
+ {
+  "id": "20261027213301",
+  "file": "20261027213301.json",
+  "recordedAt": "2026-10-27T21:33:01.674Z",
+  "choices": {
+   "move": 1,
+   "litter": 1,
+   "recycle": 1,
+   "river": 1,
+   "green": 1,
+   "energy": 1,
+   "water": 1
+  },
+  "headline": "Weimar: fragmented green recovery amid permanent climate scars"
+ },
+ {
+  "id": "20261027215533",
+  "file": "20261027215533.json",
+  "recordedAt": "2026-10-27T21:55:33.420Z",
+  "choices": {
+   "move": 2,
+   "litter": 2,
+   "recycle": 2,
+   "river": 2,
+   "green": 2,
+   "energy": 2,
+   "water": 2
+  },
+  "headline": "Weimar: forest city, water-wise, almost car-free"
+ },
+ {
+  "id": "20261027221955",
+  "file": "20261027221955.json",
+  "recordedAt": "2026-10-27T22:19:55.799Z",
+  "choices": {
+   "move": 1,
+   "litter": 1,
+   "recycle": 1,
+   "river": 1,
+   "green": 1,
+   "energy": 1,
+   "water": 1
+  },
+  "headline": "Weimar at 2077: mixed habits, partial green, river still wounded"
+ },
+ {
+  "id": "20261027222108",
+  "file": "20261027222108.json",
+  "recordedAt": "2026-10-27T22:21:08.348Z",
+  "choices": {
+   "move": 1,
+   "litter": 1,
+   "recycle": 1,
+   "river": 1,
+   "green": 1,
+   "energy": 1,
+   "water": 1
+  },
+  "headline": "Weimar: green gains, old divides persist"
+ },
+ {
+  "id": "20261027223342",
+  "file": "20261027223342.json",
+  "recordedAt": "2026-10-27T22:33:42.126Z",
+  "choices": {
+   "move": 0,
+   "litter": 0,
+   "recycle": 0,
+   "river": 0,
+   "green": 1,
+   "energy": 0,
+   "water": 0
+  },
+  "headline": "Weimar consumed itself: a town of waste, drought, and broken water"
+ },
+ {
+  "id": "20261027223914",
+  "file": "20261027223914.json",
+  "recordedAt": "2026-10-27T22:39:14.262Z",
+  "choices": {
+   "move": 0,
+   "litter": 0,
+   "recycle": 0,
+   "river": 1,
+   "green": 0,
+   "energy": 0,
+   "water": 0
+  },
+  "headline": "Weimar suffocated: throwaway culture turned a cultural capital into decay"
+ },
+ {
+  "id": "20261027224029",
+  "file": "20261027224029.json",
+  "recordedAt": "2026-10-27T22:40:29.110Z",
+  "choices": {
+   "move": 2,
+   "litter": 0,
+   "recycle": 1,
+   "river": 1,
+   "green": 1,
+   "energy": 1,
+   "water": 1
+  },
+  "headline": "Weimar in two minds: care and carelessness, each strong, both real"
+ },
+ {
+  "id": "20261027224437",
+  "file": "20261027224437.json",
+  "recordedAt": "2026-10-27T22:44:37.056Z",
+  "choices": {
+   "move": 0,
+   "litter": 1,
+   "recycle": 1,
+   "river": 2,
+   "green": 1,
+   "energy": 1,
+   "water": 1
+  },
+  "headline": "Weimar: half trying, half broken"
+ },
+ {
+  "id": "20261027224729",
+  "file": "20261027224729.json",
+  "recordedAt": "2026-10-27T22:47:29.219Z",
+  "choices": {
+   "move": 1,
+   "litter": 0,
+   "recycle": 1,
+   "river": 0,
+   "green": 1,
+   "energy": 2,
+   "water": 1
+  },
+  "headline": "Weimar survives divided: solar and gardens versus pollution, trash, and a dying river."
+ },
+ {
+  "id": "20261027225158",
+  "file": "20261027225158.json",
+  "recordedAt": "2026-10-27T22:51:58.795Z",
+  "choices": {
+   "move": 2,
+   "litter": 2,
+   "recycle": 1,
+   "river": 1,
+   "green": 2,
+   "energy": 1,
+   "water": 0
+  },
+  "headline": "Gardens flourish but the river stays forgotten: Weimar chose bicycles over buses"
+ },
+ {
+  "id": "20261027225626",
+  "file": "20261027225626.json",
+  "recordedAt": "2026-10-27T22:56:26.349Z",
+  "choices": {
+   "move": 1,
+   "litter": 0,
+   "recycle": 1,
+   "river": 0,
+   "green": 1,
+   "energy": 0,
+   "water": 0
+  },
+  "headline": "Weimar survives split in half: cars and waste fight gardens and transit."
+ },
+ {
+  "id": "20261027230335",
+  "file": "20261027230335.json",
+  "recordedAt": "2026-10-27T23:03:35.062Z",
+  "choices": {
+   "move": 0,
+   "litter": 2,
+   "recycle": 1,
+   "river": 0,
+   "green": 1,
+   "energy": 1,
+   "water": 2
+  },
+  "headline": "Weimar chose cars and convenience over the river and trees."
+ },
+ {
+  "id": "20261027231308",
+  "file": "20261027231308.json",
+  "recordedAt": "2026-10-27T23:13:08.865Z",
+  "choices": {
+   "move": 0,
+   "litter": 2,
+   "recycle": 1,
+   "river": 1,
+   "green": 0,
+   "energy": 1,
+   "water": 2
+  },
+  "headline": "Solar roofs spread while drivers stay alone and groundwater drops; trees keep falling."
+ },
+ {
+  "id": "20261027231802",
+  "file": "20261027231802.json",
+  "recordedAt": "2026-10-27T23:18:02.571Z",
+  "choices": {
+   "move": 1,
+   "litter": 1,
+   "recycle": 1,
+   "river": 2,
+   "green": 1,
+   "energy": 1,
+   "water": 1
+  },
+  "headline": "Care habits spread."
+ },
+ {
+  "id": "20261027234238",
+  "file": "20261027234238.json",
+  "recordedAt": "2026-10-27T23:42:38.880Z",
+  "choices": {
+   "move": 2,
+   "litter": 1,
+   "recycle": 1,
+   "river": 2,
+   "green": 0,
+   "energy": 2,
+   "water": 1
+  },
+  "headline": ""
+ }
+]

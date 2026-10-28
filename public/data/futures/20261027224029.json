@@ -1,0 +1,475 @@
+{
+ "recordedAt": "2026-10-27T22:40:29.110Z",
+ "model": "anthropic/claude-4.5-haiku",
+ "choices": {
+  "move": 2,
+  "litter": 0,
+  "recycle": 1,
+  "river": 1,
+  "green": 1,
+  "energy": 1,
+  "water": 1
+ },
+ "headline": "Weimar in two minds: care and carelessness, each strong, both real",
+ "real": {
+  "fetchedAt": "2026-10-27T22:39:40.884Z",
+  "air": {
+   "time": "2026-10-27T23:00",
+   "european_aqi": 29,
+   "pm2_5": 9.4,
+   "pm10": 12.7,
+   "no2": 7.5,
+   "source": "real: Open-Meteo air quality (CAMS Europe model) for Weimar"
+  },
+  "weather": {
+   "time": "2026-10-27T23:30",
+   "temperature_c": 10.2,
+   "rain_last_30_days_mm": 34,
+   "source": "real: Open-Meteo weather for Weimar"
+  },
+  "river": {
+   "today_m3s": 2.65,
+   "mean_last_30_days_m3s": 0.85,
+   "source": "real: Open-Meteo flood API (GloFAS model), river Ilm at Weimar"
+  }
+ },
+ "facts": {
+  "map_area_km2": 2.6,
+  "buildings": 4316,
+  "green_share": 0.08,
+  "water_share": 0.013,
+  "bus_lines": 9,
+  "source": "real: city kit (LoD2 buildings, land use plots) and OpenStreetMap bus lines"
+ },
+ "seed": 980815,
+ "startState": {
+  "air": 0.71,
+  "green": 0.32,
+  "mobility": 0.45,
+  "river": 0.55,
+  "trees": 0.6,
+  "clean": 0.6
+ },
+ "startWorld": {
+  "sky": "#9cc7ea",
+  "ground": "#d6d0c2",
+  "buildings": "#f2ead8",
+  "vegetation": 0.85,
+  "water": 0.8,
+  "haze": 0.19,
+  "light": "day",
+  "traffic": 0.6,
+  "crowds": 0.6
+ },
+ "timeline": [
+  {
+   "year": 2033,
+   "kind": "think",
+   "entry": {
+    "why": "time starts to run in Weimar",
+    "people": [
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "park_2",
+      "act": "Someone turns a parking space into a small garden",
+      "text": "Someone near Green area 2 (3.0 ha) turns a parking space into a small garden."
+     },
+     {
+      "choice": "recycle",
+      "first": false,
+      "icon": "🚮",
+      "place": "goethe_s_house",
+      "act": "Someone buys a new phone every year and bins the old one",
+      "text": "Someone near Goethe's House buys a new phone every year and bins the old one."
+     },
+     {
+      "choice": "river",
+      "first": false,
+      "icon": "🛢",
+      "place": "ilm_river",
+      "act": "Someone washes the car next to the river",
+      "text": "Someone near River Ilm washes the car next to the river."
+     },
+     {
+      "choice": "river",
+      "first": false,
+      "icon": "🛢",
+      "place": "ilm_river",
+      "act": "Someone throws a bag of rubbish into the Ilm",
+      "text": "Someone near River Ilm throws a bag of rubbish into the Ilm."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar begins: bikes and buses coexist with cars, but carelessness spreads—litter, e-waste, river pollution. Small green acts emerge too.",
+    "surprise": null,
+    "verdict": null,
+    "headline": "Weimar wakes: care and neglect mix in equal measure",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "ilm_pollution_starts",
+      "title": "River fouled by habit",
+      "icon": "🌊",
+      "place": "ilm_river",
+      "radius": 200,
+      "story": "Car wash runoff and dumped bags darken the Ilm; locals ignore it; banks turn grey",
+      "mood": "bad",
+      "visual": {
+       "dirty_water": 0.3
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "park_2_garden_sprout",
+      "title": "Guerrilla garden takes root",
+      "icon": "🌱",
+      "place": "park_2",
+      "radius": 80,
+      "story": "One person reclaims a parking space; a small patch of soil, seedlings, hope blooms",
+      "mood": "good",
+      "visual": {
+       "trees": 0.15,
+       "people": 0.2
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "park_1_paving_creeps",
+      "title": "Lawn gives way to stone",
+      "icon": "🪨",
+      "place": "park_1",
+      "radius": 120,
+      "story": "Gravel replaces grass; maintenance falls; green shrinks; dust rises on windy days",
+      "mood": "bad",
+      "visual": {
+       "sand": 0.25
+      },
+      "streetColor": null,
+      "groundColor": "#c9c9c9"
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#9cc7ea",
+     "ground": "#d6d0c2",
+     "buildings": "#f2ead8",
+     "vegetation": 0.82,
+     "water": 0.75,
+     "haze": 0.22,
+     "traffic": 0.6,
+     "crowds": 0.6,
+     "light": "day"
+    }
+   }
+  },
+  {
+   "year": 2046,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "herderkirche",
+      "act": "Someone plants flowers on a balcony",
+      "text": "Someone near Herderkirche plants flowers on a balcony."
+     },
+     {
+      "choice": "recycle",
+      "first": false,
+      "icon": "🚮",
+      "place": "liszt_house",
+      "act": "Someone puts old batteries in the household rubbish",
+      "text": "Someone near Liszt House puts old batteries in the household rubbish."
+     },
+     {
+      "choice": "energy",
+      "first": true,
+      "icon": "☀",
+      "place": "goetheplatz",
+      "act": "Someone insulates the attic of an old house",
+      "text": "Someone near Goetheplatz insulates the attic of an old house."
+     },
+     {
+      "choice": "water",
+      "first": true,
+      "icon": "💧",
+      "place": "park_2",
+      "act": "Someone fixes a dripping tap",
+      "text": "Someone near Green area 2 (3.0 ha) fixes a dripping tap."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar splits: some plant flowers and fix taps, others dump batteries and gravel lawns. Litter accumulates, the Ilm stays fouled. Green pockets grow while pavem",
+    "surprise": null,
+    "verdict": null,
+    "headline": "Care and carelessness both dig in; Weimar's future hangs in balance",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "battery_waste_spreads",
+      "title": "E-waste enters the bins",
+      "icon": "🔋",
+      "place": "liszt_house",
+      "radius": 80,
+      "story": "Old batteries and electronics tossed into household waste; toxins seep toward soil and groundwater.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.4
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "litter_habit_grows",
+      "title": "Street litter becomes normal",
+      "icon": "🗑️",
+      "place": "goetheplatz",
+      "radius": 120,
+      "story": "Discarded items lie longer on pavements; cleaning crews fall behind as throwing becomes casual.",
+      "mood": "bad",
+      "visual": {
+       "waste": 0.35
+      },
+      "streetColor": null,
+      "groundColor": "#c9bfb0"
+     },
+     {
+      "id": "balcony_green_spreads",
+      "title": "Balcony gardens multiply",
+      "icon": "🌸",
+      "place": "herderkirche",
+      "radius": 100,
+      "story": "Small acts of green: flowers on balconies, residents reclaiming beauty in tight spaces. Slow but visible.",
+      "mood": "good",
+      "visual": {
+       "green_roofs": 0.25
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#a8d4f1",
+     "ground": "#d0cac0",
+     "vegetation": 0.79,
+     "haze": 0.25
+    }
+   }
+  },
+  {
+   "year": 2063,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "green",
+      "first": false,
+      "icon": "🧱",
+      "place": "schiller_s_house",
+      "act": "Someone cuts down a tree in the backyard",
+      "text": "Someone near Schiller's House cuts down a tree in the backyard."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "schiller_s_house",
+      "act": "Someone sorts glass, paper and plastic",
+      "text": "Someone near Schiller's House sorts glass, paper and plastic."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "bauhaus_museum",
+      "act": "Someone repairs a chair instead of throwing it away",
+      "text": "Someone near Bauhaus-Museum repairs a chair instead of throwing it away."
+     },
+     {
+      "choice": "energy",
+      "first": true,
+      "icon": "☀",
+      "place": "goethe_s_house",
+      "act": "Someone switches off the lights in empty rooms",
+      "text": "Someone near Goethe's House switches off the lights in empty rooms."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar fractures: green gestures sprout while pollution deepens. Tree-cutting meets recycling, AC waste meets light-switching. The Ilm rots unchecked as balconi",
+    "surprise": {
+     "title": "Glowing stones appear in the Ilm",
+     "story": "Luminescent pebbles surface in the fouled river at dawn—harmless algae blooms, but eerie. People gather to watch.",
+     "icon": "✨",
+     "place": "ilm_river"
+    },
+    "verdict": null,
+    "headline": "Weimar splits: care and harm grow side by side",
+    "outlook": "",
+    "observed": [],
+    "changes": [
+     {
+      "id": "tree_loss_accelerates",
+      "title": "Backyards lose their canopy",
+      "icon": "🪚",
+      "place": "schiller_s_house",
+      "radius": 120,
+      "story": "Tree-felling for views, renovation, ease spreads. Shade vanishes, microclimates warm.",
+      "mood": "bad",
+      "visual": {
+       "trees": 0.3,
+       "dead_trees": 0.2
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "recycling_corner_forms",
+      "title": "Glass and paper sort themselves",
+      "icon": "♻️",
+      "place": "schiller_s_house",
+      "radius": 80,
+      "story": "Neighbours sort waste visibly. Small act, spreading habit. Others copy.",
+      "mood": "good",
+      "visual": {
+       "recycling": 0.5
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "repair_culture_takes_root",
+      "title": "Fixing things, not tossing them",
+      "icon": "🔧",
+      "place": "bauhaus_museum",
+      "radius": 100,
+      "story": "Chairs mended, bikes repaired. A craftsperson ethos awakens near the Bauhaus's shadow.",
+      "mood": "good",
+      "visual": {
+       "waste": 0.3
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#a8cce8",
+     "ground": "#d2cec2",
+     "vegetation": 0.76,
+     "water": 0.68,
+     "haze": 0.28,
+     "crowds": 0.62
+    }
+   }
+  },
+  {
+   "year": 2077,
+   "kind": "think",
+   "entry": {
+    "why": "It is now 2077: time has run out. Give your final picture of Weimar, with indicators and outlook.",
+    "people": [
+     {
+      "choice": "move",
+      "first": true,
+      "icon": "🚲",
+      "place": "goetheplatz",
+      "act": "Someone takes the bus to the Hauptbahnhof",
+      "text": "Someone near Goetheplatz takes the bus to the Hauptbahnhof."
+     },
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "city_palace",
+      "act": "Someone waters the street tree in front of the house",
+      "text": "Someone near City Palace waters the street tree in front of the house."
+     },
+     {
+      "choice": "litter",
+      "first": false,
+      "icon": "🗑",
+      "place": "liszt_house",
+      "act": "Someone leaves a pizza box on a bench",
+      "text": "Someone near Liszt House leaves a pizza box on a bench."
+     },
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "park_4",
+      "act": "Someone leaves every screen in the flat on all night",
+      "text": "Someone near Green area 4 (1.0 ha) leaves every screen in the flat on all night."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar is split. Care grows—recycling, repair, balcony gardens, tree-watering—but neglect persists: litter, e-waste, river rot, light waste, all ignored. The to",
+    "surprise": null,
+    "verdict": {
+     "word": "Divided",
+     "icon": "⚖️",
+     "mood": "mixed"
+    },
+    "headline": "Weimar in two minds: care and carelessness, each strong, both real",
+    "outlook": "Weimar endures as a town of contradictions: green gestures and repair thrive alongside litter, e-waste, and a poisoned river—care and neglect locked in stalemate, each preventing the other from winning.",
+    "observed": [],
+    "changes": [],
+    "removed": [],
+    "state": {
+     "air": 0.72,
+     "green": 0.76,
+     "mobility": 0.8,
+     "river": 0.35,
+     "trees": 0.62,
+     "clean": 0.58
+    },
+    "world": {
+     "sky": "#a8cce8",
+     "ground": "#d2cec2",
+     "buildings": "#f2ead8",
+     "vegetation": 0.76,
+     "water": 0.68,
+     "haze": 0.28,
+     "traffic": 0.6,
+     "crowds": 0.62,
+     "light": "day"
+    }
+   }
+  }
+ ],
+ "id": "20261027224029"
+}

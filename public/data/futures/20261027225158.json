@@ -1,0 +1,507 @@
+{
+ "recordedAt": "2026-10-27T22:51:58.795Z",
+ "model": "anthropic/claude-4.5-haiku",
+ "choices": {
+  "move": 2,
+  "litter": 2,
+  "recycle": 1,
+  "river": 1,
+  "green": 2,
+  "energy": 1,
+  "water": 0
+ },
+ "headline": "Gardens flourish but the river stays forgotten: Weimar chose bicycles over buses",
+ "real": {
+  "fetchedAt": "2026-10-27T22:50:50.191Z",
+  "air": {
+   "time": "2026-10-27T23:00",
+   "european_aqi": 29,
+   "pm2_5": 9.4,
+   "pm10": 12.7,
+   "no2": 7.5,
+   "source": "real: Open-Meteo air quality (CAMS Europe model) for Weimar"
+  },
+  "weather": {
+   "time": "2026-10-27T23:45",
+   "temperature_c": 10.3,
+   "rain_last_30_days_mm": 34,
+   "source": "real: Open-Meteo weather for Weimar"
+  },
+  "river": {
+   "today_m3s": 2.65,
+   "mean_last_30_days_m3s": 0.85,
+   "source": "real: Open-Meteo flood API (GloFAS model), river Ilm at Weimar"
+  }
+ },
+ "facts": {
+  "map_area_km2": 2.6,
+  "buildings": 4316,
+  "green_share": 0.08,
+  "water_share": 0.013,
+  "bus_lines": 9,
+  "source": "real: city kit (LoD2 buildings, land use plots) and OpenStreetMap bus lines"
+ },
+ "seed": 303354,
+ "startState": {
+  "air": 0.71,
+  "green": 0.32,
+  "mobility": 0.45,
+  "river": 0.55,
+  "trees": 0.6,
+  "clean": 0.6
+ },
+ "startWorld": {
+  "sky": "#9cc7ea",
+  "ground": "#d6d0c2",
+  "buildings": "#f2ead8",
+  "vegetation": 0.85,
+  "water": 0.8,
+  "haze": 0.19,
+  "light": "day",
+  "traffic": 0.6,
+  "crowds": 0.6
+ },
+ "timeline": [
+  {
+   "year": 2035,
+   "kind": "think",
+   "entry": {
+    "why": "time starts to run in Weimar",
+    "people": [
+     {
+      "choice": "energy",
+      "first": false,
+      "icon": "🔥",
+      "place": "duchess_anna_amalia_library",
+      "act": "Someone runs the air conditioner with the window open",
+      "text": "Someone near Duchess Anna Amalia Library runs the air conditioner with the window open."
+     },
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "liszt_house",
+      "act": "Someone turns a parking space into a small garden",
+      "text": "Someone near Liszt House turns a parking space into a small garden."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "bauhaus_museum",
+      "act": "Someone sorts glass, paper and plastic",
+      "text": "Someone near Bauhaus-Museum sorts glass, paper and plastic."
+     },
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "park_3",
+      "act": "Someone waters the street tree in front of the house",
+      "text": "Someone near Green area 3 (1.6 ha) waters the street tree in front of the house."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Weimar starts well: people cycle, recycle, care for trees and turn off lights. Small good habits now, clean air and good water. I watch what grows from this.",
+    "surprise": null,
+    "verdict": null,
+    "headline": "Small acts of care begin: a garden grows where a car was parked",
+    "outlook": "",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "3200",
+     "bus_passengers_per_day": "8400",
+     "bike_trips_per_day": "5600",
+     "waste_to_landfill_kg_per_day": "1200",
+     "recycled_waste_kg_per_day": "520",
+     "street_trees_watered_weekly": "140"
+    },
+    "judged": [
+     {
+      "behaviour": "running air conditioner with window open",
+      "value": -0.3
+     },
+     {
+      "behaviour": "turning parking space into a garden",
+      "value": 0.8
+     },
+     {
+      "behaviour": "sorting recyclables at home",
+      "value": 0.7
+     },
+     {
+      "behaviour": "watering street trees",
+      "value": 0.6
+     },
+     {
+      "behaviour": "taking electronics to recycling",
+      "value": 0.7
+     },
+     {
+      "behaviour": "switching off unnecessary lights",
+      "value": 0.5
+     }
+    ],
+    "changes": [
+     {
+      "id": "liszt_garden_starts",
+      "title": "Parking space becomes a garden",
+      "icon": "🌱",
+      "place": "liszt_house",
+      "radius": 50,
+      "story": "A resident removed asphalt and planted vegetables, flowers and herbs in one parking space.",
+      "mood": "good",
+      "visual": {
+       "bikes": 0.05,
+       "green_roofs": 0.1
+      },
+      "streetColor": null,
+      "groundColor": "#8b7355"
+     },
+     {
+      "id": "recycling_habit_spreads",
+      "title": "Recycling stations set up",
+      "icon": "♻️",
+      "place": "bauhaus_museum",
+      "radius": 60,
+      "story": "Neighbours see glass and paper being sorted properly, and start doing the same at home.",
+      "mood": "good",
+      "visual": {
+       "recycling": 0.15
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "street_tree_care_visible",
+      "title": "Street tree watering becomes normal",
+      "icon": "💧",
+      "place": "park_3",
+      "radius": 80,
+      "story": "People notice healthier trees in the street and begin watering them regularly on hot days.",
+      "mood": "good",
+      "visual": {
+       "trees": 0.08
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "vegetation": 0.86,
+     "haze": 0.17
+    }
+   }
+  },
+  {
+   "year": 2050,
+   "kind": "think",
+   "entry": {
+    "why": "a few years have passed",
+    "people": [
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "park_4",
+      "act": "Someone waters the lawn at noon in a drought",
+      "text": "Someone near Green area 4 (1.0 ha) waters the lawn at noon in a drought."
+     },
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "herderkirche",
+      "act": "Someone fills a private pool every week",
+      "text": "Someone near Herderkirche fills a private pool every week."
+     },
+     {
+      "choice": "green",
+      "first": true,
+      "icon": "🌱",
+      "place": "schiller_s_house",
+      "act": "Someone turns a parking space into a small garden",
+      "text": "Someone near Schiller's House turns a parking space into a small garden."
+     },
+     {
+      "choice": "recycle",
+      "first": true,
+      "icon": "♻",
+      "place": "park_3",
+      "act": "Someone takes old electronics to the recycling yard",
+      "text": "Someone near Green area 3 (1.6 ha) takes old electronics to the recycling yard."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Good habits spread: cycling, recycling, planting gardens. But water waste and pollution creep in. Air stays clean, river ignored. I see contradiction.",
+    "surprise": null,
+    "verdict": null,
+    "headline": "Gardens grow but water runs free: good hearts, wasteful hands in Weimar",
+    "outlook": "",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "3100",
+     "bus_passengers_per_day": "8900",
+     "bike_trips_per_day": "6200",
+     "waste_to_landfill_kg_per_day": "1100",
+     "recycled_waste_kg_per_day": "620",
+     "street_trees_watered_weekly": "165",
+     "private_pool_refills_per_week_in_town": "8",
+     "lawn_watering_litres_per_day_in_drought": "2400",
+     "paint_waste_to_drains_litres_per_month": "35"
+    },
+    "judged": [
+     {
+      "behaviour": "turning parking spaces into gardens",
+      "value": 0.9
+     },
+     {
+      "behaviour": "cycling and taking buses",
+      "value": 0.8
+     },
+     {
+      "behaviour": "watering lawns during drought",
+      "value": -0.7
+     },
+     {
+      "behaviour": "filling private pools weekly",
+      "value": -0.8
+     },
+     {
+      "behaviour": "pouring paint thinner down drains",
+      "value": -0.9
+     },
+     {
+      "behaviour": "recycling electronics",
+      "value": 0.85
+     }
+    ],
+    "changes": [
+     {
+      "id": "schiller_garden_born",
+      "title": "Parking space becomes a garden",
+      "icon": "🌻",
+      "place": "schiller_s_house",
+      "radius": 50,
+      "story": "A parking space near Schiller's House becomes a small vegetable garden.",
+      "mood": "good",
+      "visual": {
+       "trees": 0.3
+      },
+      "streetColor": null,
+      "groundColor": "#8b7355"
+     },
+     {
+      "id": "herder_pool_water_drain",
+      "title": "Private pool drains the aquifer",
+      "icon": "💧",
+      "place": "herderkirche",
+      "radius": 80,
+      "story": "Groundwater under Herderkirche drops as weekly pool fills and empty refills strain local supplies.",
+      "mood": "bad",
+      "visual": {},
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "ilm_paint_pollution_starts",
+      "title": "Paint thinner enters the river",
+      "icon": "🏭",
+      "place": "ilm_river",
+      "radius": 120,
+      "story": "Paint thinner poured down drains reaches the Ilm, turning water near the source a pale grey.",
+      "mood": "bad",
+      "visual": {
+       "dirty_water": 0.2
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [],
+    "state": {
+     "air": null,
+     "green": null,
+     "mobility": null,
+     "river": null,
+     "trees": null,
+     "clean": null
+    },
+    "world": {
+     "sky": "#a8d5f5",
+     "ground": "#d4cebc",
+     "vegetation": 0.87,
+     "water": 0.72,
+     "haze": 0.14,
+     "traffic": 0.59
+    }
+   }
+  },
+  {
+   "year": 2077,
+   "kind": "think",
+   "entry": {
+    "why": "It is now 2077: time has run out. Give your final picture of Weimar, with indicators and outlook.",
+    "people": [
+     {
+      "choice": "litter",
+      "first": true,
+      "icon": "🧹",
+      "place": "park_2",
+      "act": "Someone picks up a bottle someone dropped",
+      "text": "Someone near Green area 2 (3.0 ha) picks up a bottle someone dropped."
+     },
+     {
+      "choice": "river",
+      "first": false,
+      "icon": "🛢",
+      "place": "ilm_river",
+      "act": "Someone washes the car next to the river",
+      "text": "Someone near River Ilm washes the car next to the river."
+     },
+     {
+      "choice": "water",
+      "first": false,
+      "icon": "🚿",
+      "place": "liszt_house",
+      "act": "Someone waters the lawn at noon in a drought",
+      "text": "Someone near Liszt House waters the lawn at noon in a drought."
+     },
+     {
+      "choice": "litter",
+      "first": true,
+      "icon": "🧹",
+      "place": "duchess_anna_amalia_library",
+      "act": "Someone sweeps the pavement in front of the shop",
+      "text": "Someone near Duchess Anna Amalia Library sweeps the pavement in front of the shop."
+     }
+    ],
+    "model": "anthropic/claude-4.5-haiku",
+    "thought": "Year 2077: Weimar chose small care over grand change. Gardens grew, cycling spread, but water waste and river neglect persisted. The town is liveable, not thriv",
+    "surprise": null,
+    "verdict": {
+     "word": "Pleasant but incomplete",
+     "icon": "🚴‍♀️",
+     "mood": "mixed"
+    },
+    "headline": "Gardens flourish but the river stays forgotten: Weimar chose bicycles over buses",
+    "outlook": "Weimar is green and breathable but thirsty; people cycle and care for gardens, yet the river runs thin and private water use remains unchecked.",
+    "observed": [],
+    "guessed": {
+     "cars_per_day_in_centre": "2800",
+     "bus_passengers_per_day": "9200",
+     "bike_trips_per_day": "7100",
+     "waste_to_landfill_kg_per_day": "950",
+     "recycled_waste_kg_per_day": "720",
+     "street_trees_watered_weekly": "198",
+     "private_pool_refills_per_week_in_town": "9",
+     "lawn_watering_litres_per_day_in_drought": "2800",
+     "paint_waste_to_drains_litres_per_month": "42"
+    },
+    "judged": [
+     {
+      "behaviour": "picking up dropped bottle",
+      "value": 0.8
+     },
+     {
+      "behaviour": "washing car next to river",
+      "value": -0.7
+     },
+     {
+      "behaviour": "watering lawn at noon in drought",
+      "value": -0.6
+     },
+     {
+      "behaviour": "sweeping pavement",
+      "value": 0.5
+     },
+     {
+      "behaviour": "switching off lights",
+      "value": 0.7
+     },
+     {
+      "behaviour": "carrying empty can home to recycle",
+      "value": 0.8
+     }
+    ],
+    "changes": [
+     {
+      "id": "lawns_brown_drought_2077",
+      "title": "Lawns wilt in persistent summer drought",
+      "icon": "🌾",
+      "place": "liszt_house",
+      "radius": 150,
+      "story": "Grass turns golden and crisp; some gardens fail as summer heat drains aquifers dry.",
+      "mood": "bad",
+      "visual": {
+       "dead_trees": 0.3
+      },
+      "streetColor": null,
+      "groundColor": "#c9b8a8"
+     },
+     {
+      "id": "ilm_still_stained",
+      "title": "River runs thin and faintly discoloured",
+      "icon": "🌊",
+      "place": "ilm_river",
+      "radius": 300,
+      "story": "The Ilm flows lower each summer; paint residue gives water a faint grey-brown tint.",
+      "mood": "bad",
+      "visual": {
+       "clean_water": 0.3,
+       "dirty_water": 0.4
+      },
+      "streetColor": null,
+      "groundColor": null
+     },
+     {
+      "id": "green_roofs_spread_final",
+      "title": "Green roofs now cover many buildings",
+      "icon": "🌱",
+      "place": "bauhaus_museum",
+      "radius": 200,
+      "story": "Sedum and grasses now blanket rooftops across town; rain soaks in instead of running off.",
+      "mood": "good",
+      "visual": {
+       "green_roofs": 0.6
+      },
+      "streetColor": null,
+      "groundColor": null
+     }
+    ],
+    "removed": [
+     "ilm_paint_pollution_starts"
+    ],
+    "state": {
+     "air": 0.82,
+     "green": 0.79,
+     "mobility": 0.75,
+     "river": 0.48,
+     "trees": 0.83,
+     "clean": 0.71
+    },
+    "world": {
+     "sky": "#b5dff8",
+     "ground": "#d8d0c0",
+     "buildings": "#f5f0e8",
+     "vegetation": 0.85,
+     "water": 0.68,
+     "haze": 0.12,
+     "traffic": 0.57,
+     "crowds": 0.62,
+     "light": "day"
+    }
+   }
+  }
+ ],
+ "id": "20261027225158"
+}

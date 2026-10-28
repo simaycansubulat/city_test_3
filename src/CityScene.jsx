@@ -13,6 +13,7 @@ import { LandmarkLabelLayer, LandmarkTracker } from './LandmarkLabels.jsx'
 import Ghost from './Ghost.jsx'
 import { makeFacadeMaterial } from './facade.js'
 import { buildBuildingGeometry } from './buildingGeometry.js'
+import FutureCity from './Future.jsx'
 
 // Night colours for Weimar 2077
 const NIGHT = { ground: '#090b14', street: '#22b8ff', fog: '#0a0c18', marker: '#fcee0a' }
@@ -21,7 +22,8 @@ const NIGHT = { ground: '#090b14', street: '#22b8ff', fog: '#0a0c18', marker: '#
 const v3 = (x, y, h) => [x, h, -y]
 
 // mode: null (overview), 'density', 'transport', 'pollution', 'forest' or 'architecture'
-export default function CityScene({ city, scenery, busLines, landmarks, reach, onGroundClick, look2077, mode, forestIndex, selected, onSelect, voice }) {
+// mode 'future': the AI's Weimar; future carries its changes and the air it has made
+export default function CityScene({ city, scenery, busLines, landmarks, reach, onGroundClick, look2077, mode, forestIndex, selected, onSelect, voice, future }) {
   const { x0, y0, x1, y1 } = city.extent
   const colorOf = (b) => USE_COLORS[b.use] ?? USE_COLORS.undefined
   // both building versions, built once: flat roofs for the plain map, pitched roofs for 2077
@@ -39,8 +41,11 @@ export default function CityScene({ city, scenery, busLines, landmarks, reach, o
   const home = useMemo(() => [target[0], size * 1.1, target[2] + size * 0.9], [target, size])
   // Pollution mode: the whole air turns brown-grey and closes in
   const smoggy = m === 'pollution'
-  const fogNear = smoggy ? size * 0.5 : size * 1.4
-  const fogFar = smoggy ? size * 2.2 : size * 3.6
+  // AI Future: the air closes in and browns as the AI's clean-air value falls
+  const haze = m === 'future' && future?.view ? Math.max(0, 1 - future.view.state.air) ** 1.3 : smoggy ? 1 : 0
+  const fogNear = size * (1.4 - 0.9 * haze)
+  const fogFar = size * (3.6 - 1.4 * haze)
+  const fogColor = '#' + new THREE.Color(NIGHT.fog).lerp(new THREE.Color(SMOG_FOG), haze).getHexString()
 
   return (
     <>
@@ -51,7 +56,7 @@ export default function CityScene({ city, scenery, busLines, landmarks, reach, o
       style={{
         background: !look2077
           ? '#e8e5de'
-          : smoggy
+          : haze > 0.5
             ? 'radial-gradient(ellipse at 50% 25%, #3a3424 0%, #221e15 55%, #0f0d09 100%)'
             : 'radial-gradient(ellipse at 50% 25%, #1b2142 0%, #0b0d1a 55%, #05060c 100%)',
       }}
@@ -59,7 +64,7 @@ export default function CityScene({ city, scenery, busLines, landmarks, reach, o
       {look2077 ? (
         <>
           {/* night haze and a cool moonlight for the trees and the land */}
-          <fog attach="fog" args={[smoggy ? SMOG_FOG : NIGHT.fog, fogNear, fogFar]} />
+          <fog attach="fog" args={[fogColor, fogNear, fogFar]} />
           <hemisphereLight args={['#9db4ea', '#0b0d16', m === 'forest' ? 1.5 : 1.05]} />
           <directionalLight color="#c4d2ff" position={[-800, 1500, 600]} intensity={0.85} />
         </>
@@ -73,7 +78,7 @@ export default function CityScene({ city, scenery, busLines, landmarks, reach, o
       {look2077 && <Landscape scenery={scenery} forest={m === 'forest'} />}
       <ReachAreas reach={reach} night={look2077} />
       <Streets city={city} night={look2077} mode={m} />
-      <Buildings built={look2077 ? historic : day} reach={reach} night={look2077} mode={m} fogNear={fogNear} fogFar={fogFar} />
+      <Buildings built={look2077 ? historic : day} reach={reach} night={look2077} mode={m} fogNear={fogNear} fogFar={fogFar} fogColor={fogColor} />
       <StartMarker reach={reach} night={look2077} />
       {look2077 && reach?.travel === 'supersonic' && <SonicBoom reach={reach} />}
       {/* imagined layers: decoration only, they take no clicks and change no numbers */}
@@ -81,10 +86,11 @@ export default function CityScene({ city, scenery, busLines, landmarks, reach, o
       {m === 'density' && <DensityEffect scenery={scenery} night />}
       {m === 'transport' && <Transport city={city} busLines={busLines} />}
       {m === 'pollution' && <Pollution scenery={scenery} />}
+      {m === 'future' && <FutureCity city={city} scenery={scenery} zones={future.zones} view={future.view} />}
       {m === 'forest' && <ForestWarning forest={scenery.forests[forestIndex % scenery.forests.length]} />}
       <CameraDirector focus={focusOf(look2077 ? selected : null, m === 'forest' ? scenery.forests[forestIndex % scenery.forests.length] : null)} />
       {m === 'architecture' && <Architecture city={city} landmarks={landmarks} roofLines={historic.roofLines} />}
-      {look2077 && <LandmarkTracker landmarks={landmarks} refs={labelRefs} selected={selected} />}
+      {look2077 && m !== 'future' && <LandmarkTracker landmarks={landmarks} refs={labelRefs} selected={selected} />}
       {look2077 && selected && <Ghost landmark={selected} voice={voice} />}
       <OrbitControls
         makeDefault
@@ -101,7 +107,7 @@ export default function CityScene({ city, scenery, busLines, landmarks, reach, o
         </EffectComposer>
       )}
     </Canvas>
-    {look2077 && <LandmarkLabelLayer landmarks={landmarks} selected={selected} onSelect={onSelect} refs={labelRefs} />}
+    {look2077 && m !== 'future' && <LandmarkLabelLayer landmarks={landmarks} selected={selected} onSelect={onSelect} refs={labelRefs} />}
     </>
   )
 }
@@ -154,13 +160,13 @@ function Streets({ city, night, mode }) {
 // All buildings in one merged mesh, so orbiting stays smooth. The plain map uses flat roofs; the
 // Weimar 2077 view uses the same footprints and heights with approximate pitched roofs.
 // Each building knows which vertices are its own, so it can be recoloured when a walk reaches it.
-function Buildings({ built, reach, night, mode, fogNear, fogFar }) {
+function Buildings({ built, reach, night, mode, fogNear, fogFar, fogColor }) {
   const { geometry, ranges, baseColors } = built
 
   const facade = useMemo(() => makeFacadeMaterial(), [])
   facade.uniforms.uFogNear.value = fogNear
   facade.uniforms.uFogFar.value = fogFar
-  facade.uniforms.uFogColor.value.set(mode === 'pollution' ? SMOG_FOG : NIGHT.fog)
+  facade.uniforms.uFogColor.value.set(fogColor)
   facade.uniforms.uDensityOn.value = mode === 'density' ? 1 : 0
   facade.uniforms.uDim.value = mode === 'forest' ? 1 : mode === 'pollution' ? 0.6 : 0 // the smog swallows the lights
   facade.uniforms.uDetail.value = mode === 'architecture' ? 1 : 0
