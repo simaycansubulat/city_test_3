@@ -223,20 +223,5 @@
    "water": 1
   },
   "headline": "Care habits spread."
- },
- {
-  "id": "20261027234238",
-  "file": "20261027234238.json",
-  "recordedAt": "2026-10-27T23:42:38.880Z",
-  "choices": {
-   "move": 2,
-   "litter": 1,
-   "recycle": 1,
-   "river": 2,
-   "green": 0,
-   "energy": 2,
-   "water": 1
-  },
-  "headline": ""
  }
 ]

@@ -310,7 +310,10 @@ export function useFuture({ city, scenery, landmarks, active }) {
         const due = r.replay.timeline.slice(r.played).filter((e) => e.year <= year || year >= END)
         if (due.length) {
           update({ played: r.played + due.length })
-          for (const e of due) {
+          for (const e0 of due) {
+            // nothing is shown twice: an event an old saved future repeats, even in other words, is dropped
+            const before = happened(runRef.current.memory)
+            const e = e0.entry ? { ...e0, entry: { ...e0.entry, changes: (e0.entry.changes ?? []).filter((c, i, all) => !isRepeat(c, [...before, ...all.slice(0, i)])) } } : e0
             if (e.kind === 'habits') setChoicesState(e.choices)
             else if (e.entry.finalEvent || e.entry.verdict) {
               // the last event already on screen stays: only the verdict is taken from this entry
