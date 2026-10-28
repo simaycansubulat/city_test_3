@@ -246,6 +246,15 @@ export function plain(text) {
   return t.charAt(0).toUpperCase() + t.slice(1)
 }
 
+// Everyday words in every text of a step: an SUV is just a car
+export const everyday = (value) =>
+  JSON.parse(
+    JSON.stringify(value).replace(/\b(?:([Aa])n? )?SUV(s?)\b/g, (m, a, s, at, all) => {
+      const car = a ? `${a} car${s}` : `car${s}`
+      return a || !/(^|"|[.!?]\s*)$/.test(all.slice(Math.max(0, at - 3), at)) ? car : `Car${s}`
+    }),
+  )
+
 // Keeps what the city can draw: known places and building blocks, sizes the map can hold
 export function cleanStep(raw, zones) {
   const ids = new Set(zones.map((z) => z.id))

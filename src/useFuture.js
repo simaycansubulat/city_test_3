@@ -23,6 +23,7 @@ import {
   sharesOf,
   happened,
   isRepeat,
+  everyday,
   startWorld,
   wakeContext,
 } from './future.js'
@@ -36,7 +37,7 @@ const finalWhy = () => FINAL
 const LAST_EVENT_MS = 8000 // the least time the last event is shown before the verdict
 const START = YEARS[0]
 const END = YEARS[YEARS.length - 1]
-const THINK_EVERY = 7 // years between wakings when nothing else happens
+const THINK_EVERY = 5 // years between wakings when nothing else happens
 const FIRST_EVENT = 2027 // nothing is shown before this year: the first thought waits for it
 const FINAL_AT = 2069 // the last thought is asked for in this year, so the last event plays while time runs out to 2077
 const PEOPLE_MS = 3000 // how long the people the mind looks at stand on the streets
@@ -64,6 +65,27 @@ const randomLastEvent = () => LAST_EVENTS[Math.floor(Math.random() * LAST_EVENTS
 function toTimeline(saved) {
   if (saved.timeline) return saved.timeline
   return (saved.steps ?? []).map((s) => ({ year: s.year - 2, kind: 'think', entry: { ...s, why: 'a few years have passed', people: (s.observations ?? []).slice(0, 4) } }))
+}
+
+// A saved future as the replay plays it: repeats dropped (nothing is shown twice, even in other words), nothing
+// bizarre before the last event, and the events spread evenly from the first year on, so there are no long waits
+const IDLE_SPEED = 6 // in a replay, years run this many times faster while nothing is on screen
+function forReplay(timeline) {
+  const before = []
+  const events = []
+  const rest = []
+  for (const e of timeline) {
+    if (e.kind !== 'think' || e.entry.finalEvent || e.entry.verdict) {
+      rest.push(e)
+      continue
+    }
+    const changes = (e.entry.changes ?? []).filter((c, i, all) => !isRepeat(c, [...before, ...all.slice(0, i)]))
+    before.push(...changes.map((c) => ({ title: c.title, place: c.place })))
+    if (changes.length) events.push({ ...e, entry: { ...e.entry, changes, surprise: null } })
+  }
+  const every = events.length > 1 ? (FINAL_AT - 1 - FIRST_EVENT) / (events.length - 1) : 0
+  events.forEach((e, i) => (e.year = FIRST_EVENT + i * every))
+  return [...events, ...rest].sort((a, b) => a.year - b.year)
 }
 
 export function useFuture({ city, scenery, landmarks, active }) {
@@ -263,7 +285,7 @@ export function useFuture({ city, scenery, landmarks, active }) {
         if (gameRef.current !== game) return
         thoughtMs.current = (thoughtMs.current + (Date.now() - began)) / 2
         if (!res.ok) throw new Error(body.error ?? `the town didn't answer (${res.status})`)
-        const entry = { why, people: seen.slice(0, 4), model: body.model, ...cleanStep(body.decision, zones) }
+        const entry = { why, people: seen.slice(0, 4), model: body.model, ...cleanStep(everyday(body.decision), zones) }
         // nothing ever happens twice in a game: whatever repeats an earlier event, even in other words, is dropped
         const before = happened(runRef.current.memory)
         entry.surprise = null // the only bizarre event is the last one, in 2077
@@ -304,23 +326,22 @@ export function useFuture({ city, scenery, landmarks, active }) {
     const t = setInterval(() => {
       const r = runRef.current
       if (!r) return
-      const year = Math.min(END, r.year + 100 / YEAR_MS)
+      // a replay never waits: while nothing is on screen, the years run fast to the next event
+      const idle = r.replay && !spotBusy.current && !r.ended
+      const year = Math.min(END, r.year + (idle ? IDLE_SPEED : 1) * (100 / YEAR_MS))
       update({ year })
       if (r.replay) {
         const due = r.replay.timeline.slice(r.played).filter((e) => e.year <= year || year >= END)
         if (due.length) {
           update({ played: r.played + due.length })
-          for (const e0 of due) {
-            // nothing is shown twice: an event an old saved future repeats, even in other words, is dropped
-            const before = happened(runRef.current.memory)
-            const e = e0.entry ? { ...e0, entry: { ...e0.entry, changes: (e0.entry.changes ?? []).filter((c, i, all) => !isRepeat(c, [...before, ...all.slice(0, i)])) } } : e0
+          for (const e of due) {
             if (e.kind === 'habits') setChoicesState(e.choices)
             else if (e.entry.finalEvent || e.entry.verdict) {
               // the last event already on screen stays: only the verdict is taken from this entry
               const entry = { ...e.entry, surprise: null, finalEvent: r.ended ? null : e.entry.finalEvent }
               update({ finalEntry: entry })
               showLast(entry)
-            } else apply({ ...e.entry, surprise: null }) // nothing bizarre before the last event
+            } else apply(e.entry)
           }
         }
         // an old saved future without a last event gets a random one, while the last years run out
@@ -396,7 +417,7 @@ export function useFuture({ city, scenery, landmarks, active }) {
         return
       }
       const saved = await r.json()
-      begin({ replay: { ...saved, timeline: toTimeline(saved) }, entry, startChoices: saved.choices ?? DEFAULT_CHOICES, real: saved.real, seed: saved.seed, startState: saved.startState, startWorld: saved.startWorld })
+      begin({ replay: { ...saved, timeline: forReplay(everyday(toTimeline(saved))) }, entry, startChoices: saved.choices ?? DEFAULT_CHOICES, real: saved.real, seed: saved.seed, startState: saved.startState, startWorld: saved.startWorld })
     },
     [begin],
   )
